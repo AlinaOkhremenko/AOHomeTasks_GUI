@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AOESquareView : UIView
+typedef NS_ENUM (NSUInteger, AOSquarePosition) {
+    AOSquarePositionLeftTopCorner,
+    AOSquarePositionRigthBottomCorner,
+    AOSquarePositionLeftBottomCorner,
+    AOSquarePositionRigthTopCorner
+};
 
+@interface AOESquareView : UIView
+@property (nonatomic)   AOSquarePosition    squarePosition;
+
+- (void)setSquarePosition:(AOSquarePosition)squarePosition;
+- (void)setSquarePosition:(AOSquarePosition)squarePosition animated:(BOOL)animation;
+- (void)setSquarePosition:(AOSquarePosition)squarePosition
+                 animated:(BOOL)animation
+        completionHandler:(void(^)(void))animationCompletion;
 @end
