@@ -13,8 +13,8 @@
 		C765A0F61B9F50FC0067E6C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A0F41B9F50FC0067E6C8 /* LaunchScreen.xib */; };
 		C765A1021B9F50FC0067E6C8 /* AOEHomeTask1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */; };
 		C765A1111B9F6EE80067E6C8 /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1101B9F6EE80067E6C8 /* AOESquareView.m */; };
-		C765A1161B9F72040067E6C8 /* AOEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1141B9F72040067E6C8 /* AOEViewController.m */; };
-		C765A1171B9F72040067E6C8 /* AOEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A1151B9F72040067E6C8 /* AOEViewController.xib */; };
+		C765A1161B9F72040067E6C8 /* AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1141B9F72040067E6C8 /* AOESquareViewController.m */; };
+		C765A1171B9F72040067E6C8 /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +40,9 @@
 		C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEHomeTask1Tests.m; sourceTree = "<group>"; };
 		C765A10F1B9F6EE80067E6C8 /* AOESquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareView.h; sourceTree = "<group>"; };
 		C765A1101B9F6EE80067E6C8 /* AOESquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareView.m; sourceTree = "<group>"; };
-		C765A1131B9F72040067E6C8 /* AOEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEViewController.h; sourceTree = "<group>"; };
-		C765A1141B9F72040067E6C8 /* AOEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEViewController.m; sourceTree = "<group>"; };
-		C765A1151B9F72040067E6C8 /* AOEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOEViewController.xib; sourceTree = "<group>"; };
+		C765A1131B9F72040067E6C8 /* AOESquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareViewController.h; sourceTree = "<group>"; };
+		C765A1141B9F72040067E6C8 /* AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareViewController.m; sourceTree = "<group>"; };
+		C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOESquareViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +132,9 @@
 			children = (
 				C765A10F1B9F6EE80067E6C8 /* AOESquareView.h */,
 				C765A1101B9F6EE80067E6C8 /* AOESquareView.m */,
-				C765A1131B9F72040067E6C8 /* AOEViewController.h */,
-				C765A1141B9F72040067E6C8 /* AOEViewController.m */,
-				C765A1151B9F72040067E6C8 /* AOEViewController.xib */,
+				C765A1131B9F72040067E6C8 /* AOESquareViewController.h */,
+				C765A1141B9F72040067E6C8 /* AOESquareViewController.m */,
+				C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */,
 			);
 			name = AOEViewController;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C765A0F61B9F50FC0067E6C8 /* LaunchScreen.xib in Resources */,
-				C765A1171B9F72040067E6C8 /* AOEViewController.xib in Resources */,
+				C765A1171B9F72040067E6C8 /* AOESquareViewController.xib in Resources */,
 				C765A0F31B9F50FC0067E6C8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +251,7 @@
 			files = (
 				C765A0EB1B9F50FC0067E6C8 /* AOEAppDelegate.m in Sources */,
 				C765A0E81B9F50FC0067E6C8 /* main.m in Sources */,
-				C765A1161B9F72040067E6C8 /* AOEViewController.m in Sources */,
+				C765A1161B9F72040067E6C8 /* AOESquareViewController.m in Sources */,
 				C765A1111B9F6EE80067E6C8 /* AOESquareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
