@@ -6,15 +6,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AOESquareViewController">
             <connections>
-                <outlet property="squareView" destination="Y27-Tz-i9n" id="gZo-ct-Odg"/>
-                <outlet property="view" destination="2mP-kB-Uok" id="idi-px-EGA"/>
+                <outlet property="view" destination="2mP-kB-Uok" id="Qjr-CD-MVg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view opaque="NO" contentMode="scaleToFill" id="2mP-kB-Uok">
+        <view opaque="NO" contentMode="scaleToFill" id="2mP-kB-Uok" customClass="AOEContainerView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view opaque="NO" alpha="0.74999999999999978" contentMode="scaleToFill" id="Y27-Tz-i9n" customClass="AOESquareView">
+                    <rect key="frame" x="0.0" y="0.0" width="84" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.4144473216466466" green="0.87365845959595956" blue="0.85238140008361085" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4ld-eB-B6b">
                     <rect key="frame" x="132" y="330" width="61" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,15 +31,14 @@
                         <action selector="onMoveSquareButton:" destination="-1" eventType="touchUpInside" id="xci-jm-iLz"/>
                     </connections>
                 </button>
-                <view opaque="NO" alpha="0.74999999999999978" contentMode="scaleToFill" id="Y27-Tz-i9n" customClass="AOESquareView">
-                    <rect key="frame" x="0.0" y="0.0" width="84" height="87"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.4144473216466466" green="0.87365845959595956" blue="0.85238140008361085" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
             </subviews>
             <color key="backgroundColor" red="0.86466224747474751" green="0.86466224747474751" blue="0.86466224747474751" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.95880681820000002" green="0.10852324817338872" blue="0.16454988810002993" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="buttonMove" destination="4ld-eB-B6b" id="f1i-yV-DCs"/>
+                <outlet property="squareView" destination="Y27-Tz-i9n" id="nVi-JY-VcU"/>
+            </connections>
             <point key="canvasLocation" x="-39" y="-126"/>
         </view>
     </objects>

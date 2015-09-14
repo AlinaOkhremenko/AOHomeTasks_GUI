@@ -9,6 +9,7 @@
 #import "AOEAppDelegate.h"
 #import "AOESquareViewController.h"
 
+
 @interface AOEAppDelegate ()
 
 @end
@@ -18,14 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption
 {
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIWindow *window = [UIWindow window];
     self.window = window;
     
-    window.rootViewController = [[AOESquareViewController alloc] initWithNibName:@"AOESquareViewController" bundle:nil];
+    window.rootViewController = [AOESquareViewController viewController];
     
     window.backgroundColor = [UIColor greenColor];
     [window makeKeyAndVisible];
-    
     
     return YES;
 }

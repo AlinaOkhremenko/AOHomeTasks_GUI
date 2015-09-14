@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+AOEInitialization.h"
+#import "UIWindow+AOEInitialization.h"
 
 @interface AOEAppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong)   UIWindow    *window;

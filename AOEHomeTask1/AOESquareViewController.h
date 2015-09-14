@@ -8,27 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AOESquareView.h"
-
-typedef NS_ENUM (NSUInteger, AOSquarePosition) {
-    AOSquarePositionLeftTopCorner,
-    AOSquarePositionRigthTopCorner,
-    AOSquarePositionRigthBottomCorner,
-    AOSquarePositionLeftBottomCorner,
-    
-};
+#import "AOEContainerView.h"
 
 @interface AOESquareViewController : UIViewController
-@property (nonatomic, weak) IBOutlet AOESquareView      *squareView;
-@property (nonatomic, weak) IBOutlet UIButton           *buttonMove;
-
-@property (nonatomic, assign)        AOSquarePosition   squarePosition;
-@property (nonatomic, assign)        BOOL               squareAnimationOn;
-
-- (void)setSquarePosition:(AOSquarePosition)squarePosition;
-- (void)setSquarePosition:(AOSquarePosition)squarePosition animated:(BOOL)animation;
-- (void)setSquarePosition:(AOSquarePosition)squarePosition
-                 animated:(BOOL)animation
-        completionHandler:(void(^)())animationCompletion;
+@property (nonatomic, assign)   BOOL            squareAnimationOn;
+@property (nonatomic, weak)     AOESquareView   *squareView;
 
 - (IBAction)onMoveSquareButton:(id)sender;
 

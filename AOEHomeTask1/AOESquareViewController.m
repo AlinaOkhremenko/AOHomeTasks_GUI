@@ -7,64 +7,27 @@
 //
 
 #import "AOESquareViewController.h"
-#import "AOESquareView.h"
 
 @interface AOESquareViewController ()
+@property (nonatomic, readonly)     AOEContainerView    *containerView;
+
+- (void)moveSquareToNextPosition;
 
 @end
 
 @implementation AOESquareViewController
 
-#pragma mark - 
-#pragma mark - Accessor Methods
+@dynamic containerView;
 
-- (void)setSquarePosition:(AOSquarePosition)squarePosition {
-    [self setSquarePosition:squarePosition animated:NO];
-}
+#pragma mark-
+#pragma mark - Accessors
 
-- (void)setSquarePosition:(AOSquarePosition)squarePosition
-                 animated:(BOOL)animation
-{
-    [self setSquarePosition:squarePosition animated:YES completionHandler:nil];
-    
-}
-- (void)setSquarePosition:(AOSquarePosition)squarePosition
-                 animated:(BOOL)animation
-        completionHandler:(void(^)())animationCompletion
-{
-    if (_squarePosition != squarePosition) {
-        _squarePosition = squarePosition;
-        [UIView animateWithDuration:0.5
-                         animations:^{
-                             CGRect frame = self.squareView.frame;
-                             CGRect bounds = self.view.bounds;
-                             CGFloat widthFrame = CGRectGetWidth(frame);
-                             CGFloat heightFrame = CGRectGetHeight(frame);
-                             CGFloat widthBounds = CGRectGetWidth(bounds);
-                             CGFloat heightBounds = CGRectGetHeight(bounds);
-                             
-                             switch (self.squarePosition) {
-                                 case AOSquarePositionLeftTopCorner:
-                                     self.squareView.center = CGPointMake(widthFrame/2,heightFrame/2);
-                                     break;
-                                 case AOSquarePositionLeftBottomCorner:
-                                     self.squareView.center = CGPointMake(widthFrame/2, (heightBounds -heightFrame/2));
-                                     break;
-                                 case AOSquarePositionRigthTopCorner:
-                                     self.squareView.center = CGPointMake(widthBounds - widthFrame/2, heightFrame/2);
-                                     break;
-                                 case AOSquarePositionRigthBottomCorner:
-                                     self.squareView.center = CGPointMake(widthBounds - widthFrame/2, heightBounds-heightFrame/2);
-                                     break;
-                             }
-                         }
-                         completion:^(BOOL finished) {
-                             if (animationCompletion != nil) {
-                                 animationCompletion();
-                             }
-                         }
-         ];
+- (AOEContainerView *)containerView {
+    if ([self isViewLoaded] && [self.view isKindOfClass:[AOEContainerView class]]) {
+        return (AOEContainerView *)self.view;
     }
+    
+    return nil;
 }
 
 #pragma mark - 
@@ -72,8 +35,7 @@
 
 - (IBAction)onMoveSquareButton:(id)sender {
     self.squareAnimationOn = !self.squareAnimationOn;
-    if (self.squareAnimationOn)
-    {
+    if (self.squareAnimationOn) {
         [self moveSquareToNextPosition];
     }
 }
@@ -81,20 +43,20 @@
 #pragma mark - 
 #pragma mark - Private Methods
 
-- (void)moveSquareToNextPosition
-{
-    if (self.squareAnimationOn)
-    {
-        NSInteger nextPosition = _squarePosition + 1;
-        nextPosition = nextPosition % 4;
+- (void)moveSquareToNextPosition {
+    if (self.squareAnimationOn) {
+        AOESquareView *squareView = self.containerView.squareView;
+        NSInteger nextPosition = squareView.squarePosition + 1;
+        nextPosition = nextPosition % AOSquarePositionCount;
         
         id __weak weakSelf = self;
-        [self setSquarePosition:nextPosition
-                       animated:YES
-              completionHandler:^{
-                  id __strong strongSelf = weakSelf;
-                  [strongSelf moveSquareToNextPosition];
-              }];
+        [squareView setSquarePosition:nextPosition
+                             animated:YES
+                    completionHandler:^{
+                        id __strong strongSelf = weakSelf;
+                        [strongSelf moveSquareToNextPosition];
+                    }
+         ];
     }
 }
 - (void)viewDidLoad {
