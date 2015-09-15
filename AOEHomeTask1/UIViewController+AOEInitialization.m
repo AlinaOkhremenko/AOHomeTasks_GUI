@@ -14,4 +14,8 @@
     return [[self alloc] initWithNibName:NSStringFromClass(self) bundle:nil];
 }
 
++ (id)viewControllerWithNibName:(NSString*)nibName {
+    return [[self alloc]initWithNibName:nibName bundle:nil];
+}
+
 @end
