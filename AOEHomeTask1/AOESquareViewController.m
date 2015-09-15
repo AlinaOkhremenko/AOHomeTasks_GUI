@@ -7,11 +7,11 @@
 //
 
 #import "AOESquareViewController.h"
+#import "AOESquareView.h"
+#import "AOEMacro.h"
 
 @interface AOESquareViewController ()
 @property (nonatomic, readonly)     AOEContainerView    *containerView;
-
-- (void)moveSquareToNextPosition;
 
 @end
 
@@ -34,31 +34,13 @@
 #pragma mark Public Methods Implementation
 
 - (IBAction)onMoveSquareButton:(id)sender {
-    self.squareAnimationOn = !self.squareAnimationOn;
-    if (self.squareAnimationOn) {
-        [self moveSquareToNextPosition];
+    BOOL newValue = !self.containerView.squareView.squareAnimationOn;
+    self.containerView.squareView.squareAnimationOn = newValue;
+    if (newValue) {
+        [self.containerView.squareView moveSquareToNextPosition];
     }
 }
 
-#pragma mark - 
-#pragma mark - Private Methods
-
-- (void)moveSquareToNextPosition {
-    if (self.squareAnimationOn) {
-        AOESquareView *squareView = self.containerView.squareView;
-        NSInteger nextPosition = squareView.squarePosition + 1;
-        nextPosition = nextPosition % AOSquarePositionCount;
-        
-        id __weak weakSelf = self;
-        [squareView setSquarePosition:nextPosition
-                             animated:YES
-                    completionHandler:^{
-                        id __strong strongSelf = weakSelf;
-                        [strongSelf moveSquareToNextPosition];
-                    }
-         ];
-    }
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
 }

@@ -18,11 +18,13 @@ typedef NS_ENUM (NSUInteger, AOSquarePosition) {
 
 @interface AOESquareView : UIView
 @property (nonatomic, assign)   AOSquarePosition   squarePosition;
+@property (nonatomic, assign)   BOOL               squareAnimationOn;
 
-- (void)setSquarePosition:(AOSquarePosition)squarePosition;
 - (void)setSquarePosition:(AOSquarePosition)squarePosition animated:(BOOL)animation;
 - (void)setSquarePosition:(AOSquarePosition)squarePosition
                  animated:(BOOL)animation
         completionHandler:(void(^)())animationCompletion;
+
+- (void)moveSquareToNextPosition;
 
 @end

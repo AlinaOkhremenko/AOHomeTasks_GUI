@@ -11,11 +11,10 @@
 
 #define macro_concatenate(A, B) A##B
 
-#define weakify(VAR)\
-__weak__typeof(VAR) macro_concatenate(weak, VAR) = (VAR)\
+#define AOEweakify(VAR)\
+id __weak macro_concatenate(weak, VAR) = VAR\
 
-#define strongify(VAR)\
-__strong__typeof(VAR) macro_concatenate(strong, VAR) = macro_concatenate(weak, VAR) 
-
+#define AOEstrongify(VAR)\
+id __strong macro_concatenate(strong, VAR) = macro_concatenate(weak, VAR)
 
 #endif

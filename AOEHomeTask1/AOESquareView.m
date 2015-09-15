@@ -7,6 +7,7 @@
 //
 
 #import "AOESquareView.h"
+#import  "AOEMacro.h"
 
 static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
 
@@ -34,7 +35,7 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
         NSTimeInterval duration = animation ? kAOESquareAnimationDuration : 0;
         [UIView animateWithDuration:duration
                          animations:^{
-                             self.center = [self positionForSquareView:squarePosition];
+                             self.frame = [self frameForSquareView:squarePosition];
                          }
                          completion:^(BOOL finished) {
                              if (animationCompletion) {
@@ -46,40 +47,63 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
 }
 
 #pragma mark - 
+#pragma mark - Public Methods
+
+- (void)moveSquareToNextPosition {
+    if (self.squareAnimationOn) {
+        
+        AOEweakify(self);
+        [self setSquarePosition:[self nextPosition]
+                       animated:YES
+              completionHandler:^{
+                  AOEstrongify(self);
+                  [strongself moveSquareToNextPosition];
+              }
+         ];
+    }
+}
+
+#pragma mark -
 #pragma mark - Private Mathods
 
-- (CGPoint)positionForSquareView:(AOSquarePosition)position {
+- (AOSquarePosition)nextPosition {
+    NSInteger nextPosition = self.squarePosition + 1;
+    nextPosition = nextPosition % AOSquarePositionCount;
+    return nextPosition;
+}
+
+- (CGRect)frameForSquareView:(AOSquarePosition)position {
     CGRect squareViewFrame = self.frame;
     CGRect viewBounds = self.superview.bounds;
-    CGFloat widthFrame = CGRectGetWidth(squareViewFrame);
-    CGFloat heightFrame = CGRectGetHeight(squareViewFrame);
-    CGFloat widthBounds = CGRectGetWidth(viewBounds);
-    CGFloat heightBounds = CGRectGetHeight(viewBounds);
     CGPoint point = CGPointZero;
-
+    CGFloat x = CGRectGetWidth(viewBounds) - CGRectGetWidth(squareViewFrame);
+    CGFloat y = CGRectGetHeight(viewBounds) - CGRectGetHeight(squareViewFrame);
+    
     switch (self.squarePosition) {
         case AOSquarePositionLeftTopCorner:
-            point = CGPointMake(widthFrame/2, heightFrame/2);
+            point.x = 0;
+            point.y = 0;
             break;
             
         case AOSquarePositionLeftBottomCorner:
-            point = CGPointMake(widthFrame/2, (heightBounds - heightFrame/2));
+            point.y = y;
             break;
             
         case AOSquarePositionRigthTopCorner:
-            point = CGPointMake((widthBounds - widthFrame/2), heightFrame/2);
+            point.x = x;
             break;
             
         case AOSquarePositionRigthBottomCorner:
-            point = CGPointMake((widthBounds - widthFrame/2), (heightBounds - heightFrame/2));
+            point = CGPointMake(x, y);
             break;
             
         default:
             break;
             
     }
+    squareViewFrame.origin = point;
     
-    return point;
+    return squareViewFrame;
 }
 
 @end
