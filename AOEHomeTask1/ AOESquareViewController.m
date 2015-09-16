@@ -34,10 +34,10 @@
 #pragma mark Public Methods Implementation
 
 - (IBAction)onMoveSquareButton:(id)sender {
-    BOOL newValue = !self.containerView.squareView.squareAnimationOn;
-    self.containerView.squareView.squareAnimationOn = newValue;
-    if (newValue) {
-        [self.containerView.squareView moveSquareToNextPosition];
+    BOOL newValue = !self.containerView.squareView.animatingSquare;
+    self.containerView.squareView.animatingSquare = newValue;
+    if (self.containerView.squareView.animatingSquare) {
+        [self.containerView.squareView animateSquareView];
     }
 }
 

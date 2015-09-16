@@ -11,11 +11,11 @@
 @implementation UIViewController (AOEInitialization)
 
 + (id)viewController {
-    return [[self alloc] initWithNibName:NSStringFromClass(self) bundle:nil];
+    return [[self alloc] initWithNibName:[self nibName] bundle:nil];
 }
 
-+ (id)viewControllerWithNibName:(NSString*)nibName {
-    return [[self alloc]initWithNibName:nibName bundle:nil];
++ (id)nibName {
+    return nil;
 }
 
 @end

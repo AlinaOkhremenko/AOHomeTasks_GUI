@@ -11,6 +11,11 @@
 
 static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
 
+@interface AOESquareView ()
+@property (nonatomic, assign)   BOOL   animationInProcess;
+
+@end;
+
 @implementation AOESquareView
 
 #pragma mark -
@@ -31,45 +36,51 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
         completionHandler:(void(^)())animationCompletion
 {
     if (_squarePosition != squarePosition) {
-        _squarePosition = squarePosition;
+        
         NSTimeInterval duration = animation ? kAOESquareAnimationDuration : 0;
         [UIView animateWithDuration:duration
                          animations:^{
                              self.frame = [self frameForSquareView:squarePosition];
                          }
-                         completion:^(BOOL finished) {
+         
+                         completion:^(BOOL finished){
+                    _squarePosition = squarePosition;
                              if (animationCompletion) {
                                  animationCompletion();
                              }
                          }
          ];
     }
+    
 }
 
 #pragma mark - 
 #pragma mark - Public Methods
 
-- (void)moveSquareToNextPosition {
-    if (self.squareAnimationOn) {
-        
-        AOEweakify(self);
-        [self setSquarePosition:[self nextPosition]
-                       animated:YES
-              completionHandler:^{
-                  AOEstrongify(self);
-                  [strongself moveSquareToNextPosition];
-              }
-         ];
+- (void)animateSquareView {
+    if (self.animatingSquare) {
+        if (!self.animationInProcess) {
+            
+            self.animationInProcess = YES;
+            AOEweakify(self);
+            [self setSquarePosition:[self nextPosition]
+                           animated:YES
+                  completionHandler:^{
+                      AOEstrongify(self);
+                      self.animationInProcess = NO;
+                      
+                      [self animateSquareView];
+                  }
+             ];
+        }
     }
 }
 
 #pragma mark -
-#pragma mark - Private Mathods
+#pragma mark - Private Methods
 
 - (AOSquarePosition)nextPosition {
-    NSInteger nextPosition = self.squarePosition + 1;
-    nextPosition = nextPosition % AOSquarePositionCount;
-    return nextPosition;
+    return ((self.squarePosition + 1) % AOSquarePositionCount);
 }
 
 - (CGRect)frameForSquareView:(AOSquarePosition)position {
@@ -81,8 +92,6 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
     
     switch (self.squarePosition) {
         case AOSquarePositionLeftTopCorner:
-            point.x = 0;
-            point.y = 0;
             break;
             
         case AOSquarePositionLeftBottomCorner:

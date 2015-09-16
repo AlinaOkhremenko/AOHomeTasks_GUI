@@ -13,7 +13,7 @@
 		C765A0F61B9F50FC0067E6C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A0F41B9F50FC0067E6C8 /* LaunchScreen.xib */; };
 		C765A1021B9F50FC0067E6C8 /* AOEHomeTask1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */; };
 		C765A1111B9F6EE80067E6C8 /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1101B9F6EE80067E6C8 /* AOESquareView.m */; };
-		C765A1161B9F72040067E6C8 /* AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1141B9F72040067E6C8 /* AOESquareViewController.m */; };
+		C765A1161B9F72040067E6C8 /*  AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1141B9F72040067E6C8 /*  AOESquareViewController.m */; };
 		C765A1171B9F72040067E6C8 /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */; };
 		C7DDA45C1BA73DF6003B2485 /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA45B1BA73DF6003B2485 /* UIViewController+AOEInitialization.m */; };
 		C7DDA45F1BA73EEA003B2485 /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA45E1BA73EEA003B2485 /* UIWindow+AOEInitialization.m */; };
@@ -45,7 +45,7 @@
 		C765A10F1B9F6EE80067E6C8 /* AOESquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareView.h; sourceTree = "<group>"; };
 		C765A1101B9F6EE80067E6C8 /* AOESquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareView.m; sourceTree = "<group>"; };
 		C765A1131B9F72040067E6C8 /* AOESquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareViewController.h; sourceTree = "<group>"; };
-		C765A1141B9F72040067E6C8 /* AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareViewController.m; sourceTree = "<group>"; };
+		C765A1141B9F72040067E6C8 /*  AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = " AOESquareViewController.m"; sourceTree = "<group>"; };
 		C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOESquareViewController.xib; sourceTree = "<group>"; };
 		C7DDA45A1BA73DF6003B2485 /* UIViewController+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEInitialization.h"; sourceTree = "<group>"; };
 		C7DDA45B1BA73DF6003B2485 /* UIViewController+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEInitialization.m"; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				C7DDA4651BA74794003B2485 /* AOEContainerView.h */,
 				C7DDA4631BA7477E003B2485 /* AOEContainerView.m */,
 				C765A1131B9F72040067E6C8 /* AOESquareViewController.h */,
-				C765A1141B9F72040067E6C8 /* AOESquareViewController.m */,
+				C765A1141B9F72040067E6C8 /*  AOESquareViewController.m */,
 				C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */,
 				C70AE2F71BA4B48700808FDA /* AOEMacro.h */,
 			);
@@ -286,7 +286,7 @@
 				C7DDA45C1BA73DF6003B2485 /* UIViewController+AOEInitialization.m in Sources */,
 				C765A0E81B9F50FC0067E6C8 /* main.m in Sources */,
 				C7DDA45F1BA73EEA003B2485 /* UIWindow+AOEInitialization.m in Sources */,
-				C765A1161B9F72040067E6C8 /* AOESquareViewController.m in Sources */,
+				C765A1161B9F72040067E6C8 /*  AOESquareViewController.m in Sources */,
 				C765A1111B9F6EE80067E6C8 /* AOESquareView.m in Sources */,
 				C7DDA4641BA7477E003B2485 /* AOEContainerView.m in Sources */,
 			);
