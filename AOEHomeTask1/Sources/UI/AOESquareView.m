@@ -12,14 +12,14 @@
 static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
 
 @interface AOESquareView ()
-@property (nonatomic, assign)   BOOL   animationInProcess;
+@property (nonatomic, assign)   BOOL   animationInProgress;
 
 @end;
 
 @implementation AOESquareView
 
 #pragma mark -
-#pragma mark - Accessor Methods
+#pragma mark Accessor Methods
 
 - (void)setSquarePosition:(AOSquarePosition)squarePosition {
     [self setSquarePosition:squarePosition animated:NO];
@@ -36,48 +36,50 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
         completionHandler:(void(^)())animationCompletion
 {
     if (_squarePosition != squarePosition) {
-        
         NSTimeInterval duration = animation ? kAOESquareAnimationDuration : 0;
         [UIView animateWithDuration:duration
                          animations:^{
                              self.frame = [self frameForSquareView:squarePosition];
                          }
-         
                          completion:^(BOOL finished){
-                    _squarePosition = squarePosition;
+                             _squarePosition = squarePosition;
                              if (animationCompletion) {
                                  animationCompletion();
                              }
-                         }
-         ];
+                         }];
     }
-    
+}
+
+- (void)setAnimatingSquare:(BOOL)animatingSquare {
+    if (animatingSquare != _animatingSquare) {
+        _animatingSquare = animatingSquare;
+        [self animateSquareView];
+    }
 }
 
 #pragma mark - 
-#pragma mark - Public Methods
+#pragma mark Public Methods
 
 - (void)animateSquareView {
     if (self.animatingSquare) {
-        if (!self.animationInProcess) {
+        if (!self.animationInProgress) {
             
-            self.animationInProcess = YES;
+            self.animationInProgress = YES;
             AOEweakify(self);
             [self setSquarePosition:[self nextPosition]
                            animated:YES
                   completionHandler:^{
                       AOEstrongify(self);
-                      self.animationInProcess = NO;
+                      self.animationInProgress = NO;
                       
                       [self animateSquareView];
-                  }
-             ];
+            }];
         }
     }
 }
 
 #pragma mark -
-#pragma mark - Private Methods
+#pragma mark Private Methods
 
 - (AOSquarePosition)nextPosition {
     return ((self.squarePosition + 1) % AOSquarePositionCount);
@@ -110,6 +112,7 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
             break;
             
     }
+    
     squareViewFrame.origin = point;
     
     return squareViewFrame;

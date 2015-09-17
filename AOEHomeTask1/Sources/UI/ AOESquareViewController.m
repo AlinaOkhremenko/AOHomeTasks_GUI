@@ -10,36 +10,20 @@
 #import "AOESquareView.h"
 #import "AOEMacro.h"
 
-@interface AOESquareViewController ()
-@property (nonatomic, readonly)     AOEContainerView    *containerView;
-
-@end
+AOEViewControllerClass(AOESquareViewController, containerView, AOEContainerView);
 
 @implementation AOESquareViewController
 
-@dynamic containerView;
-
-#pragma mark-
-#pragma mark - Accessors
-
-- (AOEContainerView *)containerView {
-    if ([self isViewLoaded] && [self.view isKindOfClass:[AOEContainerView class]]) {
-        return (AOEContainerView *)self.view;
-    }
-    
-    return nil;
-}
-
-#pragma mark - 
-#pragma mark Public Methods Implementation
+#pragma mark -
+#pragma mark Public Methods 
 
 - (IBAction)onMoveSquareButton:(id)sender {
     BOOL newValue = !self.containerView.squareView.animatingSquare;
     self.containerView.squareView.animatingSquare = newValue;
-    if (self.containerView.squareView.animatingSquare) {
-        [self.containerView.squareView animateSquareView];
-    }
 }
+
+#pragma mark -
+#pragma mark Life Cycle methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,6 +33,5 @@
     [super didReceiveMemoryWarning];
     
 }
-
 
 @end

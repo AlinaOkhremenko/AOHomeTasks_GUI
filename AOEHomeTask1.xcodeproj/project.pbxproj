@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		C765A0E81B9F50FC0067E6C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A0E71B9F50FC0067E6C8 /* main.m */; };
 		C765A0EB1B9F50FC0067E6C8 /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A0EA1B9F50FC0067E6C8 /* AOEAppDelegate.m */; };
-		C765A0F31B9F50FC0067E6C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C765A0F21B9F50FC0067E6C8 /* Images.xcassets */; };
-		C765A0F61B9F50FC0067E6C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A0F41B9F50FC0067E6C8 /* LaunchScreen.xib */; };
 		C765A1021B9F50FC0067E6C8 /* AOEHomeTask1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */; };
-		C765A1111B9F6EE80067E6C8 /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1101B9F6EE80067E6C8 /* AOESquareView.m */; };
-		C765A1161B9F72040067E6C8 /*  AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1141B9F72040067E6C8 /*  AOESquareViewController.m */; };
-		C765A1171B9F72040067E6C8 /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */; };
-		C7DDA45C1BA73DF6003B2485 /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA45B1BA73DF6003B2485 /* UIViewController+AOEInitialization.m */; };
-		C7DDA45F1BA73EEA003B2485 /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA45E1BA73EEA003B2485 /* UIWindow+AOEInitialization.m */; };
-		C7DDA4641BA7477E003B2485 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA4631BA7477E003B2485 /* AOEContainerView.m */; };
+		C7DDA4761BAB31C1003B2485 /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA46B1BAB31C1003B2485 /* UIViewController+AOEInitialization.m */; };
+		C7DDA4771BAB31C1003B2485 /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA46D1BAB31C1003B2485 /* UIWindow+AOEInitialization.m */; };
+		C7DDA4781BAB31C1003B2485 /*  AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA46F1BAB31C1003B2485 /*  AOESquareViewController.m */; };
+		C7DDA4791BAB31C1003B2485 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA4711BAB31C1003B2485 /* AOEContainerView.m */; };
+		C7DDA47A1BAB31C1003B2485 /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA4731BAB31C1003B2485 /* AOESquareView.m */; };
+		C7DDA47B1BAB31C1003B2485 /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DDA4751BAB31C1003B2485 /* AOESquareViewController.xib */; };
+		C7DDA4841BAB33A4003B2485 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DDA4821BAB33A4003B2485 /* Images.xcassets */; };
+		C7DDA4851BAB33A4003B2485 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DDA4831BAB33A4003B2485 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,28 +31,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C70AE2F71BA4B48700808FDA /* AOEMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
 		C765A0E21B9F50FC0067E6C8 /* AOEHomeTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOEHomeTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C765A0E61B9F50FC0067E6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C765A0E71B9F50FC0067E6C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C765A0E91B9F50FC0067E6C8 /* AOEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOEAppDelegate.h; sourceTree = "<group>"; };
 		C765A0EA1B9F50FC0067E6C8 /* AOEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEAppDelegate.m; sourceTree = "<group>"; };
-		C765A0F21B9F50FC0067E6C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C765A0F51B9F50FC0067E6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C765A0FB1B9F50FC0067E6C8 /* AOEHomeTask1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOEHomeTask1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C765A1001B9F50FC0067E6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEHomeTask1Tests.m; sourceTree = "<group>"; };
-		C765A10F1B9F6EE80067E6C8 /* AOESquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareView.h; sourceTree = "<group>"; };
-		C765A1101B9F6EE80067E6C8 /* AOESquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareView.m; sourceTree = "<group>"; };
-		C765A1131B9F72040067E6C8 /* AOESquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareViewController.h; sourceTree = "<group>"; };
-		C765A1141B9F72040067E6C8 /*  AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = " AOESquareViewController.m"; sourceTree = "<group>"; };
-		C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOESquareViewController.xib; sourceTree = "<group>"; };
-		C7DDA45A1BA73DF6003B2485 /* UIViewController+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEInitialization.h"; sourceTree = "<group>"; };
-		C7DDA45B1BA73DF6003B2485 /* UIViewController+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEInitialization.m"; sourceTree = "<group>"; };
-		C7DDA45D1BA73EEA003B2485 /* UIWindow+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEInitialization.h"; sourceTree = "<group>"; };
-		C7DDA45E1BA73EEA003B2485 /* UIWindow+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEInitialization.m"; sourceTree = "<group>"; };
-		C7DDA4631BA7477E003B2485 /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
-		C7DDA4651BA74794003B2485 /* AOEContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
+		C7DDA46A1BAB31C1003B2485 /* UIViewController+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEInitialization.h"; sourceTree = "<group>"; };
+		C7DDA46B1BAB31C1003B2485 /* UIViewController+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEInitialization.m"; sourceTree = "<group>"; };
+		C7DDA46C1BAB31C1003B2485 /* UIWindow+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEInitialization.h"; sourceTree = "<group>"; };
+		C7DDA46D1BAB31C1003B2485 /* UIWindow+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEInitialization.m"; sourceTree = "<group>"; };
+		C7DDA46F1BAB31C1003B2485 /*  AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = " AOESquareViewController.m"; sourceTree = "<group>"; };
+		C7DDA4701BAB31C1003B2485 /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
+		C7DDA4711BAB31C1003B2485 /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
+		C7DDA4721BAB31C1003B2485 /* AOESquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareView.h; sourceTree = "<group>"; };
+		C7DDA4731BAB31C1003B2485 /* AOESquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareView.m; sourceTree = "<group>"; };
+		C7DDA4741BAB31C1003B2485 /* AOESquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareViewController.h; sourceTree = "<group>"; };
+		C7DDA4751BAB31C1003B2485 /* AOESquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOESquareViewController.xib; sourceTree = "<group>"; };
+		C7DDA4821BAB33A4003B2485 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C7DDA4831BAB33A4003B2485 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		C7DDA4881BAB3510003B2485 /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +76,7 @@
 		C765A0D91B9F50FC0067E6C8 = {
 			isa = PBXGroup;
 			children = (
+				C7DDA4671BAB31C1003B2485 /* Sources */,
 				C765A0E41B9F50FC0067E6C8 /* AOEHomeTask1 */,
 				C765A0FE1B9F50FC0067E6C8 /* AOEHomeTask1Tests */,
 				C765A0E31B9F50FC0067E6C8 /* Products */,
@@ -94,8 +95,7 @@
 		C765A0E41B9F50FC0067E6C8 /* AOEHomeTask1 */ = {
 			isa = PBXGroup;
 			children = (
-				C765A10B1B9F54D60067E6C8 /* Sources */,
-				C765A1121B9F71170067E6C8 /* Resources */,
+				C7DDA4811BAB33A4003B2485 /* Resources */,
 				C765A0E51B9F50FC0067E6C8 /* AOEHomeTask1 */,
 			);
 			path = AOEHomeTask1;
@@ -129,56 +129,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C765A10B1B9F54D60067E6C8 /* Sources */ = {
+		C7DDA4671BAB31C1003B2485 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C7DDA4561BA7335D003B2485 /* Categories */,
-				C7DDA4541BA732F0003B2485 /* UI */,
+				C7DDA4681BAB31C1003B2485 /* Library */,
+				C7DDA46E1BAB31C1003B2485 /* UI */,
 			);
 			name = Sources;
+			path = AOEHomeTask1/Sources;
 			sourceTree = "<group>";
 		};
-		C765A10E1B9F6E950067E6C8 /* AOEViewController */ = {
+		C7DDA4681BAB31C1003B2485 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				C765A10F1B9F6EE80067E6C8 /* AOESquareView.h */,
-				C765A1101B9F6EE80067E6C8 /* AOESquareView.m */,
-				C7DDA4651BA74794003B2485 /* AOEContainerView.h */,
-				C7DDA4631BA7477E003B2485 /* AOEContainerView.m */,
-				C765A1131B9F72040067E6C8 /* AOESquareViewController.h */,
-				C765A1141B9F72040067E6C8 /*  AOESquareViewController.m */,
-				C765A1151B9F72040067E6C8 /* AOESquareViewController.xib */,
-				C70AE2F71BA4B48700808FDA /* AOEMacro.h */,
+				C7DDA4871BAB3510003B2485 /* Macros */,
+				C7DDA4691BAB31C1003B2485 /* Categories */,
 			);
-			name = AOEViewController;
+			path = Library;
 			sourceTree = "<group>";
 		};
-		C765A1121B9F71170067E6C8 /* Resources */ = {
+		C7DDA4691BAB31C1003B2485 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				C765A0F21B9F50FC0067E6C8 /* Images.xcassets */,
-				C765A0F41B9F50FC0067E6C8 /* LaunchScreen.xib */,
+				C7DDA46A1BAB31C1003B2485 /* UIViewController+AOEInitialization.h */,
+				C7DDA46B1BAB31C1003B2485 /* UIViewController+AOEInitialization.m */,
+				C7DDA46C1BAB31C1003B2485 /* UIWindow+AOEInitialization.h */,
+				C7DDA46D1BAB31C1003B2485 /* UIWindow+AOEInitialization.m */,
 			);
-			name = Resources;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		C7DDA4541BA732F0003B2485 /* UI */ = {
+		C7DDA46E1BAB31C1003B2485 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C765A10E1B9F6E950067E6C8 /* AOEViewController */,
+				C7DDA46F1BAB31C1003B2485 /*  AOESquareViewController.m */,
+				C7DDA4741BAB31C1003B2485 /* AOESquareViewController.h */,
+				C7DDA4701BAB31C1003B2485 /* AOEContainerView.h */,
+				C7DDA4711BAB31C1003B2485 /* AOEContainerView.m */,
+				C7DDA4721BAB31C1003B2485 /* AOESquareView.h */,
+				C7DDA4731BAB31C1003B2485 /* AOESquareView.m */,
+				C7DDA4751BAB31C1003B2485 /* AOESquareViewController.xib */,
 			);
-			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		C7DDA4561BA7335D003B2485 /* Categories */ = {
+		C7DDA4811BAB33A4003B2485 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C7DDA45A1BA73DF6003B2485 /* UIViewController+AOEInitialization.h */,
-				C7DDA45B1BA73DF6003B2485 /* UIViewController+AOEInitialization.m */,
-				C7DDA45D1BA73EEA003B2485 /* UIWindow+AOEInitialization.h */,
-				C7DDA45E1BA73EEA003B2485 /* UIWindow+AOEInitialization.m */,
+				C7DDA4821BAB33A4003B2485 /* Images.xcassets */,
+				C7DDA4831BAB33A4003B2485 /* LaunchScreen.xib */,
 			);
-			name = Categories;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7DDA4871BAB3510003B2485 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				C7DDA4881BAB3510003B2485 /* AOEMacro.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C765A0F61B9F50FC0067E6C8 /* LaunchScreen.xib in Resources */,
-				C765A1171B9F72040067E6C8 /* AOESquareViewController.xib in Resources */,
-				C765A0F31B9F50FC0067E6C8 /* Images.xcassets in Resources */,
+				C7DDA47B1BAB31C1003B2485 /* AOESquareViewController.xib in Resources */,
+				C7DDA4851BAB33A4003B2485 /* LaunchScreen.xib in Resources */,
+				C7DDA4841BAB33A4003B2485 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,13 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DDA4791BAB31C1003B2485 /* AOEContainerView.m in Sources */,
 				C765A0EB1B9F50FC0067E6C8 /* AOEAppDelegate.m in Sources */,
-				C7DDA45C1BA73DF6003B2485 /* UIViewController+AOEInitialization.m in Sources */,
+				C7DDA4771BAB31C1003B2485 /* UIWindow+AOEInitialization.m in Sources */,
+				C7DDA4761BAB31C1003B2485 /* UIViewController+AOEInitialization.m in Sources */,
+				C7DDA4781BAB31C1003B2485 /*  AOESquareViewController.m in Sources */,
+				C7DDA47A1BAB31C1003B2485 /* AOESquareView.m in Sources */,
 				C765A0E81B9F50FC0067E6C8 /* main.m in Sources */,
-				C7DDA45F1BA73EEA003B2485 /* UIWindow+AOEInitialization.m in Sources */,
-				C765A1161B9F72040067E6C8 /*  AOESquareViewController.m in Sources */,
-				C765A1111B9F6EE80067E6C8 /* AOESquareView.m in Sources */,
-				C7DDA4641BA7477E003B2485 /* AOEContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,17 +318,6 @@
 			targetProxy = C765A0FC1B9F50FC0067E6C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C765A0F41B9F50FC0067E6C8 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C765A0F51B9F50FC0067E6C8 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C765A1031B9F50FC0067E6C8 /* Debug */ = {

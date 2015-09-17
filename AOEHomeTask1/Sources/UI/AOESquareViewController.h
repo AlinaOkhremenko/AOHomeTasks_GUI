@@ -11,7 +11,6 @@
 #import "AOEContainerView.h"
 
 @interface AOESquareViewController : UIViewController
-@property (nonatomic, weak)     AOESquareView   *squareView;
 
 - (IBAction)onMoveSquareButton:(id)sender;
 
