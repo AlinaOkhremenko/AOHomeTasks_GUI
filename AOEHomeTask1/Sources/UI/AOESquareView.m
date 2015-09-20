@@ -14,6 +14,8 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
 @interface AOESquareView ()
 @property (nonatomic, assign)   BOOL   animationInProgress;
 
+- (void)animateSquareView;
+
 @end;
 
 @implementation AOESquareView
@@ -57,8 +59,12 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
     }
 }
 
-#pragma mark - 
-#pragma mark Public Methods
+- (BOOL)animatingSquare {
+    return _animatingSquare;
+}
+
+#pragma mark -
+#pragma mark Private Methods
 
 - (void)animateSquareView {
     if (self.animatingSquare) {
@@ -69,7 +75,7 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
             [self setSquarePosition:[self nextPosition]
                            animated:YES
                   completionHandler:^{
-                      AOEstrongify(self);
+                      AOEstrongifyAndReturnIfNil(self);
                       self.animationInProgress = NO;
                       
                       [self animateSquareView];
@@ -78,11 +84,8 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
     }
 }
 
-#pragma mark -
-#pragma mark Private Methods
-
 - (AOSquarePosition)nextPosition {
-    return ((self.squarePosition + 1) % AOSquarePositionCount);
+    return (self.squarePosition + 1) % AOSquarePositionCount;
 }
 
 - (CGRect)frameForSquareView:(AOSquarePosition)position {

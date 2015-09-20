@@ -12,38 +12,36 @@
 #define AOEweakify(VAR) \
     __weak __typeof(VAR) __AOEWeak##VAR = VAR
 
-#define AOEstrongify(VAR) \
-    __strong __typeof(VAR) VAR = __AOEWeak##VAR
+#define AOEstrongifyAndReturnIfNil(VAR) \
+    __strong __typeof(VAR) VAR = __AOEWeak##VAR; \
+    if (VAR == nil) return ;
 
+#define AOEViewProperty(propertyName, class) \
+@property (nonatomic, readonly)     class    *propertyName; \
 
+#define AOEViewGetterSynthesize(selector, viewClass) \
+    - (viewClass *)selector { \
+        if ([self isViewLoaded] && [self.view isKindOfClass:[viewClass class]]) { \
+            return (viewClass*)self.view; \
+        } \
+        \
+        return nil; \
+    } \
 
 #define AOEViewControllerClass(viewControllerClass, propertyName, viewClass) \
-    @interface viewControllerClass(__AOEPrivateView) \
+    @interface viewControllerClass (_viewClass##_propertyName) \
     \
     AOEViewProperty(propertyName, viewClass) \
     \
     @end \
     \
-    @implementation viewControllerClass (__AOEPrivateView) \
+    @implementation viewControllerClass (_viewClass##_propertyName) \
     \
     @dynamic propertyName; \
     \
     AOEViewGetterSynthesize(propertyName, viewClass) \
     \
     @end
-
-
-#define AOEViewProperty(propertyName, class) \
-    @property (nonatomic, readonly)     class    *propertyName; \
-
-
-#define AOEViewGetterSynthesize(selector, viewClass) \
- - (viewClass *)selector { \
-    if ([self isViewLoaded] && [self.view isKindOfClass:[viewClass class]]) { \
-        return (viewClass*)self.view; \
-    } \
-    return nil; \
-    } \
 
 
 #endif

@@ -18,8 +18,8 @@ AOEViewControllerClass(AOESquareViewController, containerView, AOEContainerView)
 #pragma mark Public Methods 
 
 - (IBAction)onMoveSquareButton:(id)sender {
-    BOOL newValue = !self.containerView.squareView.animatingSquare;
-    self.containerView.squareView.animatingSquare = newValue;
+    AOESquareView *view = self.containerView.squareView;
+    view.animatingSquare = !view.animatingSquare;
 }
 
 #pragma mark -
