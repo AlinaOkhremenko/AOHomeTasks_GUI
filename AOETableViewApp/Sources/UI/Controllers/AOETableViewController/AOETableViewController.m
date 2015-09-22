@@ -8,6 +8,8 @@
 
 #import "AOETableViewController.h"
 #import "AOETableViewCell.h"
+#import "AOEContainerView.h"
+
 #import "UITableViewCell+AOEDequeueReusableCell.h"
 
 AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
@@ -37,7 +39,6 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewCell *cell = [AOETableViewCell dequeueReusableCell:tableView];
     
     if (!cell) {

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AOEMacro.h"
-#import "AOEContainerView.h"
-#import "AOETableViewCell.h"
+
+@class AOEContainerView;
+@class AOETableViewCell;
 
 @interface AOETableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
