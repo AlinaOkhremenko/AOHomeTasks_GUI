@@ -29,6 +29,7 @@
 		C7D6BD1F1BB1EB4500E98EB4 /* UINib+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */; };
 		C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */; };
 		C7D6BD261BB1F4BF00E98EB4 /* AOEDataArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD251BB1F4BF00E98EB4 /* AOEDataArrayModel.m */; };
+		C7D6BD2A1BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD291BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AOEExtensions.m"; sourceTree = "<group>"; };
 		C7D6BD241BB1F4BF00E98EB4 /* AOEDataArrayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDataArrayModel.h; sourceTree = "<group>"; };
 		C7D6BD251BB1F4BF00E98EB4 /* AOEDataArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataArrayModel.m; sourceTree = "<group>"; };
+		C7D6BD281BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AOEExtensions.h"; sourceTree = "<group>"; };
+		C7D6BD291BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AOEExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,7 @@
 		C7D6BCED1BB1C76500E98EB4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C7D6BD271BB1FAFC00E98EB4 /* NSMutableArray */,
 				C7D6BD201BB1F24400E98EB4 /* UITableView */,
 				C7D6BD1C1BB1EB1800E98EB4 /* UINib */,
 				C7D6BCEE1BB1C76500E98EB4 /* NSString */,
@@ -300,6 +304,15 @@
 				C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		C7D6BD271BB1FAFC00E98EB4 /* NSMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BD281BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.h */,
+				C7D6BD291BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.m */,
+			);
+			path = NSMutableArray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +441,7 @@
 				C7D6BD111BB1C76500E98EB4 /* UIWindow+AOEExtensions.m in Sources */,
 				C7D6BD261BB1F4BF00E98EB4 /* AOEDataArrayModel.m in Sources */,
 				C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */,
+				C7D6BD2A1BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
