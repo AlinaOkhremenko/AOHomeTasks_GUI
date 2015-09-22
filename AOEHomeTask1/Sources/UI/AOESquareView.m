@@ -70,7 +70,7 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
             [self setSquarePosition:[self nextPosition]
                            animated:YES
                   completionHandler:^{
-                      AOEstrongifyAndReturnIfNil(self);
+                      AOEstrongify(self);
                       self.animationInProgress = NO;
                       [self animateSquareView];
             }];
