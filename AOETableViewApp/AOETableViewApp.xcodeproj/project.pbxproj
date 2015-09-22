@@ -14,7 +14,6 @@
 		C7D6BD0C1BB1C76500E98EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */; };
 		C7D6BD0D1BB1C76500E98EB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */; };
 		C7D6BD0E1BB1C76500E98EB4 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF01BB1C76500E98EB4 /* NSString+RandomString.m */; };
-		C7D6BD0F1BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF21BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m */; };
 		C7D6BD101BB1C76500E98EB4 /* UIViewController+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF51BB1C76500E98EB4 /* UIViewController+AOEExtensions.m */; };
 		C7D6BD111BB1C76500E98EB4 /* UIWindow+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF81BB1C76500E98EB4 /* UIWindow+AOEExtensions.m */; };
 		C7D6BD121BB1C76500E98EB4 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD021BB1C76500E98EB4 /* AOEContainerView.m */; };
@@ -28,6 +27,7 @@
 		C7D6BD1A1BB1CF7600E98EB4 /* AOETableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD041BB1C76500E98EB4 /* AOETableView.m */; };
 		C7D6BD1B1BB1CF7B00E98EB4 /* AOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD061BB1C76500E98EB4 /* AOETableViewCell.m */; };
 		C7D6BD1F1BB1EB4500E98EB4 /* UINib+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */; };
+		C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,6 @@
 		C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C7D6BCEF1BB1C76500E98EB4 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		C7D6BCF01BB1C76500E98EB4 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
-		C7D6BCF11BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AOEDequeueReusableCell.h"; sourceTree = "<group>"; };
-		C7D6BCF21BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AOEDequeueReusableCell.m"; sourceTree = "<group>"; };
 		C7D6BCF41BB1C76500E98EB4 /* UIViewController+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEExtensions.h"; sourceTree = "<group>"; };
 		C7D6BCF51BB1C76500E98EB4 /* UIViewController+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEExtensions.m"; sourceTree = "<group>"; };
 		C7D6BCF71BB1C76500E98EB4 /* UIWindow+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEExtensions.h"; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		C7D6BD0A1BB1C76500E98EB4 /* AOETableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewController.xib; sourceTree = "<group>"; };
 		C7D6BD1D1BB1EB4500E98EB4 /* UINib+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINib+AOEExtensions.h"; sourceTree = "<group>"; };
 		C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINib+AOEExtensions.m"; sourceTree = "<group>"; };
+		C7D6BD211BB1F26500E98EB4 /* UITableView+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AOEExtensions.h"; sourceTree = "<group>"; };
+		C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AOEExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,10 +172,9 @@
 		C7D6BCED1BB1C76500E98EB4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C7D6BD201BB1F24400E98EB4 /* UITableView */,
 				C7D6BD1C1BB1EB1800E98EB4 /* UINib */,
 				C7D6BCEE1BB1C76500E98EB4 /* NSString */,
-				C7D6BCF11BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.h */,
-				C7D6BCF21BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m */,
 				C7D6BCF31BB1C76500E98EB4 /* UIVIewController */,
 				C7D6BCF61BB1C76500E98EB4 /* UIWindow */,
 			);
@@ -287,6 +286,15 @@
 				C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */,
 			);
 			path = UINib;
+			sourceTree = "<group>";
+		};
+		C7D6BD201BB1F24400E98EB4 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BD211BB1F26500E98EB4 /* UITableView+AOEExtensions.h */,
+				C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,12 +416,12 @@
 				C7D6BD1F1BB1EB4500E98EB4 /* UINib+AOEExtensions.m in Sources */,
 				C7D6BD161BB1C76500E98EB4 /* AOETableViewController.m in Sources */,
 				C7D6BD101BB1C76500E98EB4 /* UIViewController+AOEExtensions.m in Sources */,
-				C7D6BD0F1BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m in Sources */,
 				C7AD3AB01BAEFBBE00983FC0 /* AOETableViewAppTests.m in Sources */,
 				C7D6BD0E1BB1C76500E98EB4 /* NSString+RandomString.m in Sources */,
 				C7D6BD141BB1C76500E98EB4 /* AOETableViewCell.m in Sources */,
 				C7D6BD131BB1C76500E98EB4 /* AOETableView.m in Sources */,
 				C7D6BD111BB1C76500E98EB4 /* UIWindow+AOEExtensions.m in Sources */,
+				C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
