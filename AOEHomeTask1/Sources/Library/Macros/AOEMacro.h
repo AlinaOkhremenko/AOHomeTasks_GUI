@@ -12,9 +12,21 @@
 #define AOEweakify(VAR) \
     __weak __typeof(VAR) __AOEWeak##VAR = VAR
 
+#define AOEstrongify(VAR) \
+__strong __typeof(VAR) VAR = __AOEWeak##VAR;
+
 #define AOEstrongifyAndReturnIfNil(VAR) \
     __strong __typeof(VAR) VAR = __AOEWeak##VAR; \
-    if (VAR == nil) return ;
+    if (VAR == nil) { \
+        return \
+    };
+
+#define AOEstrongifyAndReturnNilIfNil(VAR) \
+__strong __typeof(VAR) VAR = __AOEWeak##VAR; \
+    if (VAR == nil) { \
+        return nil; \
+    };
+
 
 #define AOEViewProperty(propertyName, class) \
 @property (nonatomic, readonly)     class    *propertyName; \
@@ -29,13 +41,13 @@
     } \
 
 #define AOEViewControllerClass(viewControllerClass, propertyName, viewClass) \
-    @interface viewControllerClass (_viewClass##_propertyName) \
+    @interface viewControllerClass (##viewClass##propertyName) \
     \
     AOEViewProperty(propertyName, viewClass) \
     \
     @end \
     \
-    @implementation viewControllerClass (_viewClass##_propertyName) \
+    @implementation viewControllerClass (##viewClass##propertyName) \
     \
     @dynamic propertyName; \
     \
