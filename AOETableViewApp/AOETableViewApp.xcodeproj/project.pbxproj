@@ -28,6 +28,7 @@
 		C7D6BD1B1BB1CF7B00E98EB4 /* AOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD061BB1C76500E98EB4 /* AOETableViewCell.m */; };
 		C7D6BD1F1BB1EB4500E98EB4 /* UINib+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */; };
 		C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */; };
+		C7D6BD261BB1F4BF00E98EB4 /* AOEDataArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD251BB1F4BF00E98EB4 /* AOEDataArrayModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINib+AOEExtensions.m"; sourceTree = "<group>"; };
 		C7D6BD211BB1F26500E98EB4 /* UITableView+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AOEExtensions.h"; sourceTree = "<group>"; };
 		C7D6BD221BB1F26500E98EB4 /* UITableView+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AOEExtensions.m"; sourceTree = "<group>"; };
+		C7D6BD241BB1F4BF00E98EB4 /* AOEDataArrayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDataArrayModel.h; sourceTree = "<group>"; };
+		C7D6BD251BB1F4BF00E98EB4 /* AOEDataArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataArrayModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 		C7D6BCFD1BB1C76500E98EB4 /* AOEDataArrayModel */ = {
 			isa = PBXGroup;
 			children = (
+				C7D6BD241BB1F4BF00E98EB4 /* AOEDataArrayModel.h */,
+				C7D6BD251BB1F4BF00E98EB4 /* AOEDataArrayModel.m */,
 			);
 			path = AOEDataArrayModel;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				C7D6BD141BB1C76500E98EB4 /* AOETableViewCell.m in Sources */,
 				C7D6BD131BB1C76500E98EB4 /* AOETableView.m in Sources */,
 				C7D6BD111BB1C76500E98EB4 /* UIWindow+AOEExtensions.m in Sources */,
+				C7D6BD261BB1F4BF00E98EB4 /* AOEDataArrayModel.m in Sources */,
 				C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
