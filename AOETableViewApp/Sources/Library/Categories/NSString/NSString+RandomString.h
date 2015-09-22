@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AOAlphabet.h"
+//#import "AOAlphabet.h"
 
 @interface NSString (RandomString)
 
-- (NSString *)randomStringWith:(NSUInteger)length
-                   andAlphabet:(AOAlphabet *)alphabet;
-
+//- (NSString *)randomStringWith:(NSUInteger)length
+//                   andAlphabet:(AOAlphabet *)alphabet;
+//
 @end

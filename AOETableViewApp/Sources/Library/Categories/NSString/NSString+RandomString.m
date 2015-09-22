@@ -9,17 +9,17 @@
 #import "NSString+RandomString.h"
 
 @implementation NSString (RandomString)
-
-- (NSString *)randomStringWith:(NSUInteger)length
-                   andAlphabet:(AOAlphabet *)alphabet
-{
-    NSMutableString *string = [NSMutableString stringWithCapacity:length];
-    
-    for (uint i = 0; i < length; i++) {
-        [string appendFormat:@"%@",[alphabet getRandomLetter]];
-    }
-    
-    return [string copy];
-}
-
+//
+//- (NSString *)randomStringWith:(NSUInteger)length
+//                   andAlphabet:(AOAlphabet *)alphabet
+//{
+//    NSMutableString *string = [NSMutableString stringWithCapacity:length];
+//    
+//    for (uint i = 0; i < length; i++) {
+//        [string appendFormat:@"%@",[alphabet getRandomLetter]];
+//    }
+//    
+//    return [string copy];
+//}
+//
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AOETableViewCell.h"
+
 #define kCellHeight 100;
 
 @implementation AOETableViewCell

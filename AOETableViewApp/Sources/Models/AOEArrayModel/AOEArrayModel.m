@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 
-#import "AOEDataArrayModel.h"
+#import "AOEArrayModel.h"
 
-@interface AOEDataArrayModel ()
+@interface AOEArrayModel ()
 @property (nonatomic, strong)   NSMutableArray  *objects;
 
 @end
 
-@implementation AOEDataArrayModel
+@implementation AOEArrayModel
 
 @dynamic count;
 @dynamic array;

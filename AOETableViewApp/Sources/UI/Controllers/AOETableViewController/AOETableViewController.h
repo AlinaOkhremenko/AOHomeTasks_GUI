@@ -11,7 +11,9 @@
 
 @class AOEContainerView;
 @class AOETableViewCell;
+@class AOEArrayModel;
 
 @interface AOETableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong)   AOEArrayModel   *arrayModel;
 
 @end

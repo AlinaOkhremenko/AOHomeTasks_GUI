@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AOEDataArrayModel : NSObject
+@interface AOEArrayModel : NSObject
 @property (nonatomic, readonly) NSUInteger  count;
 @property (nonatomic, readonly) NSArray     *array;
 
