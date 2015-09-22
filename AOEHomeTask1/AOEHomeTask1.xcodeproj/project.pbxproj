@@ -7,31 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C765A0E81B9F50FC0067E6C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A0E71B9F50FC0067E6C8 /* main.m */; };
-		C765A0EB1B9F50FC0067E6C8 /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A0EA1B9F50FC0067E6C8 /* AOEAppDelegate.m */; };
-		C765A1021B9F50FC0067E6C8 /* AOEHomeTask1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */; };
-		C7D5084A1BAB46CA00CC0A9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D508491BAB46CA00CC0A9F /* main.m */; };
-		C7D5084D1BAB46CA00CC0A9F /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D5084C1BAB46CA00CC0A9F /* AOEAppDelegate.m */; };
-		C7D508551BAB46CA00CC0A9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D508541BAB46CA00CC0A9F /* Images.xcassets */; };
-		C7D508581BAB46CA00CC0A9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D508561BAB46CA00CC0A9F /* LaunchScreen.xib */; };
-		C7D508641BAB46CA00CC0A9F /* AOEHomeTask2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D508631BAB46CA00CC0A9F /* AOEHomeTask2Tests.m */; };
-		C7D508781BAB4D7900CC0A9F /* AOETableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D508771BAB4D7900CC0A9F /* AOETableView.m */; };
-		C7D5087C1BAB4F9200CC0A9F /* AOEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D5087A1BAB4F9200CC0A9F /* AOEViewController.m */; };
-		C7D5087D1BAB4F9200CC0A9F /* AOEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D5087B1BAB4F9200CC0A9F /* AOEViewController.xib */; };
-		C7D508801BAB503300CC0A9F /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D5087F1BAB503300CC0A9F /* AOEContainerView.m */; };
-		C7D508861BAB531100CC0A9F /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D508831BAB531100CC0A9F /* UIViewController+AOEInitialization.m */; };
-		C7D508871BAB531100CC0A9F /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D508851BAB531100CC0A9F /* UIWindow+AOEInitialization.m */; };
-		C7D5088F1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D5088E1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.m */; };
-		C7D508981BAD63FC00CC0A9F /* AOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D508961BAD63FC00CC0A9F /* AOETableViewCell.m */; };
-		C7D508991BAD63FC00CC0A9F /* AOETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D508971BAD63FC00CC0A9F /* AOETableViewCell.xib */; };
-		C7DDA4761BAB31C1003B2485 /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA46B1BAB31C1003B2485 /* UIViewController+AOEInitialization.m */; };
-		C7DDA4771BAB31C1003B2485 /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA46D1BAB31C1003B2485 /* UIWindow+AOEInitialization.m */; };
-		C7DDA4781BAB31C1003B2485 /*  AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA46F1BAB31C1003B2485 /*  AOESquareViewController.m */; };
-		C7DDA4791BAB31C1003B2485 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA4711BAB31C1003B2485 /* AOEContainerView.m */; };
-		C7DDA47A1BAB31C1003B2485 /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDA4731BAB31C1003B2485 /* AOESquareView.m */; };
-		C7DDA47B1BAB31C1003B2485 /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DDA4751BAB31C1003B2485 /* AOESquareViewController.xib */; };
-		C7DDA4841BAB33A4003B2485 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DDA4821BAB33A4003B2485 /* Images.xcassets */; };
-		C7DDA4851BAB33A4003B2485 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DDA4831BAB33A4003B2485 /* LaunchScreen.xib */; };
+		C768C12D1BB1A8CE00F6990A /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1131BB1A8CE00F6990A /* AOEAppDelegate.m */; };
+		C768C12E1BB1A8CE00F6990A /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1131BB1A8CE00F6990A /* AOEAppDelegate.m */; };
+		C768C12F1BB1A8CE00F6990A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C768C1141BB1A8CE00F6990A /* Info.plist */; };
+		C768C1301BB1A8CE00F6990A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C768C1141BB1A8CE00F6990A /* Info.plist */; };
+		C768C1311BB1A8CE00F6990A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1151BB1A8CE00F6990A /* main.m */; };
+		C768C1321BB1A8CE00F6990A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1151BB1A8CE00F6990A /* main.m */; };
+		C768C1331BB1A8CE00F6990A /* AOEHomeTask1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1171BB1A8CE00F6990A /* AOEHomeTask1Tests.m */; };
+		C768C1341BB1A8CE00F6990A /* AOEHomeTask1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1171BB1A8CE00F6990A /* AOEHomeTask1Tests.m */; };
+		C768C1351BB1A8CE00F6990A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C768C1181BB1A8CE00F6990A /* Info.plist */; };
+		C768C1361BB1A8CE00F6990A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C768C1181BB1A8CE00F6990A /* Info.plist */; };
+		C768C1371BB1A8CE00F6990A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C768C11A1BB1A8CE00F6990A /* Images.xcassets */; };
+		C768C1381BB1A8CE00F6990A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C768C11A1BB1A8CE00F6990A /* Images.xcassets */; };
+		C768C1391BB1A8CE00F6990A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C11B1BB1A8CE00F6990A /* LaunchScreen.xib */; };
+		C768C13A1BB1A8CE00F6990A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C11B1BB1A8CE00F6990A /* LaunchScreen.xib */; };
+		C768C13B1BB1A8CE00F6990A /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1201BB1A8CE00F6990A /* UIViewController+AOEInitialization.m */; };
+		C768C13C1BB1A8CE00F6990A /* UIViewController+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1201BB1A8CE00F6990A /* UIViewController+AOEInitialization.m */; };
+		C768C13D1BB1A8CE00F6990A /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1221BB1A8CE00F6990A /* UIWindow+AOEInitialization.m */; };
+		C768C13E1BB1A8CE00F6990A /* UIWindow+AOEInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1221BB1A8CE00F6990A /* UIWindow+AOEInitialization.m */; };
+		C768C13F1BB1A8CE00F6990A /*  AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1261BB1A8CE00F6990A /*  AOESquareViewController.m */; };
+		C768C1401BB1A8CE00F6990A /*  AOESquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1261BB1A8CE00F6990A /*  AOESquareViewController.m */; };
+		C768C1411BB1A8CE00F6990A /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1281BB1A8CE00F6990A /* AOEContainerView.m */; };
+		C768C1421BB1A8CE00F6990A /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1281BB1A8CE00F6990A /* AOEContainerView.m */; };
+		C768C1431BB1A8CE00F6990A /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C12A1BB1A8CE00F6990A /* AOESquareView.m */; };
+		C768C1441BB1A8CE00F6990A /* AOESquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C12A1BB1A8CE00F6990A /* AOESquareView.m */; };
+		C768C1451BB1A8CE00F6990A /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C12C1BB1A8CE00F6990A /* AOESquareViewController.xib */; };
+		C768C1461BB1A8CE00F6990A /* AOESquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C12C1BB1A8CE00F6990A /* AOESquareViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,65 +43,31 @@
 			remoteGlobalIDString = C765A0E11B9F50FC0067E6C8;
 			remoteInfo = AOEHomeTask1;
 		};
-		C7D5085E1BAB46CA00CC0A9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C765A0DA1B9F50FC0067E6C8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C7D508441BAB46CA00CC0A9F;
-			remoteInfo = AOEHomeTask2;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C765A0E21B9F50FC0067E6C8 /* AOEHomeTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOEHomeTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C765A0E61B9F50FC0067E6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C765A0E71B9F50FC0067E6C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C765A0E91B9F50FC0067E6C8 /* AOEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOEAppDelegate.h; sourceTree = "<group>"; };
-		C765A0EA1B9F50FC0067E6C8 /* AOEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEAppDelegate.m; sourceTree = "<group>"; };
-		C765A0FB1B9F50FC0067E6C8 /* AOEHomeTask1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOEHomeTask1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C765A1001B9F50FC0067E6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEHomeTask1Tests.m; sourceTree = "<group>"; };
-		C7D508451BAB46CA00CC0A9F /* AOEHomeTask2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOEHomeTask2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7D508481BAB46CA00CC0A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7D508491BAB46CA00CC0A9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C7D5084B1BAB46CA00CC0A9F /* AOEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOEAppDelegate.h; sourceTree = "<group>"; };
-		C7D5084C1BAB46CA00CC0A9F /* AOEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEAppDelegate.m; sourceTree = "<group>"; };
-		C7D508541BAB46CA00CC0A9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C7D508571BAB46CA00CC0A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C7D5085D1BAB46CA00CC0A9F /* AOEHomeTask2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOEHomeTask2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7D508621BAB46CA00CC0A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7D508631BAB46CA00CC0A9F /* AOEHomeTask2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOEHomeTask2Tests.m; sourceTree = "<group>"; };
-		C7D508761BAB4D7900CC0A9F /* AOETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableView.h; sourceTree = "<group>"; };
-		C7D508771BAB4D7900CC0A9F /* AOETableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableView.m; sourceTree = "<group>"; };
-		C7D508791BAB4F9200CC0A9F /* AOEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEViewController.h; sourceTree = "<group>"; };
-		C7D5087A1BAB4F9200CC0A9F /* AOEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEViewController.m; sourceTree = "<group>"; };
-		C7D5087B1BAB4F9200CC0A9F /* AOEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOEViewController.xib; sourceTree = "<group>"; };
-		C7D5087E1BAB503300CC0A9F /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
-		C7D5087F1BAB503300CC0A9F /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
-		C7D508821BAB531100CC0A9F /* UIViewController+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEInitialization.h"; sourceTree = "<group>"; };
-		C7D508831BAB531100CC0A9F /* UIViewController+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEInitialization.m"; sourceTree = "<group>"; };
-		C7D508841BAB531100CC0A9F /* UIWindow+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEInitialization.h"; sourceTree = "<group>"; };
-		C7D508851BAB531100CC0A9F /* UIWindow+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEInitialization.m"; sourceTree = "<group>"; };
-		C7D508891BAB547100CC0A9F /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
-		C7D5088D1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AOEReusIdentifier.h"; sourceTree = "<group>"; };
-		C7D5088E1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AOEReusIdentifier.m"; sourceTree = "<group>"; };
-		C7D508951BAD63FC00CC0A9F /* AOETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableViewCell.h; sourceTree = "<group>"; };
-		C7D508961BAD63FC00CC0A9F /* AOETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableViewCell.m; sourceTree = "<group>"; };
-		C7D508971BAD63FC00CC0A9F /* AOETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewCell.xib; sourceTree = "<group>"; };
-		C7DDA46A1BAB31C1003B2485 /* UIViewController+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEInitialization.h"; sourceTree = "<group>"; };
-		C7DDA46B1BAB31C1003B2485 /* UIViewController+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEInitialization.m"; sourceTree = "<group>"; };
-		C7DDA46C1BAB31C1003B2485 /* UIWindow+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEInitialization.h"; sourceTree = "<group>"; };
-		C7DDA46D1BAB31C1003B2485 /* UIWindow+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEInitialization.m"; sourceTree = "<group>"; };
-		C7DDA46F1BAB31C1003B2485 /*  AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = " AOESquareViewController.m"; sourceTree = "<group>"; };
-		C7DDA4701BAB31C1003B2485 /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
-		C7DDA4711BAB31C1003B2485 /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
-		C7DDA4721BAB31C1003B2485 /* AOESquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareView.h; sourceTree = "<group>"; };
-		C7DDA4731BAB31C1003B2485 /* AOESquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareView.m; sourceTree = "<group>"; };
-		C7DDA4741BAB31C1003B2485 /* AOESquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareViewController.h; sourceTree = "<group>"; };
-		C7DDA4751BAB31C1003B2485 /* AOESquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOESquareViewController.xib; sourceTree = "<group>"; };
-		C7DDA4821BAB33A4003B2485 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C7DDA4831BAB33A4003B2485 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		C7DDA4881BAB3510003B2485 /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
+		C765A0E21B9F50FC0067E6C8 /* AOEHomeTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AOEHomeTask1.app; path = "/Users/alina/AOHomeTasks_GUI/AOEHomeTask1/build/Debug-iphoneos/AOEHomeTask1.app"; sourceTree = "<absolute>"; };
+		C765A0FB1B9F50FC0067E6C8 /* AOEHomeTask1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AOEHomeTask1Tests.xctest; path = "/Users/alina/AOHomeTasks_GUI/AOEHomeTask1/build/Debug-iphoneos/AOEHomeTask1Tests.xctest"; sourceTree = "<absolute>"; };
+		C768C1121BB1A8CE00F6990A /* AOEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEAppDelegate.h; sourceTree = "<group>"; };
+		C768C1131BB1A8CE00F6990A /* AOEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEAppDelegate.m; sourceTree = "<group>"; };
+		C768C1141BB1A8CE00F6990A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C768C1151BB1A8CE00F6990A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C768C1171BB1A8CE00F6990A /* AOEHomeTask1Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEHomeTask1Tests.m; sourceTree = "<group>"; };
+		C768C1181BB1A8CE00F6990A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C768C11A1BB1A8CE00F6990A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C768C11B1BB1A8CE00F6990A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		C768C11F1BB1A8CE00F6990A /* UIViewController+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEInitialization.h"; sourceTree = "<group>"; };
+		C768C1201BB1A8CE00F6990A /* UIViewController+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEInitialization.m"; sourceTree = "<group>"; };
+		C768C1211BB1A8CE00F6990A /* UIWindow+AOEInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEInitialization.h"; sourceTree = "<group>"; };
+		C768C1221BB1A8CE00F6990A /* UIWindow+AOEInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEInitialization.m"; sourceTree = "<group>"; };
+		C768C1241BB1A8CE00F6990A /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
+		C768C1261BB1A8CE00F6990A /*  AOESquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = " AOESquareViewController.m"; sourceTree = "<group>"; };
+		C768C1271BB1A8CE00F6990A /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
+		C768C1281BB1A8CE00F6990A /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
+		C768C1291BB1A8CE00F6990A /* AOESquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareView.h; sourceTree = "<group>"; };
+		C768C12A1BB1A8CE00F6990A /* AOESquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOESquareView.m; sourceTree = "<group>"; };
+		C768C12B1BB1A8CE00F6990A /* AOESquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOESquareViewController.h; sourceTree = "<group>"; };
+		C768C12C1BB1A8CE00F6990A /* AOESquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOESquareViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,279 +85,97 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7D508421BAB46CA00CC0A9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7D5085A1BAB46CA00CC0A9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C765A0D91B9F50FC0067E6C8 = {
 			isa = PBXGroup;
 			children = (
-				C7DDA4671BAB31C1003B2485 /* Sources */,
-				C765A0E41B9F50FC0067E6C8 /* AOEHomeTask1 */,
-				C765A0FE1B9F50FC0067E6C8 /* AOEHomeTask1Tests */,
-				C7D508461BAB46CA00CC0A9F /* AOEHomeTask2 */,
-				C7D508601BAB46CA00CC0A9F /* AOEHomeTask2Tests */,
-				C765A0E31B9F50FC0067E6C8 /* Products */,
+				C768C1111BB1A8CE00F6990A /* AOEHomeTask1 */,
+				C768C1161BB1A8CE00F6990A /* AOEHomeTask1Tests */,
+				C768C1191BB1A8CE00F6990A /* Resources */,
+				C768C11C1BB1A8CE00F6990A /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
-		C765A0E31B9F50FC0067E6C8 /* Products */ = {
+		C768C1111BB1A8CE00F6990A /* AOEHomeTask1 */ = {
 			isa = PBXGroup;
 			children = (
-				C765A0E21B9F50FC0067E6C8 /* AOEHomeTask1.app */,
-				C765A0FB1B9F50FC0067E6C8 /* AOEHomeTask1Tests.xctest */,
-				C7D508451BAB46CA00CC0A9F /* AOEHomeTask2.app */,
-				C7D5085D1BAB46CA00CC0A9F /* AOEHomeTask2Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C765A0E41B9F50FC0067E6C8 /* AOEHomeTask1 */ = {
-			isa = PBXGroup;
-			children = (
-				C7DDA4811BAB33A4003B2485 /* Resources */,
-				C765A0E51B9F50FC0067E6C8 /* AOEHomeTask1 */,
+				C768C1121BB1A8CE00F6990A /* AOEAppDelegate.h */,
+				C768C1131BB1A8CE00F6990A /* AOEAppDelegate.m */,
+				C768C1141BB1A8CE00F6990A /* Info.plist */,
+				C768C1151BB1A8CE00F6990A /* main.m */,
 			);
 			path = AOEHomeTask1;
 			sourceTree = "<group>";
 		};
-		C765A0E51B9F50FC0067E6C8 /* AOEHomeTask1 */ = {
+		C768C1161BB1A8CE00F6990A /* AOEHomeTask1Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C765A0E91B9F50FC0067E6C8 /* AOEAppDelegate.h */,
-				C765A0EA1B9F50FC0067E6C8 /* AOEAppDelegate.m */,
-				C765A0E61B9F50FC0067E6C8 /* Info.plist */,
-				C765A0E71B9F50FC0067E6C8 /* main.m */,
-			);
-			name = AOEHomeTask1;
-			sourceTree = "<group>";
-		};
-		C765A0FE1B9F50FC0067E6C8 /* AOEHomeTask1Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C765A1011B9F50FC0067E6C8 /* AOEHomeTask1Tests.m */,
-				C765A0FF1B9F50FC0067E6C8 /* Supporting Files */,
+				C768C1171BB1A8CE00F6990A /* AOEHomeTask1Tests.m */,
+				C768C1181BB1A8CE00F6990A /* Info.plist */,
 			);
 			path = AOEHomeTask1Tests;
 			sourceTree = "<group>";
 		};
-		C765A0FF1B9F50FC0067E6C8 /* Supporting Files */ = {
+		C768C1191BB1A8CE00F6990A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C765A1001B9F50FC0067E6C8 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C7D508461BAB46CA00CC0A9F /* AOEHomeTask2 */ = {
-			isa = PBXGroup;
-			children = (
-				C7D5086E1BAB47F500CC0A9F /* Sources */,
-				C7D5086B1BAB474700CC0A9F /* AOEHomeTask2 */,
-			);
-			path = AOEHomeTask2;
-			sourceTree = "<group>";
-		};
-		C7D508601BAB46CA00CC0A9F /* AOEHomeTask2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508631BAB46CA00CC0A9F /* AOEHomeTask2Tests.m */,
-				C7D508611BAB46CA00CC0A9F /* Supporting Files */,
-			);
-			path = AOEHomeTask2Tests;
-			sourceTree = "<group>";
-		};
-		C7D508611BAB46CA00CC0A9F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508621BAB46CA00CC0A9F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C7D5086B1BAB474700CC0A9F /* AOEHomeTask2 */ = {
-			isa = PBXGroup;
-			children = (
-				C7D5086D1BAB47E400CC0A9F /* AOEHomeTask2 */,
-				C7D5086C1BAB475900CC0A9F /* Resources */,
-			);
-			name = AOEHomeTask2;
-			sourceTree = "<group>";
-		};
-		C7D5086C1BAB475900CC0A9F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508541BAB46CA00CC0A9F /* Images.xcassets */,
-				C7D508561BAB46CA00CC0A9F /* LaunchScreen.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		C7D5086D1BAB47E400CC0A9F /* AOEHomeTask2 */ = {
-			isa = PBXGroup;
-			children = (
-				C7D5084B1BAB46CA00CC0A9F /* AOEAppDelegate.h */,
-				C7D5084C1BAB46CA00CC0A9F /* AOEAppDelegate.m */,
-				C7D508481BAB46CA00CC0A9F /* Info.plist */,
-				C7D508491BAB46CA00CC0A9F /* main.m */,
-			);
-			name = AOEHomeTask2;
-			sourceTree = "<group>";
-		};
-		C7D5086E1BAB47F500CC0A9F /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508701BAB488100CC0A9F /* Library */,
-				C7D5086F1BAB483300CC0A9F /* UI */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		C7D5086F1BAB483300CC0A9F /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508761BAB4D7900CC0A9F /* AOETableView.h */,
-				C7D508771BAB4D7900CC0A9F /* AOETableView.m */,
-				C7D508791BAB4F9200CC0A9F /* AOEViewController.h */,
-				C7D5087A1BAB4F9200CC0A9F /* AOEViewController.m */,
-				C7D5087B1BAB4F9200CC0A9F /* AOEViewController.xib */,
-				C7D5087E1BAB503300CC0A9F /* AOEContainerView.h */,
-				C7D5087F1BAB503300CC0A9F /* AOEContainerView.m */,
-				C7D508951BAD63FC00CC0A9F /* AOETableViewCell.h */,
-				C7D508961BAD63FC00CC0A9F /* AOETableViewCell.m */,
-				C7D508971BAD63FC00CC0A9F /* AOETableViewCell.xib */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		C7D508701BAB488100CC0A9F /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508881BAB547100CC0A9F /* Macros */,
-				C7D508811BAB531100CC0A9F /* Categories */,
-			);
-			name = Library;
-			sourceTree = "<group>";
-		};
-		C7D508811BAB531100CC0A9F /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C7D5088C1BAB679C00CC0A9F /* UITableViewCell */,
-				C7D5088B1BAB677900CC0A9F /* UIViewController */,
-				C7D5088A1BAB675300CC0A9F /* UIWindow */,
-			);
-			name = Categories;
-			path = AOEHomeTask1/Sources/Library/Categories;
-			sourceTree = SOURCE_ROOT;
-		};
-		C7D508881BAB547100CC0A9F /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508891BAB547100CC0A9F /* AOEMacro.h */,
-			);
-			name = Macros;
-			path = AOEHomeTask1/Sources/Library/Macros;
-			sourceTree = SOURCE_ROOT;
-		};
-		C7D5088A1BAB675300CC0A9F /* UIWindow */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508841BAB531100CC0A9F /* UIWindow+AOEInitialization.h */,
-				C7D508851BAB531100CC0A9F /* UIWindow+AOEInitialization.m */,
-			);
-			name = UIWindow;
-			sourceTree = "<group>";
-		};
-		C7D5088B1BAB677900CC0A9F /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C7D508821BAB531100CC0A9F /* UIViewController+AOEInitialization.h */,
-				C7D508831BAB531100CC0A9F /* UIViewController+AOEInitialization.m */,
-			);
-			name = UIViewController;
-			sourceTree = "<group>";
-		};
-		C7D5088C1BAB679C00CC0A9F /* UITableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				C7D5088D1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.h */,
-				C7D5088E1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.m */,
-			);
-			name = UITableViewCell;
-			sourceTree = "<group>";
-		};
-		C7DDA4671BAB31C1003B2485 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				C7DDA4681BAB31C1003B2485 /* Library */,
-				C7DDA46E1BAB31C1003B2485 /* UI */,
-			);
-			name = Sources;
-			path = AOEHomeTask1/Sources;
-			sourceTree = "<group>";
-		};
-		C7DDA4681BAB31C1003B2485 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				C7DDA4871BAB3510003B2485 /* Macros */,
-				C7DDA4691BAB31C1003B2485 /* Categories */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		C7DDA4691BAB31C1003B2485 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C7DDA46A1BAB31C1003B2485 /* UIViewController+AOEInitialization.h */,
-				C7DDA46B1BAB31C1003B2485 /* UIViewController+AOEInitialization.m */,
-				C7DDA46C1BAB31C1003B2485 /* UIWindow+AOEInitialization.h */,
-				C7DDA46D1BAB31C1003B2485 /* UIWindow+AOEInitialization.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		C7DDA46E1BAB31C1003B2485 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				C7DDA46F1BAB31C1003B2485 /*  AOESquareViewController.m */,
-				C7DDA4741BAB31C1003B2485 /* AOESquareViewController.h */,
-				C7DDA4701BAB31C1003B2485 /* AOEContainerView.h */,
-				C7DDA4711BAB31C1003B2485 /* AOEContainerView.m */,
-				C7DDA4721BAB31C1003B2485 /* AOESquareView.h */,
-				C7DDA4731BAB31C1003B2485 /* AOESquareView.m */,
-				C7DDA4751BAB31C1003B2485 /* AOESquareViewController.xib */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		C7DDA4811BAB33A4003B2485 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C7DDA4821BAB33A4003B2485 /* Images.xcassets */,
-				C7DDA4831BAB33A4003B2485 /* LaunchScreen.xib */,
+				C768C11A1BB1A8CE00F6990A /* Images.xcassets */,
+				C768C11B1BB1A8CE00F6990A /* LaunchScreen.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C7DDA4871BAB3510003B2485 /* Macros */ = {
+		C768C11C1BB1A8CE00F6990A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C7DDA4881BAB3510003B2485 /* AOEMacro.h */,
+				C768C11D1BB1A8CE00F6990A /* Library */,
+				C768C1251BB1A8CE00F6990A /* UI */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C768C11D1BB1A8CE00F6990A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C768C11E1BB1A8CE00F6990A /* Categories */,
+				C768C1231BB1A8CE00F6990A /* Macros */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		C768C11E1BB1A8CE00F6990A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C768C11F1BB1A8CE00F6990A /* UIViewController+AOEInitialization.h */,
+				C768C1201BB1A8CE00F6990A /* UIViewController+AOEInitialization.m */,
+				C768C1211BB1A8CE00F6990A /* UIWindow+AOEInitialization.h */,
+				C768C1221BB1A8CE00F6990A /* UIWindow+AOEInitialization.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C768C1231BB1A8CE00F6990A /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				C768C1241BB1A8CE00F6990A /* AOEMacro.h */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		C768C1251BB1A8CE00F6990A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C768C1261BB1A8CE00F6990A /*  AOESquareViewController.m */,
+				C768C1271BB1A8CE00F6990A /* AOEContainerView.h */,
+				C768C1281BB1A8CE00F6990A /* AOEContainerView.m */,
+				C768C1291BB1A8CE00F6990A /* AOESquareView.h */,
+				C768C12A1BB1A8CE00F6990A /* AOESquareView.m */,
+				C768C12B1BB1A8CE00F6990A /* AOESquareViewController.h */,
+				C768C12C1BB1A8CE00F6990A /* AOESquareViewController.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,41 +216,6 @@
 			productReference = C765A0FB1B9F50FC0067E6C8 /* AOEHomeTask1Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C7D508441BAB46CA00CC0A9F /* AOEHomeTask2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7D508691BAB46CA00CC0A9F /* Build configuration list for PBXNativeTarget "AOEHomeTask2" */;
-			buildPhases = (
-				C7D508411BAB46CA00CC0A9F /* Sources */,
-				C7D508421BAB46CA00CC0A9F /* Frameworks */,
-				C7D508431BAB46CA00CC0A9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AOEHomeTask2;
-			productName = AOEHomeTask2;
-			productReference = C7D508451BAB46CA00CC0A9F /* AOEHomeTask2.app */;
-			productType = "com.apple.product-type.application";
-		};
-		C7D5085C1BAB46CA00CC0A9F /* AOEHomeTask2Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7D5086A1BAB46CA00CC0A9F /* Build configuration list for PBXNativeTarget "AOEHomeTask2Tests" */;
-			buildPhases = (
-				C7D508591BAB46CA00CC0A9F /* Sources */,
-				C7D5085A1BAB46CA00CC0A9F /* Frameworks */,
-				C7D5085B1BAB46CA00CC0A9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C7D5085F1BAB46CA00CC0A9F /* PBXTargetDependency */,
-			);
-			name = AOEHomeTask2Tests;
-			productName = AOEHomeTask2Tests;
-			productReference = C7D5085D1BAB46CA00CC0A9F /* AOEHomeTask2Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -483,13 +233,6 @@
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = C765A0E11B9F50FC0067E6C8;
 					};
-					C7D508441BAB46CA00CC0A9F = {
-						CreatedOnToolsVersion = 6.4;
-					};
-					C7D5085C1BAB46CA00CC0A9F = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = C7D508441BAB46CA00CC0A9F;
-					};
 				};
 			};
 			buildConfigurationList = C765A0DD1B9F50FC0067E6C8 /* Build configuration list for PBXProject "AOEHomeTask1" */;
@@ -501,14 +244,12 @@
 				Base,
 			);
 			mainGroup = C765A0D91B9F50FC0067E6C8;
-			productRefGroup = C765A0E31B9F50FC0067E6C8 /* Products */;
+			productRefGroup = C765A0D91B9F50FC0067E6C8;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C765A0E11B9F50FC0067E6C8 /* AOEHomeTask1 */,
 				C765A0FA1B9F50FC0067E6C8 /* AOEHomeTask1Tests */,
-				C7D508441BAB46CA00CC0A9F /* AOEHomeTask2 */,
-				C7D5085C1BAB46CA00CC0A9F /* AOEHomeTask2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -518,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7DDA47B1BAB31C1003B2485 /* AOESquareViewController.xib in Resources */,
-				C7DDA4851BAB33A4003B2485 /* LaunchScreen.xib in Resources */,
-				C7DDA4841BAB33A4003B2485 /* Images.xcassets in Resources */,
+				C768C1391BB1A8CE00F6990A /* LaunchScreen.xib in Resources */,
+				C768C1371BB1A8CE00F6990A /* Images.xcassets in Resources */,
+				C768C1451BB1A8CE00F6990A /* AOESquareViewController.xib in Resources */,
+				C768C1351BB1A8CE00F6990A /* Info.plist in Resources */,
+				C768C12F1BB1A8CE00F6990A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,24 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7D508431BAB46CA00CC0A9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7D508581BAB46CA00CC0A9F /* LaunchScreen.xib in Resources */,
-				C7D508991BAD63FC00CC0A9F /* AOETableViewCell.xib in Resources */,
-				C7D5087D1BAB4F9200CC0A9F /* AOEViewController.xib in Resources */,
-				C7D508551BAB46CA00CC0A9F /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7D5085B1BAB46CA00CC0A9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C768C13A1BB1A8CE00F6990A /* LaunchScreen.xib in Resources */,
+				C768C1381BB1A8CE00F6990A /* Images.xcassets in Resources */,
+				C768C1461BB1A8CE00F6990A /* AOESquareViewController.xib in Resources */,
+				C768C1361BB1A8CE00F6990A /* Info.plist in Resources */,
+				C768C1301BB1A8CE00F6990A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,13 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7DDA4791BAB31C1003B2485 /* AOEContainerView.m in Sources */,
-				C765A0EB1B9F50FC0067E6C8 /* AOEAppDelegate.m in Sources */,
-				C7DDA4771BAB31C1003B2485 /* UIWindow+AOEInitialization.m in Sources */,
-				C7DDA4761BAB31C1003B2485 /* UIViewController+AOEInitialization.m in Sources */,
-				C7DDA4781BAB31C1003B2485 /*  AOESquareViewController.m in Sources */,
-				C7DDA47A1BAB31C1003B2485 /* AOESquareView.m in Sources */,
-				C765A0E81B9F50FC0067E6C8 /* main.m in Sources */,
+				C768C13D1BB1A8CE00F6990A /* UIWindow+AOEInitialization.m in Sources */,
+				C768C13B1BB1A8CE00F6990A /* UIViewController+AOEInitialization.m in Sources */,
+				C768C13F1BB1A8CE00F6990A /*  AOESquareViewController.m in Sources */,
+				C768C1431BB1A8CE00F6990A /* AOESquareView.m in Sources */,
+				C768C1311BB1A8CE00F6990A /* main.m in Sources */,
+				C768C1331BB1A8CE00F6990A /* AOEHomeTask1Tests.m in Sources */,
+				C768C1411BB1A8CE00F6990A /* AOEContainerView.m in Sources */,
+				C768C12D1BB1A8CE00F6990A /* AOEAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,31 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C765A1021B9F50FC0067E6C8 /* AOEHomeTask1Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7D508411BAB46CA00CC0A9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7D508981BAD63FC00CC0A9F /* AOETableViewCell.m in Sources */,
-				C7D5087C1BAB4F9200CC0A9F /* AOEViewController.m in Sources */,
-				C7D5088F1BAB67DC00CC0A9F /* UITableViewCell+AOEReusIdentifier.m in Sources */,
-				C7D508781BAB4D7900CC0A9F /* AOETableView.m in Sources */,
-				C7D508801BAB503300CC0A9F /* AOEContainerView.m in Sources */,
-				C7D5084D1BAB46CA00CC0A9F /* AOEAppDelegate.m in Sources */,
-				C7D508861BAB531100CC0A9F /* UIViewController+AOEInitialization.m in Sources */,
-				C7D5084A1BAB46CA00CC0A9F /* main.m in Sources */,
-				C7D508871BAB531100CC0A9F /* UIWindow+AOEInitialization.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7D508591BAB46CA00CC0A9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7D508641BAB46CA00CC0A9F /* AOEHomeTask2Tests.m in Sources */,
+				C768C13E1BB1A8CE00F6990A /* UIWindow+AOEInitialization.m in Sources */,
+				C768C13C1BB1A8CE00F6990A /* UIViewController+AOEInitialization.m in Sources */,
+				C768C1401BB1A8CE00F6990A /*  AOESquareViewController.m in Sources */,
+				C768C1441BB1A8CE00F6990A /* AOESquareView.m in Sources */,
+				C768C1321BB1A8CE00F6990A /* main.m in Sources */,
+				C768C1341BB1A8CE00F6990A /* AOEHomeTask1Tests.m in Sources */,
+				C768C1421BB1A8CE00F6990A /* AOEContainerView.m in Sources */,
+				C768C12E1BB1A8CE00F6990A /* AOEAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,23 +320,7 @@
 			target = C765A0E11B9F50FC0067E6C8 /* AOEHomeTask1 */;
 			targetProxy = C765A0FC1B9F50FC0067E6C8 /* PBXContainerItemProxy */;
 		};
-		C7D5085F1BAB46CA00CC0A9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C7D508441BAB46CA00CC0A9F /* AOEHomeTask2 */;
-			targetProxy = C7D5085E1BAB46CA00CC0A9F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C7D508561BAB46CA00CC0A9F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7D508571BAB46CA00CC0A9F /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C765A1031B9F50FC0067E6C8 /* Debug */ = {
@@ -765,64 +463,6 @@
 			};
 			name = Release;
 		};
-		C7D508651BAB46CA00CC0A9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AOEHomeTask2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		C7D508661BAB46CA00CC0A9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AOEHomeTask2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		C7D508671BAB46CA00CC0A9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AOEHomeTask2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOEHomeTask2.app/AOEHomeTask2";
-			};
-			name = Debug;
-		};
-		C7D508681BAB46CA00CC0A9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AOEHomeTask2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOEHomeTask2.app/AOEHomeTask2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -852,22 +492,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		C7D508691BAB46CA00CC0A9F /* Build configuration list for PBXNativeTarget "AOEHomeTask2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7D508651BAB46CA00CC0A9F /* Debug */,
-				C7D508661BAB46CA00CC0A9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		C7D5086A1BAB46CA00CC0A9F /* Build configuration list for PBXNativeTarget "AOEHomeTask2Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7D508671BAB46CA00CC0A9F /* Debug */,
-				C7D508681BAB46CA00CC0A9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

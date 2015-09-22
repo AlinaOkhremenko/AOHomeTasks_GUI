@@ -31,7 +31,6 @@ AOEViewControllerClass(AOESquareViewController, containerView, AOEContainerView)
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 @end

@@ -59,17 +59,12 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
     }
 }
 
-- (BOOL)animatingSquare {
-    return _animatingSquare;
-}
 
 #pragma mark -
 #pragma mark Private Methods
 
 - (void)animateSquareView {
-    if (self.animatingSquare) {
-        if (!self.animationInProgress) {
-            
+    if (self.animatingSquare &&!self.animationInProgress) {
             self.animationInProgress = YES;
             AOEweakify(self);
             [self setSquarePosition:[self nextPosition]
@@ -77,10 +72,8 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
                   completionHandler:^{
                       AOEstrongifyAndReturnIfNil(self);
                       self.animationInProgress = NO;
-                      
                       [self animateSquareView];
             }];
-        }
     }
 }
 
@@ -96,9 +89,6 @@ static const NSTimeInterval kAOESquareAnimationDuration = 0.5;
     CGFloat y = CGRectGetHeight(viewBounds) - CGRectGetHeight(squareViewFrame);
     
     switch (self.squarePosition) {
-        case AOSquarePositionLeftTopCorner:
-            break;
-            
         case AOSquarePositionLeftBottomCorner:
             point.y = y;
             break;
