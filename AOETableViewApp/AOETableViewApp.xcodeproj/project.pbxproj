@@ -10,24 +10,24 @@
 		C768C0BA1BAF02F500F6990A /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0A81BAF02F500F6990A /* AOEAppDelegate.m */; };
 		C768C0BB1BAF02F500F6990A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C768C0A91BAF02F500F6990A /* Info.plist */; };
 		C768C0BC1BAF02F500F6990A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0AA1BAF02F500F6990A /* main.m */; };
-		C768C0BD1BAF02F500F6990A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C768C0AC1BAF02F500F6990A /* Images.xcassets */; };
-		C768C0BE1BAF02F500F6990A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C0AD1BAF02F500F6990A /* LaunchScreen.xib */; };
-		C768C0C81BAF055800F6990A /* AOETableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0C61BAF055800F6990A /* AOETableViewController.m */; };
-		C768C0C91BAF055800F6990A /* AOETableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C0C71BAF055800F6990A /* AOETableViewController.xib */; };
-		C768C0CC1BAF059E00F6990A /* AOETableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0CB1BAF059E00F6990A /* AOETableView.m */; };
-		C768C0D01BAF060000F6990A /* AOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0CE1BAF060000F6990A /* AOETableViewCell.m */; };
-		C768C0D11BAF060000F6990A /* AOETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C768C0CF1BAF060000F6990A /* AOETableViewCell.xib */; };
-		C768C0D41BAF064F00F6990A /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0D31BAF064F00F6990A /* AOEContainerView.m */; };
-		C768C0DA1BAF09B000F6990A /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0D91BAF09B000F6990A /* NSString+RandomString.m */; };
-		C768C0E51BAF09F800F6990A /* AOAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0DE1BAF09F800F6990A /* AOAlphabet.m */; };
-		C768C0E61BAF09F800F6990A /* AOAlphabetWithAlphabets.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0E01BAF09F800F6990A /* AOAlphabetWithAlphabets.m */; };
-		C768C0E71BAF09F800F6990A /* AOAlphabetWithRange.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0E21BAF09F800F6990A /* AOAlphabetWithRange.m */; };
-		C768C0E81BAF09F800F6990A /* AOAlphabetWithStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0E41BAF09F800F6990A /* AOAlphabetWithStrings.m */; };
-		C768C0EB1BAF0A1100F6990A /* AOSyllablesAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0EA1BAF0A1100F6990A /* AOSyllablesAlphabet.m */; };
-		C768C0FF1BAF1A7900F6990A /* UIWindow+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0FE1BAF1A7900F6990A /* UIWindow+AOEExtensions.m */; };
-		C768C1021BAF1AC500F6990A /* UIViewController+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1011BAF1AC500F6990A /* UIViewController+AOEExtensions.m */; };
-		C768C1091BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C1081BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.m */; };
 		C7AD3AB01BAEFBBE00983FC0 /* AOETableViewAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD3AAF1BAEFBBE00983FC0 /* AOETableViewAppTests.m */; };
+		C7D6BD0C1BB1C76500E98EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */; };
+		C7D6BD0D1BB1C76500E98EB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */; };
+		C7D6BD0E1BB1C76500E98EB4 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF01BB1C76500E98EB4 /* NSString+RandomString.m */; };
+		C7D6BD0F1BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF21BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m */; };
+		C7D6BD101BB1C76500E98EB4 /* UIViewController+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF51BB1C76500E98EB4 /* UIViewController+AOEExtensions.m */; };
+		C7D6BD111BB1C76500E98EB4 /* UIWindow+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF81BB1C76500E98EB4 /* UIWindow+AOEExtensions.m */; };
+		C7D6BD121BB1C76500E98EB4 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD021BB1C76500E98EB4 /* AOEContainerView.m */; };
+		C7D6BD131BB1C76500E98EB4 /* AOETableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD041BB1C76500E98EB4 /* AOETableView.m */; };
+		C7D6BD141BB1C76500E98EB4 /* AOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD061BB1C76500E98EB4 /* AOETableViewCell.m */; };
+		C7D6BD151BB1C76500E98EB4 /* AOETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BD071BB1C76500E98EB4 /* AOETableViewCell.xib */; };
+		C7D6BD161BB1C76500E98EB4 /* AOETableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD091BB1C76500E98EB4 /* AOETableViewController.m */; };
+		C7D6BD171BB1C76500E98EB4 /* AOETableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BD0A1BB1C76500E98EB4 /* AOETableViewController.xib */; };
+		C7D6BD181BB1CF5A00E98EB4 /* AOETableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD091BB1C76500E98EB4 /* AOETableViewController.m */; };
+		C7D6BD191BB1CF7100E98EB4 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD021BB1C76500E98EB4 /* AOEContainerView.m */; };
+		C7D6BD1A1BB1CF7600E98EB4 /* AOETableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD041BB1C76500E98EB4 /* AOETableView.m */; };
+		C7D6BD1B1BB1CF7B00E98EB4 /* AOETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD061BB1C76500E98EB4 /* AOETableViewCell.m */; };
+		C7D6BD1F1BB1EB4500E98EB4 /* UINib+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,41 +45,33 @@
 		C768C0A81BAF02F500F6990A /* AOEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEAppDelegate.m; sourceTree = "<group>"; };
 		C768C0A91BAF02F500F6990A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C768C0AA1BAF02F500F6990A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C768C0AC1BAF02F500F6990A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C768C0AD1BAF02F500F6990A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		C768C0B61BAF02F500F6990A /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
-		C768C0C51BAF055800F6990A /* AOETableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableViewController.h; sourceTree = "<group>"; };
-		C768C0C61BAF055800F6990A /* AOETableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableViewController.m; sourceTree = "<group>"; };
-		C768C0C71BAF055800F6990A /* AOETableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewController.xib; sourceTree = "<group>"; };
-		C768C0CA1BAF059E00F6990A /* AOETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableView.h; sourceTree = "<group>"; };
-		C768C0CB1BAF059E00F6990A /* AOETableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableView.m; sourceTree = "<group>"; };
-		C768C0CD1BAF060000F6990A /* AOETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableViewCell.h; sourceTree = "<group>"; };
-		C768C0CE1BAF060000F6990A /* AOETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableViewCell.m; sourceTree = "<group>"; };
-		C768C0CF1BAF060000F6990A /* AOETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewCell.xib; sourceTree = "<group>"; };
-		C768C0D21BAF064F00F6990A /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
-		C768C0D31BAF064F00F6990A /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
-		C768C0D81BAF09B000F6990A /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RandomString.h"; path = "../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/NSString+RandomString.h"; sourceTree = "<group>"; };
-		C768C0D91BAF09B000F6990A /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RandomString.m"; path = "../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/NSString+RandomString.m"; sourceTree = "<group>"; };
-		C768C0DD1BAF09F800F6990A /* AOAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOAlphabet.h; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabet.h; sourceTree = "<group>"; };
-		C768C0DE1BAF09F800F6990A /* AOAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOAlphabet.m; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabet.m; sourceTree = "<group>"; };
-		C768C0DF1BAF09F800F6990A /* AOAlphabetWithAlphabets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOAlphabetWithAlphabets.h; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabetWithAlphabets.h; sourceTree = "<group>"; };
-		C768C0E01BAF09F800F6990A /* AOAlphabetWithAlphabets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOAlphabetWithAlphabets.m; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabetWithAlphabets.m; sourceTree = "<group>"; };
-		C768C0E11BAF09F800F6990A /* AOAlphabetWithRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOAlphabetWithRange.h; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabetWithRange.h; sourceTree = "<group>"; };
-		C768C0E21BAF09F800F6990A /* AOAlphabetWithRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOAlphabetWithRange.m; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabetWithRange.m; sourceTree = "<group>"; };
-		C768C0E31BAF09F800F6990A /* AOAlphabetWithStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOAlphabetWithStrings.h; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabetWithStrings.h; sourceTree = "<group>"; };
-		C768C0E41BAF09F800F6990A /* AOAlphabetWithStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOAlphabetWithStrings.m; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOAlphabetWithStrings.m; sourceTree = "<group>"; };
-		C768C0E91BAF0A1100F6990A /* AOSyllablesAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOSyllablesAlphabet.h; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOSyllablesAlphabet.h; sourceTree = "<group>"; };
-		C768C0EA1BAF0A1100F6990A /* AOSyllablesAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOSyllablesAlphabet.m; path = ../../../../../AOHomeTasks/ObjectiveC/ObjectiveC/AOSyllablesAlphabet.m; sourceTree = "<group>"; };
-		C768C0FD1BAF1A7900F6990A /* UIWindow+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEExtensions.h"; sourceTree = "<group>"; };
-		C768C0FE1BAF1A7900F6990A /* UIWindow+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEExtensions.m"; sourceTree = "<group>"; };
-		C768C1001BAF1AC500F6990A /* UIViewController+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEExtensions.h"; sourceTree = "<group>"; };
-		C768C1011BAF1AC500F6990A /* UIViewController+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEExtensions.m"; sourceTree = "<group>"; };
-		C768C1071BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AOEDequeueReusableCell.h"; sourceTree = "<group>"; };
-		C768C1081BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AOEDequeueReusableCell.m"; sourceTree = "<group>"; };
 		C7AD3A901BAEFBBE00983FC0 /* AOETableViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOETableViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AD3AA91BAEFBBE00983FC0 /* AOETableViewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOETableViewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AD3AAE1BAEFBBE00983FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7AD3AAF1BAEFBBE00983FC0 /* AOETableViewAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOETableViewAppTests.m; sourceTree = "<group>"; };
+		C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		C7D6BCEF1BB1C76500E98EB4 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
+		C7D6BCF01BB1C76500E98EB4 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
+		C7D6BCF11BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AOEDequeueReusableCell.h"; sourceTree = "<group>"; };
+		C7D6BCF21BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AOEDequeueReusableCell.m"; sourceTree = "<group>"; };
+		C7D6BCF41BB1C76500E98EB4 /* UIViewController+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEExtensions.h"; sourceTree = "<group>"; };
+		C7D6BCF51BB1C76500E98EB4 /* UIViewController+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOEExtensions.m"; sourceTree = "<group>"; };
+		C7D6BCF71BB1C76500E98EB4 /* UIWindow+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AOEExtensions.h"; sourceTree = "<group>"; };
+		C7D6BCF81BB1C76500E98EB4 /* UIWindow+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AOEExtensions.m"; sourceTree = "<group>"; };
+		C7D6BCFB1BB1C76500E98EB4 /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
+		C7D6BD011BB1C76500E98EB4 /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
+		C7D6BD021BB1C76500E98EB4 /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
+		C7D6BD031BB1C76500E98EB4 /* AOETableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableView.h; sourceTree = "<group>"; };
+		C7D6BD041BB1C76500E98EB4 /* AOETableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableView.m; sourceTree = "<group>"; };
+		C7D6BD051BB1C76500E98EB4 /* AOETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableViewCell.h; sourceTree = "<group>"; };
+		C7D6BD061BB1C76500E98EB4 /* AOETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableViewCell.m; sourceTree = "<group>"; };
+		C7D6BD071BB1C76500E98EB4 /* AOETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewCell.xib; sourceTree = "<group>"; };
+		C7D6BD081BB1C76500E98EB4 /* AOETableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOETableViewController.h; sourceTree = "<group>"; };
+		C7D6BD091BB1C76500E98EB4 /* AOETableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOETableViewController.m; sourceTree = "<group>"; };
+		C7D6BD0A1BB1C76500E98EB4 /* AOETableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewController.xib; sourceTree = "<group>"; };
+		C7D6BD1D1BB1EB4500E98EB4 /* UINib+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINib+AOEExtensions.h"; sourceTree = "<group>"; };
+		C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINib+AOEExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,62 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C768C0A61BAF02F500F6990A /* AOETableViewApp */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0C21BAF031000F6990A /* AOETableViewApp */,
-			);
-			path = AOETableViewApp;
-			sourceTree = "<group>";
-		};
-		C768C0AB1BAF02F500F6990A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0AC1BAF02F500F6990A /* Images.xcassets */,
-				C768C0AD1BAF02F500F6990A /* LaunchScreen.xib */,
-			);
-			name = Resources;
-			path = AOETableViewApp/Resources;
-			sourceTree = "<group>";
-		};
-		C768C0AE1BAF02F500F6990A /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0AF1BAF02F500F6990A /* Library */,
-				C768C0B71BAF02F500F6990A /* UI */,
-			);
-			name = Sources;
-			path = AOETableViewApp/Sources;
-			sourceTree = "<group>";
-		};
-		C768C0AF1BAF02F500F6990A /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				C768C10A1BAF2F4F00F6990A /* Classes */,
-				C768C0EE1BAF182E00F6990A /* Categories */,
-				C768C0B51BAF02F500F6990A /* Macros */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		C768C0B51BAF02F500F6990A /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0B61BAF02F500F6990A /* AOEMacro.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
-		C768C0B71BAF02F500F6990A /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0D71BAF070F00F6990A /* View */,
-				C768C0D61BAF06F000F6990A /* Model */,
-				C768C0D51BAF06C700F6990A /* ViewController */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		C768C0C21BAF031000F6990A /* AOETableViewApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,126 +100,15 @@
 				C768C0A91BAF02F500F6990A /* Info.plist */,
 				C768C0AA1BAF02F500F6990A /* main.m */,
 			);
-			name = AOETableViewApp;
-			sourceTree = "<group>";
-		};
-		C768C0D51BAF06C700F6990A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0C51BAF055800F6990A /* AOETableViewController.h */,
-				C768C0C61BAF055800F6990A /* AOETableViewController.m */,
-				C768C0C71BAF055800F6990A /* AOETableViewController.xib */,
-				C768C0CA1BAF059E00F6990A /* AOETableView.h */,
-				C768C0CB1BAF059E00F6990A /* AOETableView.m */,
-				C768C0CD1BAF060000F6990A /* AOETableViewCell.h */,
-				C768C0CE1BAF060000F6990A /* AOETableViewCell.m */,
-				C768C0CF1BAF060000F6990A /* AOETableViewCell.xib */,
-				C768C0D21BAF064F00F6990A /* AOEContainerView.h */,
-				C768C0D31BAF064F00F6990A /* AOEContainerView.m */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		C768C0D61BAF06F000F6990A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0DC1BAF09D200F6990A /* AOAlphabet */,
-				C768C0DB1BAF09B600F6990A /* RandomString */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		C768C0D71BAF070F00F6990A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		C768C0DB1BAF09B600F6990A /* RandomString */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0D81BAF09B000F6990A /* NSString+RandomString.h */,
-				C768C0D91BAF09B000F6990A /* NSString+RandomString.m */,
-			);
-			name = RandomString;
-			sourceTree = "<group>";
-		};
-		C768C0DC1BAF09D200F6990A /* AOAlphabet */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0EC1BAF0A2100F6990A /* ClusterClasses */,
-				C768C0DD1BAF09F800F6990A /* AOAlphabet.h */,
-				C768C0DE1BAF09F800F6990A /* AOAlphabet.m */,
-			);
-			name = AOAlphabet;
-			sourceTree = "<group>";
-		};
-		C768C0EC1BAF0A2100F6990A /* ClusterClasses */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0DF1BAF09F800F6990A /* AOAlphabetWithAlphabets.h */,
-				C768C0E01BAF09F800F6990A /* AOAlphabetWithAlphabets.m */,
-				C768C0E11BAF09F800F6990A /* AOAlphabetWithRange.h */,
-				C768C0E21BAF09F800F6990A /* AOAlphabetWithRange.m */,
-				C768C0E91BAF0A1100F6990A /* AOSyllablesAlphabet.h */,
-				C768C0EA1BAF0A1100F6990A /* AOSyllablesAlphabet.m */,
-				C768C0E31BAF09F800F6990A /* AOAlphabetWithStrings.h */,
-				C768C0E41BAF09F800F6990A /* AOAlphabetWithStrings.m */,
-			);
-			name = ClusterClasses;
-			sourceTree = "<group>";
-		};
-		C768C0EE1BAF182E00F6990A /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C768C1031BAF1AE800F6990A /* UITableViewCell */,
-				C768C0F61BAF185200F6990A /* UIWindow */,
-				C768C0F51BAF183F00F6990A /* UIViewController */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		C768C0F51BAF183F00F6990A /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C768C1001BAF1AC500F6990A /* UIViewController+AOEExtensions.h */,
-				C768C1011BAF1AC500F6990A /* UIViewController+AOEExtensions.m */,
-			);
-			name = UIViewController;
-			sourceTree = "<group>";
-		};
-		C768C0F61BAF185200F6990A /* UIWindow */ = {
-			isa = PBXGroup;
-			children = (
-				C768C0FD1BAF1A7900F6990A /* UIWindow+AOEExtensions.h */,
-				C768C0FE1BAF1A7900F6990A /* UIWindow+AOEExtensions.m */,
-			);
-			name = UIWindow;
-			sourceTree = "<group>";
-		};
-		C768C1031BAF1AE800F6990A /* UITableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				C768C1071BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.h */,
-				C768C1081BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.m */,
-			);
-			name = UITableViewCell;
-			sourceTree = "<group>";
-		};
-		C768C10A1BAF2F4F00F6990A /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Classes;
+			path = AOETableViewApp;
 			sourceTree = "<group>";
 		};
 		C7AD3A871BAEFBBE00983FC0 = {
 			isa = PBXGroup;
 			children = (
-				C768C0A61BAF02F500F6990A /* AOETableViewApp */,
-				C768C0AE1BAF02F500F6990A /* Sources */,
-				C768C0AB1BAF02F500F6990A /* Resources */,
+				C768C0C21BAF031000F6990A /* AOETableViewApp */,
+				C7D6BCEB1BB1C76500E98EB4 /* Sources */,
+				C7D6BCE81BB1C76500E98EB4 /* Resources */,
 				C7AD3A911BAEFBBE00983FC0 /* Products */,
 				C7AD3AAC1BAEFBBE00983FC0 /* AOETableViewAppTests */,
 			);
@@ -313,6 +138,155 @@
 				C7AD3AAE1BAEFBBE00983FC0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7D6BCE81BB1C76500E98EB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */,
+				C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		C7D6BCEB1BB1C76500E98EB4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCEC1BB1C76500E98EB4 /* Library */,
+				C7D6BCFC1BB1C76500E98EB4 /* Models */,
+				C7D6BCFE1BB1C76500E98EB4 /* UI */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		C7D6BCEC1BB1C76500E98EB4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCED1BB1C76500E98EB4 /* Categories */,
+				C7D6BCF91BB1C76500E98EB4 /* Classes */,
+				C7D6BCFA1BB1C76500E98EB4 /* Macros */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		C7D6BCED1BB1C76500E98EB4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BD1C1BB1EB1800E98EB4 /* UINib */,
+				C7D6BCEE1BB1C76500E98EB4 /* NSString */,
+				C7D6BCF11BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.h */,
+				C7D6BCF21BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m */,
+				C7D6BCF31BB1C76500E98EB4 /* UIVIewController */,
+				C7D6BCF61BB1C76500E98EB4 /* UIWindow */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C7D6BCEE1BB1C76500E98EB4 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCEF1BB1C76500E98EB4 /* NSString+RandomString.h */,
+				C7D6BCF01BB1C76500E98EB4 /* NSString+RandomString.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		C7D6BCF31BB1C76500E98EB4 /* UIVIewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCF41BB1C76500E98EB4 /* UIViewController+AOEExtensions.h */,
+				C7D6BCF51BB1C76500E98EB4 /* UIViewController+AOEExtensions.m */,
+			);
+			path = UIVIewController;
+			sourceTree = "<group>";
+		};
+		C7D6BCF61BB1C76500E98EB4 /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCF71BB1C76500E98EB4 /* UIWindow+AOEExtensions.h */,
+				C7D6BCF81BB1C76500E98EB4 /* UIWindow+AOEExtensions.m */,
+			);
+			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		C7D6BCF91BB1C76500E98EB4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C7D6BCFA1BB1C76500E98EB4 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCFB1BB1C76500E98EB4 /* AOEMacro.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		C7D6BCFC1BB1C76500E98EB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCFD1BB1C76500E98EB4 /* AOEDataArrayModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7D6BCFD1BB1C76500E98EB4 /* AOEDataArrayModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AOEDataArrayModel;
+			sourceTree = "<group>";
+		};
+		C7D6BCFE1BB1C76500E98EB4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BCFF1BB1C76500E98EB4 /* Controllers */,
+				C7D6BD0B1BB1C76500E98EB4 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C7D6BCFF1BB1C76500E98EB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BD001BB1C76500E98EB4 /* AOETableViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C7D6BD001BB1C76500E98EB4 /* AOETableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BD011BB1C76500E98EB4 /* AOEContainerView.h */,
+				C7D6BD021BB1C76500E98EB4 /* AOEContainerView.m */,
+				C7D6BD031BB1C76500E98EB4 /* AOETableView.h */,
+				C7D6BD041BB1C76500E98EB4 /* AOETableView.m */,
+				C7D6BD051BB1C76500E98EB4 /* AOETableViewCell.h */,
+				C7D6BD061BB1C76500E98EB4 /* AOETableViewCell.m */,
+				C7D6BD071BB1C76500E98EB4 /* AOETableViewCell.xib */,
+				C7D6BD081BB1C76500E98EB4 /* AOETableViewController.h */,
+				C7D6BD091BB1C76500E98EB4 /* AOETableViewController.m */,
+				C7D6BD0A1BB1C76500E98EB4 /* AOETableViewController.xib */,
+			);
+			path = AOETableViewController;
+			sourceTree = "<group>";
+		};
+		C7D6BD0B1BB1C76500E98EB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7D6BD1C1BB1EB1800E98EB4 /* UINib */ = {
+			isa = PBXGroup;
+			children = (
+				C7D6BD1D1BB1EB4500E98EB4 /* UINib+AOEExtensions.h */,
+				C7D6BD1E1BB1EB4500E98EB4 /* UINib+AOEExtensions.m */,
+			);
+			path = UINib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,11 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C768C0D11BAF060000F6990A /* AOETableViewCell.xib in Resources */,
 				C768C0BB1BAF02F500F6990A /* Info.plist in Resources */,
-				C768C0BE1BAF02F500F6990A /* LaunchScreen.xib in Resources */,
-				C768C0BD1BAF02F500F6990A /* Images.xcassets in Resources */,
-				C768C0C91BAF055800F6990A /* AOETableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +377,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D6BD151BB1C76500E98EB4 /* AOETableViewCell.xib in Resources */,
+				C7D6BD0D1BB1C76500E98EB4 /* LaunchScreen.xib in Resources */,
+				C7D6BD0C1BB1C76500E98EB4 /* Images.xcassets in Resources */,
+				C7D6BD171BB1C76500E98EB4 /* AOETableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,21 +391,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C768C0EB1BAF0A1100F6990A /* AOSyllablesAlphabet.m in Sources */,
-				C768C0D41BAF064F00F6990A /* AOEContainerView.m in Sources */,
-				C768C0E81BAF09F800F6990A /* AOAlphabetWithStrings.m in Sources */,
+				C7D6BD191BB1CF7100E98EB4 /* AOEContainerView.m in Sources */,
+				C7D6BD1A1BB1CF7600E98EB4 /* AOETableView.m in Sources */,
 				C768C0BC1BAF02F500F6990A /* main.m in Sources */,
-				C768C0E61BAF09F800F6990A /* AOAlphabetWithAlphabets.m in Sources */,
-				C768C1091BAF1E4800F6990A /* UITableViewCell+AOEDequeueReusableCell.m in Sources */,
-				C768C0C81BAF055800F6990A /* AOETableViewController.m in Sources */,
-				C768C0E51BAF09F800F6990A /* AOAlphabet.m in Sources */,
+				C7D6BD1B1BB1CF7B00E98EB4 /* AOETableViewCell.m in Sources */,
+				C7D6BD181BB1CF5A00E98EB4 /* AOETableViewController.m in Sources */,
 				C768C0BA1BAF02F500F6990A /* AOEAppDelegate.m in Sources */,
-				C768C0CC1BAF059E00F6990A /* AOETableView.m in Sources */,
-				C768C1021BAF1AC500F6990A /* UIViewController+AOEExtensions.m in Sources */,
-				C768C0DA1BAF09B000F6990A /* NSString+RandomString.m in Sources */,
-				C768C0E71BAF09F800F6990A /* AOAlphabetWithRange.m in Sources */,
-				C768C0D01BAF060000F6990A /* AOETableViewCell.m in Sources */,
-				C768C0FF1BAF1A7900F6990A /* UIWindow+AOEExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +404,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D6BD121BB1C76500E98EB4 /* AOEContainerView.m in Sources */,
+				C7D6BD1F1BB1EB4500E98EB4 /* UINib+AOEExtensions.m in Sources */,
+				C7D6BD161BB1C76500E98EB4 /* AOETableViewController.m in Sources */,
+				C7D6BD101BB1C76500E98EB4 /* UIViewController+AOEExtensions.m in Sources */,
+				C7D6BD0F1BB1C76500E98EB4 /* UITableViewCell+AOEDequeueReusableCell.m in Sources */,
 				C7AD3AB01BAEFBBE00983FC0 /* AOETableViewAppTests.m in Sources */,
+				C7D6BD0E1BB1C76500E98EB4 /* NSString+RandomString.m in Sources */,
+				C7D6BD141BB1C76500E98EB4 /* AOETableViewCell.m in Sources */,
+				C7D6BD131BB1C76500E98EB4 /* AOETableView.m in Sources */,
+				C7D6BD111BB1C76500E98EB4 /* UIWindow+AOEExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,10 +25,9 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    window.rootViewController = [AOETableViewController viewController];
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:window.rootViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:[AOETableViewController viewController]];
     window.rootViewController = navigationController;
-    window.backgroundColor = [UIColor whiteColor];
+    
     [window makeKeyAndVisible];
     
     return YES;
@@ -41,7 +40,6 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

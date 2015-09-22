@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AOEAppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic)   UIWindow    *window;
-
 
 @end
 
