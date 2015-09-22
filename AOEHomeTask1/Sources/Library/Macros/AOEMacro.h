@@ -41,13 +41,13 @@ __strong __typeof(VAR) VAR = __AOEWeak##VAR; \
     } \
 
 #define AOEViewControllerClass(viewControllerClass, propertyName, viewClass) \
-    @interface viewControllerClass (_viewClass##propertyName) \
+    @interface viewControllerClass (viewClass##propertyName) \
     \
     AOEViewProperty(propertyName, viewClass) \
     \
     @end \
     \
-    @implementation viewControllerClass (_viewClass##propertyName) \
+    @implementation viewControllerClass (viewClass##propertyName) \
     \
     @dynamic propertyName; \
     \

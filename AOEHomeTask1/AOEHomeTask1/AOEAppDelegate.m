@@ -20,7 +20,6 @@
 - (BOOL)             application:(UIApplication *)application
    didFinishLaunchingWithOptions:(NSDictionary *)launchOption
 {
-    
     UIWindow *window = [UIWindow window];
     self.window = window;
     
