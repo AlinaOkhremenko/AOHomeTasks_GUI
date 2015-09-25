@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AOEMacro.h"
 
-@class AOEContainerView;
-@class AOETableViewCell;
 @class AOEArrayModel;
 
 @interface AOETableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>

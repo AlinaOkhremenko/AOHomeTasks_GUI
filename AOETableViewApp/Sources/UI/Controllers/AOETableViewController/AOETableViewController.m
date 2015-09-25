@@ -7,10 +7,12 @@
 //
 
 #import "AOETableViewController.h"
+
 #import "AOETableViewCell.h"
 #import "AOEContainerView.h"
 
 #import "UITableView+AOEExtensions.h"
+#import "AOEMacro.h"
 
 AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 
@@ -21,10 +23,8 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AOETableView *tableView = self.containerView.tableView;
+    UITableView *tableView = self.containerView.tableView;
     UINavigationItem *item = self.navigationItem;
-    [tableView setDataSource:self];
-    [tableView setDelegate:self];
     [tableView reloadData];
 }
 

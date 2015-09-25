@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AOETableView.h"
-@interface AOEContainerView : UITableViewCell
-@property (nonatomic, strong)   IBOutlet    AOETableView    *tableView;
+
+@interface AOEContainerView : UITableView
+@property (nonatomic, strong)   IBOutlet    UITableView    *tableView;
 
 @end
