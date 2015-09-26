@@ -21,10 +21,6 @@
     return [self objectWithClass:class withOwner:owner inBundle:nil];
 }
 
-+ (id)objectWithClass:(Class)class inBundle:(NSBundle *)bundle {
-    return [self objectWithClass:class withOwner:nil inBundle:bundle];
-}
-
 + (id)objectWithClass:(Class)class withOwner:(id)owner inBundle:(NSBundle *)bundle {
     UINib *nib = [self nibWithClass:class bundle:bundle];
     
