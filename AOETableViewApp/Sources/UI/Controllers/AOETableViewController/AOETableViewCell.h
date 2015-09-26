@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AOEDataModel;
 
 @interface AOETableViewCell : UITableViewCell
 @property (nonatomic, strong) IBOutlet UIImageView  *pictureView;
+@property (nonatomic, strong) IBOutlet UILabel      *randomText;
 
-+ (CGFloat)cellHeight;
+@property (nonatomic, strong) AOEDataModel     *model;
+
+- (void)fillWithModel:(AOEDataModel*)model;
 
 @end

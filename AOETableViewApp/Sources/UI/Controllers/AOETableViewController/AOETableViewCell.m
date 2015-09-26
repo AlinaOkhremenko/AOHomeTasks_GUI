@@ -7,13 +7,23 @@
 //
 
 #import "AOETableViewCell.h"
-
-#define kCellHeight 100;
+#import "AOEDataModel.h"
 
 @implementation AOETableViewCell
 
-+ (CGFloat)cellHeight {
-    return kCellHeight;
+#pragma mark -
+#pragma mark Accessors
+
+- (void)setModel:(AOEDataModel*)model {
+    if (_model != model) {
+        _model = model;
+    }
+     [self fillWithModel:model];
+}
+
+- (void)fillWithModel:(AOEDataModel*)model {
+    self.pictureView.image = model.imageModel.picture;
+    self.randomText.text = model.randomString;
 }
 
 @end

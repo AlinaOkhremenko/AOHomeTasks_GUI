@@ -10,6 +10,8 @@
 
 #import "AOETableViewCell.h"
 #import "AOEContainerView.h"
+#import "AOEArrayModel.h"
+#import "AOEDataModel.h"
 
 #import "UITableView+AOEExtensions.h"
 #import "AOEMacro.h"
@@ -19,12 +21,15 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 @implementation AOETableViewController
 
 #pragma mark - 
-#pragma mark Life Cycle Methods
+#pragma mark View Life Cycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITableView *tableView = self.containerView.tableView;
     UINavigationItem *item = self.navigationItem;
+    
+    self.arrayModel = [AOEArrayModel new];
+    [self.arrayModel addObject:[AOEDataModel new]];
     [tableView reloadData];
 }
 
@@ -36,11 +41,13 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 #pragma mark UITableViewDataSource protocol
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 200;
+    return self.arrayModel.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView dequeueCellWithType:[AOETableViewCell class]];
+    AOETableViewCell *cell = [tableView dequeueCellWithType:[AOETableViewCell class]];
+    cell.model = self.arrayModel[indexPath.row];
+    return cell;
 }
 
 #pragma mark -
@@ -48,14 +55,8 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    cell.backgroundColor = [UIColor lightGrayColor];
-    //cell.imageView.image = [UIImage imageNamed:@"CatImage"];
-    cell.imageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cat"ofType:@"jpeg"]];
+    //cell.backgroundColor = [UIColor lightGrayColor];
+    
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [AOETableViewCell cellHeight];
-}
-
 
 @end
