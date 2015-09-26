@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ggi-R1-Njt">
-                    <rect key="frame" x="0.0" y="37" width="320" height="531"/>
+                    <rect key="frame" x="0.0" y="19" width="320" height="549"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -28,7 +28,7 @@
             <connections>
                 <outlet property="tableView" destination="Ggi-R1-Njt" id="Gv2-G3-dsR"/>
             </connections>
-            <point key="canvasLocation" x="263" y="288"/>
+            <point key="canvasLocation" x="219" y="98"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

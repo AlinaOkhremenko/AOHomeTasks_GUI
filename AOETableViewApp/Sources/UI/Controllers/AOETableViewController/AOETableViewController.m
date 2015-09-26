@@ -21,15 +21,19 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 @implementation AOETableViewController
 
 #pragma mark - 
-#pragma mark View Life Cycle Methods
+#pragma mark View LifeCycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITableView *tableView = self.containerView.tableView;
+   
     UINavigationItem *item = self.navigationItem;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewRow)];
+    item.rightBarButtonItem = addButton;
+    item.leftBarButtonItem = self.editButtonItem;
+    self.title = @"Data Table";
     
     self.arrayModel = [AOEArrayModel new];
-    [self.arrayModel addObject:[AOEDataModel new]];
     [tableView reloadData];
 }
 
@@ -44,19 +48,30 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
     return self.arrayModel.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     AOETableViewCell *cell = [tableView dequeueCellWithType:[AOETableViewCell class]];
     cell.model = self.arrayModel[indexPath.row];
+    
     return cell;
 }
 
 #pragma mark -
 #pragma mark UITableViewDlegateProtocol
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    //cell.backgroundColor = [UIColor lightGrayColor];
-    
+- (void)    tableView:(UITableView *)tableView
+      willDisplayCell:(UITableViewCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (void)addNewRow {
+    [self.arrayModel addObject:[AOEDataModel new]];
+    [self.containerView.tableView reloadData];
 }
 
 @end

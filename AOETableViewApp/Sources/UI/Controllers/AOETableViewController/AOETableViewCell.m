@@ -18,7 +18,7 @@
     if (_model != model) {
         _model = model;
     }
-     [self fillWithModel:model];
+    [self fillWithModel:model];
 }
 
 - (void)fillWithModel:(AOEDataModel*)model {

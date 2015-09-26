@@ -13,7 +13,6 @@
 #import "AOAlphabetWithAlphabets.h"
 
 @interface AOAlphabet ()
-
 @property (nonatomic, strong) NSArray *letters;
 
 @end
