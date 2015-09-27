@@ -10,6 +10,8 @@
 		C761024F1BB735FD009D1D6F /* AOEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C761024E1BB735FD009D1D6F /* AOEDataModel.m */; };
 		C76102511BB74111009D1D6F /* AOETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76102501BB74111009D1D6F /* AOETableViewCell.xib */; };
 		C76102521BB7474B009D1D6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */; };
+		C761025A1BB84047009D1D6F /* NSIndexPath+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C76102591BB84047009D1D6F /* NSIndexPath+AOEExtensions.m */; };
+		C761025B1BB84047009D1D6F /* NSIndexPath+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C76102591BB84047009D1D6F /* NSIndexPath+AOEExtensions.m */; };
 		C768C0BA1BAF02F500F6990A /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0A81BAF02F500F6990A /* AOEAppDelegate.m */; };
 		C768C0BB1BAF02F500F6990A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C768C0A91BAF02F500F6990A /* Info.plist */; };
 		C768C0BC1BAF02F500F6990A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C768C0AA1BAF02F500F6990A /* main.m */; };
@@ -69,6 +71,8 @@
 		C761024D1BB735FD009D1D6F /* AOEDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDataModel.h; sourceTree = "<group>"; };
 		C761024E1BB735FD009D1D6F /* AOEDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataModel.m; sourceTree = "<group>"; };
 		C76102501BB74111009D1D6F /* AOETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOETableViewCell.xib; sourceTree = "<group>"; };
+		C76102581BB84047009D1D6F /* NSIndexPath+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+AOEExtensions.h"; sourceTree = "<group>"; };
+		C76102591BB84047009D1D6F /* NSIndexPath+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+AOEExtensions.m"; sourceTree = "<group>"; };
 		C768C0A71BAF02F500F6990A /* AOEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEAppDelegate.h; sourceTree = "<group>"; };
 		C768C0A81BAF02F500F6990A /* AOEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEAppDelegate.m; sourceTree = "<group>"; };
 		C768C0A91BAF02F500F6990A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 				C761024E1BB735FD009D1D6F /* AOEDataModel.m */,
 			);
 			path = AOEDataModel;
+			sourceTree = "<group>";
+		};
+		C76102571BB8402E009D1D6F /* NSIndexPath */ = {
+			isa = PBXGroup;
+			children = (
+				C76102581BB84047009D1D6F /* NSIndexPath+AOEExtensions.h */,
+				C76102591BB84047009D1D6F /* NSIndexPath+AOEExtensions.m */,
+			);
+			path = NSIndexPath;
 			sourceTree = "<group>";
 		};
 		C768C0C21BAF031000F6990A /* AOETableViewApp */ = {
@@ -225,6 +238,7 @@
 		C7D6BCED1BB1C76500E98EB4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C76102571BB8402E009D1D6F /* NSIndexPath */,
 				C7D6BD641BB70CA500E98EB4 /* NSString */,
 				C7D6BD271BB1FAFC00E98EB4 /* NSMutableArray */,
 				C7D6BD201BB1F24400E98EB4 /* UITableView */,
@@ -554,6 +568,7 @@
 				C7D6BD301BB2042400E98EB4 /* UIViewController+AOEExtensions.m in Sources */,
 				C7D6BD191BB1CF7100E98EB4 /* AOEContainerView.m in Sources */,
 				C7D6BDA41BB7117100E98EB4 /* NSString+AOEExtensions.m in Sources */,
+				C761025A1BB84047009D1D6F /* NSIndexPath+AOEExtensions.m in Sources */,
 				C7D6BDA01BB70E4800E98EB4 /* AOObservable.m in Sources */,
 				C768C0BC1BAF02F500F6990A /* main.m in Sources */,
 				C7D6BD1B1BB1CF7B00E98EB4 /* AOETableViewCell.m in Sources */,
@@ -593,6 +608,7 @@
 				C7D6BDA11BB70E4800E98EB4 /* AOObservable.m in Sources */,
 				C7D6BD231BB1F26500E98EB4 /* UITableView+AOEExtensions.m in Sources */,
 				C7D6BD961BB70CED00E98EB4 /* AOAlphabetWithAlphabets.m in Sources */,
+				C761025B1BB84047009D1D6F /* NSIndexPath+AOEExtensions.m in Sources */,
 				C7D6BD941BB70CED00E98EB4 /* AOAlphabet.m in Sources */,
 				C7D6BD2A1BB1FB4D00E98EB4 /* NSMutableArray+AOEExtensions.m in Sources */,
 				C7D6BDA51BB7117100E98EB4 /* NSString+AOEExtensions.m in Sources */,
