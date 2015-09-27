@@ -57,21 +57,57 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
     return cell;
 }
 
-#pragma mark -
-#pragma mark UITableViewDlegateProtocol
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    
+    [super setEditing:editing animated:animated];
+    
+    [self.containerView.tableView setEditing:editing animated:animated];
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.editing == NO) {
+        return UITableViewCellEditingStyleNone;
+    }
+    
+    return UITableViewCellEditingStyleDelete;
+}
 
 - (void)    tableView:(UITableView *)tableView
-      willDisplayCell:(UITableViewCell *)cell
+   commitEditingStyle:(UITableViewCellEditingStyle) editingStyle
     forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.arrayModel removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
+
+- (BOOL)    tableView:(UITableView *)tableView
+canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)    tableView:(UITableView *)tableView
+   moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+          toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [self.arrayModel moveObjectAtIndex:sourceIndexPath.row
+                               toIndex:destinationIndexPath.row];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
 - (void)addNewRow {
-    [self.arrayModel addObject:[AOEDataModel new]];
-    [self.containerView.tableView reloadData];
+    [self.containerView.tableView beginUpdates];
+    AOEArrayModel *model = self.arrayModel;
+    [model addObject:[AOEDataModel new]];
+    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:model.count - 1 inSection:0];
+    [self.containerView.tableView insertRowsAtIndexPaths:@[currentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.containerView.tableView endUpdates];
 }
 
 @end
