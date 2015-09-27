@@ -37,10 +37,6 @@ static const NSUInteger kAOEUpperBoundLength = 15;
                                                  andAlphabet:alphabetWithUpperCase];
     
     return [self stringWithFormat:@"%@%@",randomUpperCaseString, randomLowerCaseString];
-    
 }
-
-
-
 
 @end
