@@ -5,7 +5,6 @@
 //  Created by Alina Okhremenko on 20.09.15.
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
-
 #import "AOETableViewController.h"
 
 #import "AOETableViewCell.h"
@@ -27,12 +26,7 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
     [super viewDidLoad];
     UITableView *tableView = self.containerView.tableView;
    
-    UINavigationItem *item = self.navigationItem;
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewRow)];
-    item.rightBarButtonItem = addButton;
-    item.leftBarButtonItem = self.editButtonItem;
-    self.title = @"Data Table";
-    
+    [self setupNavigationItem];
     self.arrayModel = [AOEArrayModel new];
     [tableView reloadData];
 }
@@ -100,6 +94,14 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
 
 #pragma mark -
 #pragma mark Private Methods
+
+- (void)setupNavigationItem {
+    UINavigationItem *item = self.navigationItem;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewRow)];
+    item.rightBarButtonItem = addButton;
+    item.leftBarButtonItem = self.editButtonItem;
+    self.title = @"Data Table";
+}
 
 - (void)addNewRow {
     [self.containerView.tableView beginUpdates];
