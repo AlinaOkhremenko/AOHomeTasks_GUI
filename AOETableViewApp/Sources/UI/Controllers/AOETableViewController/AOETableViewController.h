@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class AOEArrayModel;
+@class AOEDataArrayModel;
 
 @interface AOETableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong)   AOEArrayModel   *arrayModel;
+@property (nonatomic, strong)   AOEDataArrayModel   *arrayModel;
 
 @end

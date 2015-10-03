@@ -16,7 +16,7 @@
 @implementation AOEObservable
 
 #pragma mark -
-#pragma mark Deallocation and Initialization Methods
+#pragma mark Initialization Methods
 
 - (instancetype)init {
     self = [super init];
@@ -28,14 +28,14 @@
 }
 
 #pragma mark -
-#pragma mark - Accessors
+#pragma mark Accessors
 
 - (NSArray *)observers {
     return [self.mutableObservers allObjects];
 }
 
 #pragma mark -
-#pragma mark  Public Methods
+#pragma mark Public Methods
 
 - (void)addObserver:(id)observer {
     [self.mutableObservers addObject:observer];

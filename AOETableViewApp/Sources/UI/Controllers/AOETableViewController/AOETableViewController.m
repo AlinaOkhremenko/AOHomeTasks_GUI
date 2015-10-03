@@ -9,10 +9,11 @@
 
 #import "AOETableViewCell.h"
 #import "AOEContainerView.h"
-#import "AOEArrayModel.h"
+#import "AOEDataArrayModel.h"
 #import "AOEDataModel.h"
 
 #import "UITableView+AOEExtensions.h"
+#import "NSIndexPath+AOEExtensions.h"
 #import "AOEMacro.h"
 
 AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
@@ -27,8 +28,8 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
     UITableView *tableView = self.containerView.tableView;
    
     [self setupNavigationItem];
-    self.arrayModel = [AOEArrayModel new];
-    [tableView reloadData];
+    self.arrayModel = [AOEDataArrayModel new];
+    [self.arrayModel fillArrayModelWithRows:10];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,7 +108,7 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
     [self.containerView.tableView beginUpdates];
     AOEArrayModel *model = self.arrayModel;
     [model addObject:[AOEDataModel new]];
-    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:model.count - 1 inSection:0];
+    NSIndexPath *currentIndexPath = [NSIndexPath indexPathByAddingRows:model.count - 1];
     [self.containerView.tableView insertRowsAtIndexPaths:@[currentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
     [self.containerView.tableView endUpdates];
 }
