@@ -287,6 +287,7 @@
 		C7D6BCFC1BB1C76500E98EB4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C7DC915D1BBFC0D500D02A6F /* AOEDataArrayModel */,
 				C761024C1BB735FD009D1D6F /* AOEDataModel */,
 				C7D6BDA61BB71F1500E98EB4 /* AOEImageModel */,
 				C7D6BD2B1BB2004200E98EB4 /* AOEArrayModel */,
@@ -458,6 +459,13 @@
 				C7D6BDA81BB71F5F00E98EB4 /* AOEImageModel.m */,
 			);
 			path = AOEImageModel;
+			sourceTree = "<group>";
+		};
+		C7DC915D1BBFC0D500D02A6F /* AOEDataArrayModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AOEDataArrayModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
