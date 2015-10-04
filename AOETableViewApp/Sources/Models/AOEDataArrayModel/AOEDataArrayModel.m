@@ -11,6 +11,21 @@
 
 @implementation AOEDataArrayModel
 
+#pragma mark - 
+#pragma mark Initializations
+
+- (id)initWithRows:(NSUInteger)rows {
+    self = [super init];
+    if (self) {
+        [self fillArrayModelWithRows:rows];
+    }
+    return self;
+}
+
+- (id)init {
+    return [self initWithRows:12];
+}
+
 #pragma mark -
 #pragma mark Public Methods
 
