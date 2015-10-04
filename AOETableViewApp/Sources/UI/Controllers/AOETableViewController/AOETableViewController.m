@@ -27,6 +27,7 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 
 #pragma mark -
 #pragma mark Accessors
+
 - (void)setArrayModel:(AOEDataArrayModel *)arrayModel {
     if (_arrayModel != arrayModel) {
         [_arrayModel removeObserver:self];
@@ -137,26 +138,7 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)        arrayModel:(AOEArrayModel *)arrayModel
  didChangeWithChangesModel:(AOEChangesModel *)changesModel
 {
-    UITableView *tableView = self.containerView.tableView;
-    AOEChangesModelOneIndex *modelOneIndex = nil;
-    AOEChangesModelTwoIndices *modelTwoIndices = nil;
-    
-    switch (changesModel.type) {
-        case AOEModelChangeTypeDelete:
-          [tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathByAddingRows:modelOneIndex.index]]
-                           withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case AOEModelChangeTypeInsert:
-            [tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathByAddingRows:modelOneIndex.index]]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case AOEModelChangeTypeMove:
-            [tableView moveRowAtIndexPath:[NSIndexPath indexPathByAddingRows:modelTwoIndices.fromIndex]
-                              toIndexPath:[NSIndexPath indexPathByAddingRows:modelTwoIndices.toIndex]];
-            break;
-    }
+    [self.containerView.tableView adaptArrayModelwithChangesModel:changesModel];
 }
 
 @end

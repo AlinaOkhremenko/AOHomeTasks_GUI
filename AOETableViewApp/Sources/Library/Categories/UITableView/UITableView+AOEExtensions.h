@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AOEChangesModel;
 
 @interface UITableView (AOEExtensions)
 
 - (id)dequeueCellWithType:(Class)cls;
+
+- (void)adaptArrayModelwithChangesModel:(AOEChangesModel*)changesModel;
 
 @end

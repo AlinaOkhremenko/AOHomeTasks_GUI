@@ -18,6 +18,9 @@
 		C7AD3AB01BAEFBBE00983FC0 /* AOETableViewAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AD3AAF1BAEFBBE00983FC0 /* AOETableViewAppTests.m */; };
 		C7CB30771BBFC5E1002AA569 /* AOEDataArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB30761BBFC5E1002AA569 /* AOEDataArrayModel.m */; };
 		C7CB30781BBFC664002AA569 /* AOEDataArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB30761BBFC5E1002AA569 /* AOEDataArrayModel.m */; };
+		C7CB307C1BBFCD45002AA569 /* AOEChangesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB307B1BBFCD45002AA569 /* AOEChangesModel.m */; };
+		C7CB30831BBFD1C3002AA569 /* AOEChangesModelOneIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB30821BBFD1C3002AA569 /* AOEChangesModelOneIndex.m */; };
+		C7CB30861BBFD1DB002AA569 /* AOEChangesModelTwoIndices.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB30851BBFD1DB002AA569 /* AOEChangesModelTwoIndices.m */; };
 		C7D6BD0C1BB1C76500E98EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */; };
 		C7D6BD0D1BB1C76500E98EB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */; };
 		C7D6BD101BB1C76500E98EB4 /* UIViewController+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6BCF51BB1C76500E98EB4 /* UIViewController+AOEExtensions.m */; };
@@ -85,6 +88,13 @@
 		C7AD3AAF1BAEFBBE00983FC0 /* AOETableViewAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOETableViewAppTests.m; sourceTree = "<group>"; };
 		C7CB30751BBFC5E1002AA569 /* AOEDataArrayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDataArrayModel.h; sourceTree = "<group>"; };
 		C7CB30761BBFC5E1002AA569 /* AOEDataArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataArrayModel.m; sourceTree = "<group>"; };
+		C7CB307A1BBFCD45002AA569 /* AOEChangesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEChangesModel.h; sourceTree = "<group>"; };
+		C7CB307B1BBFCD45002AA569 /* AOEChangesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEChangesModel.m; sourceTree = "<group>"; };
+		C7CB30811BBFD1C3002AA569 /* AOEChangesModelOneIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEChangesModelOneIndex.h; sourceTree = "<group>"; };
+		C7CB30821BBFD1C3002AA569 /* AOEChangesModelOneIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEChangesModelOneIndex.m; sourceTree = "<group>"; };
+		C7CB30841BBFD1DB002AA569 /* AOEChangesModelTwoIndices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEChangesModelTwoIndices.h; sourceTree = "<group>"; };
+		C7CB30851BBFD1DB002AA569 /* AOEChangesModelTwoIndices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEChangesModelTwoIndices.m; sourceTree = "<group>"; };
+		C7CB30881BC125DA002AA569 /* AOEObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEObserver.h; sourceTree = "<group>"; };
 		C7D6BCE91BB1C76500E98EB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7D6BCEA1BB1C76500E98EB4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C7D6BCF41BB1C76500E98EB4 /* UIViewController+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOEExtensions.h"; sourceTree = "<group>"; };
@@ -209,6 +219,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C7CB30791BBFCD2F002AA569 /* AOEChangesModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB307F1BBFD1A1002AA569 /* AOEChangesModelOneIndex */,
+				C7CB30801BBFD1A1002AA569 /* AOEChangesModelTwoIndices */,
+				C7CB307A1BBFCD45002AA569 /* AOEChangesModel.h */,
+				C7CB307B1BBFCD45002AA569 /* AOEChangesModel.m */,
+			);
+			path = AOEChangesModel;
+			sourceTree = "<group>";
+		};
+		C7CB307F1BBFD1A1002AA569 /* AOEChangesModelOneIndex */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB30811BBFD1C3002AA569 /* AOEChangesModelOneIndex.h */,
+				C7CB30821BBFD1C3002AA569 /* AOEChangesModelOneIndex.m */,
+			);
+			path = AOEChangesModelOneIndex;
+			sourceTree = "<group>";
+		};
+		C7CB30801BBFD1A1002AA569 /* AOEChangesModelTwoIndices */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB30841BBFD1DB002AA569 /* AOEChangesModelTwoIndices.h */,
+				C7CB30851BBFD1DB002AA569 /* AOEChangesModelTwoIndices.m */,
+			);
+			path = AOEChangesModelTwoIndices;
+			sourceTree = "<group>";
+		};
+		C7CB30871BC125C1002AA569 /* AOEObserver */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB30881BC125DA002AA569 /* AOEObserver.h */,
+			);
+			path = AOEObserver;
+			sourceTree = "<group>";
+		};
 		C7D6BCE81BB1C76500E98EB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +338,7 @@
 		C7D6BCFC1BB1C76500E98EB4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C7CB30791BBFCD2F002AA569 /* AOEChangesModel */,
 				C7DC915D1BBFC0D500D02A6F /* AOEDataArrayModel */,
 				C761024C1BB735FD009D1D6F /* AOEDataModel */,
 				C7D6BDA61BB71F1500E98EB4 /* AOEImageModel */,
@@ -368,6 +416,7 @@
 		C7D6BD2B1BB2004200E98EB4 /* AOEArrayModel */ = {
 			isa = PBXGroup;
 			children = (
+				C7CB30871BC125C1002AA569 /* AOEObserver */,
 				C7D6BD2C1BB2004200E98EB4 /* AOEArrayModel.h */,
 				C7D6BD2D1BB2004200E98EB4 /* AOEArrayModel.m */,
 			);
@@ -580,8 +629,10 @@
 			files = (
 				C7D6BD931BB70CED00E98EB4 /* AOAlphabet.m in Sources */,
 				C7D6BD301BB2042400E98EB4 /* UIViewController+AOEExtensions.m in Sources */,
+				C7CB307C1BBFCD45002AA569 /* AOEChangesModel.m in Sources */,
 				C7D6BD191BB1CF7100E98EB4 /* AOEContainerView.m in Sources */,
 				C7D6BDA41BB7117100E98EB4 /* NSString+AOEExtensions.m in Sources */,
+				C7CB30831BBFD1C3002AA569 /* AOEChangesModelOneIndex.m in Sources */,
 				C761025A1BB84047009D1D6F /* NSIndexPath+AOEExtensions.m in Sources */,
 				C7D6BDA01BB70E4800E98EB4 /* AOObservable.m in Sources */,
 				C768C0BC1BAF02F500F6990A /* main.m in Sources */,
@@ -595,6 +646,7 @@
 				C7D6BD311BB2042C00E98EB4 /* UINib+AOEExtensions.m in Sources */,
 				C768C0BA1BAF02F500F6990A /* AOEAppDelegate.m in Sources */,
 				C7D6BDA91BB71F5F00E98EB4 /* AOEImageModel.m in Sources */,
+				C7CB30861BBFD1DB002AA569 /* AOEChangesModelTwoIndices.m in Sources */,
 				C7D6BDAB1BB7282E00E98EB4 /* AOEArrayModel.m in Sources */,
 				C7D6BD321BB2043100E98EB4 /* UITableView+AOEExtensions.m in Sources */,
 				C761024F1BB735FD009D1D6F /* AOEDataModel.m in Sources */,
