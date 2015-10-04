@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AOObservable.h"
 
-@interface AOEArrayModel : NSObject
+@interface AOEArrayModel : AOEObservable
 @property (nonatomic, readonly) NSUInteger  count;
 @property (nonatomic, readonly) NSArray     *array;
 
@@ -18,6 +19,7 @@
 - (id)objectAtIndex:(NSUInteger)index;
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
 
+- (void)insertObject:(id)object atIndex:(NSUInteger)index;
 - (void)removeObjectAtIndex:(NSUInteger)index;
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 

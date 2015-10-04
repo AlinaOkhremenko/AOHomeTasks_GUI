@@ -11,9 +11,6 @@
 @implementation NSMutableArray (AOEExtensions)
 
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
-    if (fromIndex < toIndex) {
-        toIndex--;
-    }
     id object = [self objectAtIndex:fromIndex];
     [self removeObjectAtIndex:fromIndex];
     [self insertObject:object atIndex:toIndex];

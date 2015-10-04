@@ -10,6 +10,9 @@
 
 @implementation AOEChangesModelTwoIndices
 
+#pragma mark - 
+#pragma mark Class Methods
+
 + (instancetype)modelFromIndex:(NSUInteger)fromIndex
                        toIndex:(NSUInteger)toIndex
                           type:(AOEModelChangeType)type

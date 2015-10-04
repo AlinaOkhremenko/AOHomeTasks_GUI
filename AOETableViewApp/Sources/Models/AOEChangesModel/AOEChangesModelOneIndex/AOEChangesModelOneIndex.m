@@ -10,6 +10,9 @@
 
 @implementation AOEChangesModelOneIndex
 
+#pragma mark - 
+#pragma mark Class Methods
+
 + (instancetype)modelWithIndex:(NSUInteger)index
                           type:(AOEModelChangeType)type
 {
