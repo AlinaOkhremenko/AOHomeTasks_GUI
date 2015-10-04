@@ -15,11 +15,19 @@
 #define AOEstrongify(VAR) \
 __strong __typeof(VAR) VAR = __AOEWeak##VAR;
 
-#define AOEstrongifyAndReturnIfNil(VAR) \
-    __strong __typeof(VAR) VAR = __AOEWeak##VAR; \
+#define AOEEmpty
+
+#define AOEstrongifyAndReturnEntity(VAR, entity) \
+    AOEStrongify (VAR) \
     if (VAR == nil) { \
-        return ; \
+        return entity; \
     }
+
+#define AOEstrongifyAndReturnIfNil(VAR) \
+    AOEstrongifyAndReturnEntity(VAR, AOEEmpty)
+
+#define AOEstrongifyAndReturnNilIfNil(VAR) \
+    AOEstrongifyAndReturnEntity(VAR, nil)
 
 #define AOEViewProperty(propertyName, class) \
 @property (nonatomic, readonly)     class    *propertyName; \
@@ -34,19 +42,18 @@ __strong __typeof(VAR) VAR = __AOEWeak##VAR;
     } \
 
 #define AOEViewControllerClass(viewControllerClass, propertyName, viewClass) \
-    @interface viewControllerClass (viewClass##propertyName) \
+    @interface viewControllerClass (##viewClass##propertyName) \
     \
     AOEViewProperty(propertyName, viewClass) \
     \
     @end \
     \
-    @implementation viewControllerClass (viewClass##propertyName) \
+    @implementation viewControllerClass (##viewClass##propertyName) \
     \
     @dynamic propertyName; \
     \
     AOEViewGetterSynthesize(propertyName, viewClass) \
     \
     @end
-
 
 #endif
