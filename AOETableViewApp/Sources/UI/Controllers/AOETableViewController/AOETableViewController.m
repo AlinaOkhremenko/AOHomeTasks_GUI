@@ -29,7 +29,7 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
    
     [self setupNavigationItem];
     self.arrayModel = [AOEDataArrayModel new];
-    [self.arrayModel fillArrayModelWithRows:10];
+  
 }
 
 - (void)didReceiveMemoryWarning {
