@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AOEObserver.h"
 @class AOEDataArrayModel;
 
-@interface AOETableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AOETableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AOEObserver>
 @property (nonatomic, strong)   AOEDataArrayModel   *arrayModel;
 
 @end

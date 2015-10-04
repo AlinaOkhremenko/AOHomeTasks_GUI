@@ -7,6 +7,10 @@
 //
 
 #import "AOEArrayModel.h"
+#import "AOEChangesModel.h"
+#import "AOEObserver.h"
+
+#import "NSMutableArray+AOEExtensions.h"
 
 @interface AOEArrayModel ()
 @property (nonatomic, strong)   NSMutableArray  *objects;
@@ -60,17 +64,28 @@
     return [self objectAtIndex:index];
 }
 
+- (void)insertObject:(id)object atIndex:(NSUInteger)index {
+    [self.objects insertObject:object atIndex:index];
+    
+    [self notifyWithChangesModel:[AOEChangesModel insertModelWithIndex:index]];
+}
+
 - (void)removeObjectAtIndex:(NSUInteger)index {
     [self.objects removeObjectAtIndex:index];
+    
+    [self notifyWithChangesModel:[AOEChangesModel deleteModelWithIndex:index]];
 }
 
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
-    if (fromIndex < toIndex) {
-        toIndex--;
-    }
-    id object = [self objectAtIndex:fromIndex];
-    [self removeObjectAtIndex:fromIndex];
-    [self.objects insertObject:object atIndex:toIndex];
-}
+    [self.objects moveObjectAtIndex:fromIndex toIndex:toIndex];
     
+    [self notifyWithChangesModel:[AOEChangesModel moveModelFromIndex:fromIndex toIndex:toIndex]];
+}
+
+- (void)notifyWithChangesModel:(id)model {
+    [self notifyObserversWithSelector:@selector(arrayModel:didChangeWithChangesModel:)
+                           withObject:self.objects
+                           withObject:model];
+}
+
 @end

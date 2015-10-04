@@ -11,6 +11,11 @@
 #import "AOEContainerView.h"
 #import "AOEDataArrayModel.h"
 #import "AOEDataModel.h"
+#import "AOEObserver.h"
+#import "AOEChangesModel.h"
+#import "AOEChangesModelOneIndex.h"
+#import "AOEChangesModelTwoIndices.h"
+
 
 #import "UITableView+AOEExtensions.h"
 #import "NSIndexPath+AOEExtensions.h"
@@ -20,15 +25,25 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 
 @implementation AOETableViewController
 
+#pragma mark -
+#pragma mark Accessors
+- (void)setArrayModel:(AOEDataArrayModel *)arrayModel {
+    if (_arrayModel != arrayModel) {
+        [_arrayModel removeObserver:self];
+        _arrayModel = arrayModel;
+        [_arrayModel addObserver:self];
+    }
+}
+
 #pragma mark - 
 #pragma mark View LifeCycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITableView *tableView = self.containerView.tableView;
    
     [self setupNavigationItem];
     self.arrayModel = [AOEDataArrayModel new];
+    [self.containerView.tableView reloadData];
   
 }
 
@@ -75,7 +90,6 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.arrayModel removeObjectAtIndex:indexPath.row];
-        [tableView reloadData];
     }
 }
 
@@ -91,6 +105,7 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.arrayModel moveObjectAtIndex:sourceIndexPath.row
                                toIndex:destinationIndexPath.row];
+    [self.containerView.tableView reloadData];
 }
 
 #pragma mark -
@@ -98,7 +113,9 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)setupNavigationItem {
     UINavigationItem *item = self.navigationItem;
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewRow)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                               target:self
+                                                                               action:@selector(addNewRow)];
     item.rightBarButtonItem = addButton;
     item.leftBarButtonItem = self.editButtonItem;
     self.title = @"Data Table";
@@ -109,8 +126,37 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
     AOEArrayModel *model = self.arrayModel;
     [model addObject:[AOEDataModel new]];
     NSIndexPath *currentIndexPath = [NSIndexPath indexPathByAddingRows:model.count - 1];
-    [self.containerView.tableView insertRowsAtIndexPaths:@[currentIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.containerView.tableView insertRowsAtIndexPaths:@[currentIndexPath]
+                                        withRowAnimation:UITableViewRowAnimationFade];
     [self.containerView.tableView endUpdates];
+}
+
+#pragma mark -
+#pragma mark AOEObserver Protocol
+
+- (void)        arrayModel:(AOEArrayModel *)arrayModel
+ didChangeWithChangesModel:(AOEChangesModel *)changesModel
+{
+    UITableView *tableView = self.containerView.tableView;
+    AOEChangesModelOneIndex *modelOneIndex = nil;
+    AOEChangesModelTwoIndices *modelTwoIndices = nil;
+    
+    switch (changesModel.type) {
+        case AOEModelChangeTypeDelete:
+          [tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathByAddingRows:modelOneIndex.index]]
+                           withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case AOEModelChangeTypeInsert:
+            [tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathByAddingRows:modelOneIndex.index]]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case AOEModelChangeTypeMove:
+            [tableView moveRowAtIndexPath:[NSIndexPath indexPathByAddingRows:modelTwoIndices.fromIndex]
+                              toIndexPath:[NSIndexPath indexPathByAddingRows:modelTwoIndices.toIndex]];
+            break;
+    }
 }
 
 @end

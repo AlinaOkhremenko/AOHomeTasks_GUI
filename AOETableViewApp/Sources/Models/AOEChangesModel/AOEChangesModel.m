@@ -17,12 +17,14 @@
 
 @implementation AOEChangesModel
 
+#pragma mark -
+#pragma mark Class Methods
+
 + (instancetype)modelWithType:(AOEModelChangeType)type {
     AOEChangesModel *model = [self new];
     model.type = type;
     
     return model;
-    
 }
 
 + (AOEChangesModelOneIndex *)insertModelWithIndex:(NSUInteger)index {
