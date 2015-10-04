@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class AOEChangesModel;
+@class AOEArrayModel;
 
 @protocol AOEObserver <NSObject>
+
+- (void)        arrayModel:(AOEArrayModel*)arrayModel
+ didChangeWithChangesModel:(AOEChangesModel*)changesModel;
 
 @end
