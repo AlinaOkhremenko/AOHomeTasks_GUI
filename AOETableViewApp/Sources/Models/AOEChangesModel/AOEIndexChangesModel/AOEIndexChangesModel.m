@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 
-#import "AOEChangesModelOneIndex.h"
+#import "AOEIndexChangesModel.h"
 
-@implementation AOEChangesModelOneIndex
+@implementation AOEIndexChangesModel
 
 #pragma mark - 
 #pragma mark Class Methods
@@ -16,7 +16,7 @@
 + (instancetype)modelWithIndex:(NSUInteger)index
                           type:(AOEModelChangeType)type
 {
-    AOEChangesModelOneIndex *model = [self modelWithType:type];
+    AOEIndexChangesModel *model = [self modelWithType:type];
     model.index = index;
     
     return model;

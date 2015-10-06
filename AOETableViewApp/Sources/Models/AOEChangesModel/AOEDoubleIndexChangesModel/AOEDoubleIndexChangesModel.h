@@ -8,9 +8,9 @@
 
 #import "AOEChangesModel.h"
 
-@interface AOEChangesModelTwoIndices : AOEChangesModel
-@property (nonatomic)   NSUInteger  fromIndex;
-@property (nonatomic)   NSUInteger  toIndex;
+@interface AOEDoubleIndexChangesModel : AOEChangesModel
+@property (nonatomic, assign)   NSUInteger  fromIndex;
+@property (nonatomic, assign)   NSUInteger  toIndex;
 
 + (instancetype)modelFromIndex:(NSUInteger)fromIndex
                        toIndex:(NSUInteger)toIndex

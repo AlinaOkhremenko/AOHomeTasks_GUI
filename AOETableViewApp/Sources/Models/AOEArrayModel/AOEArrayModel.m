@@ -8,7 +8,7 @@
 
 #import "AOEArrayModel.h"
 #import "AOEChangesModel.h"
-#import "AOEObserver.h"
+#import "AOEArrayModelObserver.h"
 
 #import "NSMutableArray+AOEExtensions.h"
 
@@ -84,7 +84,7 @@
 
 - (void)notifyWithChangesModel:(id)model {
     [self notifyObserversWithSelector:@selector(arrayModel:didChangeWithChangesModel:)
-                           withObject:self.objects
+                           withObject:self
                            withObject:model];
 }
 

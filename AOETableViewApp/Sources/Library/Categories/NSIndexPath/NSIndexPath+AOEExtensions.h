@@ -6,10 +6,8 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface NSIndexPath (AOEExtensions)
 
-+ (NSIndexPath *)indexPathByAddingRows:(NSInteger)rows;
++ (NSIndexPath *)indexPathForRow:(NSInteger)row;
 
 @end

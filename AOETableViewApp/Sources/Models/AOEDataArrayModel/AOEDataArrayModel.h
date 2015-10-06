@@ -12,9 +12,9 @@
 
 @interface AOEDataArrayModel : AOEArrayModel
 
-- (id)initWithRows:(NSUInteger)rows;
 - (id)init;
+- (id)initWithCount:(NSUInteger)count;
 
-- (void)fillArrayModelWithRows:(NSUInteger)rows;
+- (void)fillArrayModelWithRows:(NSUInteger)rowsCount;
 
 @end

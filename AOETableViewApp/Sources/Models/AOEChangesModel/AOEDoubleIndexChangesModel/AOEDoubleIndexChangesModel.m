@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 
-#import "AOEChangesModelTwoIndices.h"
+#import "AOEDoubleIndexChangesModel.h"
 
-@implementation AOEChangesModelTwoIndices
+@implementation AOEDoubleIndexChangesModel
 
 #pragma mark - 
 #pragma mark Class Methods
@@ -17,9 +17,9 @@
                        toIndex:(NSUInteger)toIndex
                           type:(AOEModelChangeType)type
 {
-    AOEChangesModelTwoIndices *model = [self modelWithType:type];
-    model.toIndex = toIndex;
+    AOEDoubleIndexChangesModel *model = [self modelWithType:type];
     model.fromIndex = fromIndex;
+    model.toIndex = toIndex;
     
     return model;
 }

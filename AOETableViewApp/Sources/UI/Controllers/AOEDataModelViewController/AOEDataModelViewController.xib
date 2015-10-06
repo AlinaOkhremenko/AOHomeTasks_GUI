@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AOETableViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AOEDataModelViewController">
             <connections>
                 <outlet property="view" destination="6SY-SS-hfg" id="sg6-0k-dJZ"/>
             </connections>
@@ -19,14 +19,14 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="pi9-iY-Rhp"/>
-                        <outlet property="delegate" destination="-1" id="TE0-I4-Of2"/>
+                        <outlet property="dataSource" destination="-1" id="QC3-Q6-SN1"/>
+                        <outlet property="delegate" destination="-1" id="pQi-Uh-PGu"/>
                     </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="tableView" destination="Ggi-R1-Njt" id="Gv2-G3-dsR"/>
+                <outlet property="tableView" destination="Ggi-R1-Njt" id="Uf7-V1-jKQ"/>
             </connections>
             <point key="canvasLocation" x="219" y="98"/>
         </view>

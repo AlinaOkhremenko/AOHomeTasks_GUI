@@ -7,8 +7,8 @@
 //
 
 #import "AOEAppDelegate.h"
-#import "AOETableViewController.h"
-
+#import "AOEDataModelViewController.h"
+#import "AOEDataArrayModel.h"
 #import "UIViewController+AOEExtensions.h"
 #import "UIWindow+AOEExtensions.h"
 
@@ -25,9 +25,11 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    AOETableViewController *viewController = [AOETableViewController viewController];
+    AOEDataModelViewController *viewController = [AOEDataModelViewController viewController];
+    viewController.arrayModel = [AOEDataArrayModel new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
     window.rootViewController = navigationController;
+    
     
     [window makeKeyAndVisible];
     

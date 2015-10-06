@@ -30,7 +30,7 @@ __strong __typeof(VAR) VAR = __AOEWeak##VAR;
     AOEstrongifyAndReturnEntity(VAR, nil)
 
 #define AOEViewProperty(propertyName, class) \
-@property (nonatomic, readonly)     class    *propertyName; \
+@property (nonatomic, readonly)     class    *propertyName; 
 
 #define AOEViewGetterSynthesize(selector, viewClass) \
     - (viewClass *)selector { \
@@ -39,16 +39,16 @@ __strong __typeof(VAR) VAR = __AOEWeak##VAR;
         } \
         \
         return nil; \
-    } \
+    }
 
 #define AOEViewControllerClass(viewControllerClass, propertyName, viewClass) \
-    @interface viewControllerClass (##viewClass##propertyName) \
+    @interface viewControllerClass (viewClass##propertyName) \
     \
     AOEViewProperty(propertyName, viewClass) \
     \
     @end \
     \
-    @implementation viewControllerClass (##viewClass##propertyName) \
+    @implementation viewControllerClass (viewClass##propertyName) \
     \
     @dynamic propertyName; \
     \

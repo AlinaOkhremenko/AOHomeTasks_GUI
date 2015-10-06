@@ -5,25 +5,41 @@
 //  Created by Alina Okhremenko on 20.09.15.
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
-#import "AOETableViewController.h"
+#import "AOEDataModelViewController.h"
 
-#import "AOETableViewCell.h"
+#import "AOEDataModelViewCell.h"
 #import "AOEContainerView.h"
+
 #import "AOEDataArrayModel.h"
 #import "AOEDataModel.h"
-#import "AOEObserver.h"
 #import "AOEChangesModel.h"
-#import "AOEChangesModelOneIndex.h"
-#import "AOEChangesModelTwoIndices.h"
+#import "AOEIndexChangesModel.h"
+#import "AOEDoubleIndexChangesModel.h"
 
+#import "AOEArrayModelObserver.h"
 
 #import "UITableView+AOEExtensions.h"
 #import "NSIndexPath+AOEExtensions.h"
 #import "AOEMacro.h"
 
-AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
+AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerView);
 
-@implementation AOETableViewController
+@implementation AOEDataModelViewController
+
+#pragma mark
+#pragma mark Initializations and Deallocations
+
+- (void)dealloc {
+    self.arrayModel = nil;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+         [self setupNavigationItem];
+    }
+    return self;
+}
 
 #pragma mark -
 #pragma mark Accessors
@@ -41,11 +57,8 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    [self setupNavigationItem];
-    self.arrayModel = [AOEDataArrayModel new];
+    
     [self.containerView.tableView reloadData];
-  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,14 +75,13 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AOETableViewCell *cell = [tableView dequeueCellWithType:[AOETableViewCell class]];
+    AOEDataModelViewCell *cell = [tableView dequeueCellWithType:[AOEDataModelViewCell class]];
     cell.model = self.arrayModel[indexPath.row];
     
     return cell;
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    
     [super setEditing:editing animated:animated];
     
     [self.containerView.tableView setEditing:editing animated:animated];
@@ -78,11 +90,7 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
 - (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView
            editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.editing == NO) {
-        return UITableViewCellEditingStyleNone;
-    }
-    
-    return UITableViewCellEditingStyleDelete;
+    return self.editing == NO ? UITableViewCellEditingStyleNone : UITableViewCellEditingStyleDelete;
 }
 
 - (void)    tableView:(UITableView *)tableView
@@ -94,8 +102,8 @@ AOEViewControllerClass(AOETableViewController, containerView, AOEContainerView);
     }
 }
 
-- (BOOL)    tableView:(UITableView *)tableView
-canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)        tableView:(UITableView *)tableView
+    canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
 }
@@ -106,7 +114,6 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.arrayModel moveObjectAtIndex:sourceIndexPath.row
                                toIndex:destinationIndexPath.row];
-    [self.containerView.tableView reloadData];
 }
 
 #pragma mark -
@@ -126,7 +133,7 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
     [self.containerView.tableView beginUpdates];
     AOEArrayModel *model = self.arrayModel;
     [model addObject:[AOEDataModel new]];
-    NSIndexPath *currentIndexPath = [NSIndexPath indexPathByAddingRows:model.count - 1];
+    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:model.count - 1];
     [self.containerView.tableView insertRowsAtIndexPaths:@[currentIndexPath]
                                         withRowAnimation:UITableViewRowAnimationFade];
     [self.containerView.tableView endUpdates];
@@ -138,7 +145,7 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)        arrayModel:(AOEArrayModel *)arrayModel
  didChangeWithChangesModel:(AOEChangesModel *)changesModel
 {
-    [self.containerView.tableView adaptArrayModelwithChangesModel:changesModel];
+    [self.containerView.tableView updateWithChangesModel:changesModel];
 }
 
 @end

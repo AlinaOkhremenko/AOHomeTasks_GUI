@@ -7,8 +7,8 @@
 //
 
 #import "AOEChangesModel.h"
-#import "AOEChangesModelTwoIndices.h"
-#import "AOEChangesModelOneIndex.h"
+#import "AOEDoubleIndexChangesModel.h"
+#import "AOEIndexChangesModel.h"
 
 @interface AOEChangesModel ()
 @property(nonatomic, assign) AOEModelChangeType type;
@@ -27,20 +27,20 @@
     return model;
 }
 
-+ (AOEChangesModelOneIndex *)insertModelWithIndex:(NSUInteger)index {
-    return [AOEChangesModelOneIndex modelWithIndex:index
++ (AOEIndexChangesModel *)insertModelWithIndex:(NSUInteger)index {
+    return [AOEIndexChangesModel modelWithIndex:index
                                               type:AOEModelChangeTypeInsert];
 }
 
-+ (AOEChangesModelOneIndex *)deleteModelWithIndex:(NSUInteger)index {
-    return [AOEChangesModelOneIndex modelWithIndex:index
++ (AOEIndexChangesModel *)deleteModelWithIndex:(NSUInteger)index {
+    return [AOEIndexChangesModel modelWithIndex:index
                                               type:AOEModelChangeTypeDelete];
 }
 
-+ (AOEChangesModelTwoIndices *)moveModelFromIndex:(NSUInteger)fromIndex
++ (AOEDoubleIndexChangesModel *)moveModelFromIndex:(NSUInteger)fromIndex
                                           toIndex:(NSUInteger)toIndex
 {
-    return [AOEChangesModelTwoIndices modelFromIndex:fromIndex
+    return [AOEDoubleIndexChangesModel modelFromIndex:fromIndex
                                              toIndex:toIndex
                                                 type:AOEModelChangeTypeMove];
 }

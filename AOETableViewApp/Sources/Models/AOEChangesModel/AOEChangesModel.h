@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class AOEChangesModelOneIndex;
-@class AOEChangesModelTwoIndices;
+@class AOEIndexChangesModel;
+@class AOEDoubleIndexChangesModel;
 
 typedef NS_ENUM(NSUInteger, AOEModelChangeType) {
     AOEModelChangeTypeInsert,
@@ -21,9 +21,9 @@ typedef NS_ENUM(NSUInteger, AOEModelChangeType) {
 
 + (instancetype)modelWithType:(AOEModelChangeType)type;
 
-+ (AOEChangesModelOneIndex *)insertModelWithIndex:(NSUInteger)index;
-+ (AOEChangesModelOneIndex *)deleteModelWithIndex:(NSUInteger)index;
-+ (AOEChangesModelTwoIndices *)moveModelFromIndex:(NSUInteger)fromIndex
++ (AOEIndexChangesModel *)insertModelWithIndex:(NSUInteger)index;
++ (AOEIndexChangesModel *)deleteModelWithIndex:(NSUInteger)index;
++ (AOEDoubleIndexChangesModel *)moveModelFromIndex:(NSUInteger)fromIndex
                                           toIndex:(NSUInteger)toIndex;
 
 @end

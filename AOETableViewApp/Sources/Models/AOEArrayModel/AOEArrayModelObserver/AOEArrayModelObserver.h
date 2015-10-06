@@ -10,9 +10,9 @@
 @class AOEChangesModel;
 @class AOEArrayModel;
 
-@protocol AOEObserver <NSObject>
+@protocol AOEArrayModelObserver <NSObject>
 
-- (void)        arrayModel:(AOEArrayModel*)arrayModel
- didChangeWithChangesModel:(AOEChangesModel*)changesModel;
+- (void)        arrayModel:(AOEArrayModel *)arrayModel
+ didChangeWithChangesModel:(AOEChangesModel *)changesModel;
 
 @end

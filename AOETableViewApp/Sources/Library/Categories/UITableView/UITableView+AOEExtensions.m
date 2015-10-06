@@ -1,4 +1,4 @@
-//
+ //
 //  UITableView+AOEExtensions.m
 //  AOETableViewApp
 //
@@ -8,8 +8,8 @@
 #import "UITableView+AOEExtensions.h"
 
 #import "AOEChangesModel.h"
-#import "AOEChangesModelOneIndex.h"
-#import "AOEChangesModelTwoIndices.h"
+#import "AOEIndexChangesModel.h"
+#import "AOEDoubleIndexChangesModel.h"
 
 #import "NSIndexPath+AOEExtensions.h"
 #import "UINib+AOEExtensions.h"
@@ -28,24 +28,27 @@
     return cell;
 }
 
-- (void)adaptArrayModelwithChangesModel:(AOEChangesModel*)changesModel {
-    AOEChangesModelOneIndex *modelOneIndex = nil;
-    AOEChangesModelTwoIndices *modelTwoIndices = nil;
+- (void)updateWithChangesModel:(AOEChangesModel *)changesModel {
+    AOEIndexChangesModel *modelOneIndex = nil;
+    AOEDoubleIndexChangesModel *modelTwoIndices = nil;
  
     switch (changesModel.type) {
         case AOEModelChangeTypeDelete:
-            [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathByAddingRows:modelOneIndex.index]]
+            modelOneIndex = (AOEIndexChangesModel *)changesModel;
+            [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:modelOneIndex.index]]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case AOEModelChangeTypeInsert:
-            [self insertRowsAtIndexPaths:@[[NSIndexPath indexPathByAddingRows:modelOneIndex.index]]
+            modelOneIndex = (AOEIndexChangesModel *)changesModel;
+            [self insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:modelOneIndex.index]]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case AOEModelChangeTypeMove:
-            [self moveRowAtIndexPath:[NSIndexPath indexPathByAddingRows:modelTwoIndices.fromIndex]
-                              toIndexPath:[NSIndexPath indexPathByAddingRows:modelTwoIndices.toIndex]];
+            modelTwoIndices = (AOEDoubleIndexChangesModel *)changesModel;
+            [self moveRowAtIndexPath:[NSIndexPath indexPathForRow:modelTwoIndices.fromIndex]
+                              toIndexPath:[NSIndexPath indexPathForRow:modelTwoIndices.toIndex]];
             break;
     }
 

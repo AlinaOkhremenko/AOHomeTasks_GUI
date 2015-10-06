@@ -6,12 +6,13 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+
 #import "NSIndexPath+AOEExtensions.h"
 
 @implementation NSIndexPath (AOEExtensions)
 
-+ (NSIndexPath *)indexPathByAddingRows:(NSInteger)rows {
-    return [self indexPathForRow:rows inSection:0];
++ (NSIndexPath *)indexPathForRow:(NSInteger)row {
+    return [self indexPathForRow:row inSection:0];
 }
 
 @end

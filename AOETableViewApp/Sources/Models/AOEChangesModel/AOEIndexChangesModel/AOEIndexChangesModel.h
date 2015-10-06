@@ -8,8 +8,8 @@
 
 #import "AOEChangesModel.h"
 
-@interface AOEChangesModelOneIndex : AOEChangesModel
-@property (nonatomic)   NSUInteger  index;
+@interface AOEIndexChangesModel : AOEChangesModel
+@property (nonatomic, assign)   NSUInteger  index;
 
 + (instancetype)modelWithIndex:(NSUInteger)index
                           type:(AOEModelChangeType)type;

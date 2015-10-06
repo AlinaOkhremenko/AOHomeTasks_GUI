@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AOETableViewCell.h"
+
 @class AOEDataModel;
 
-@interface AOETableViewCell : UITableViewCell
+@interface AOEDataModelViewCell : AOETableViewCell
 @property (nonatomic, strong) IBOutlet UIImageView  *pictureView;
 @property (nonatomic, strong) IBOutlet UILabel      *randomText;
 
 @property (nonatomic, strong) AOEDataModel     *model;
 
-- (void)fillWithModel:(AOEDataModel*)model;
+- (void)fillWithModel:(AOEDataModel *)model;
 
 @end
