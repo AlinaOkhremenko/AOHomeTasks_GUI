@@ -11,7 +11,9 @@
 
 #import "NSString+AOEExtensions.h"
 
-static NSString * const kAOEImageName = @"cat";
+static NSString * const kAOEImageName       = @"cat";
+static NSString * const kAOEKeyRandomString = @"randomString";
+static NSString * const kAOEKeyImageModel   = @"imageModel";
 
 @implementation AOEDataModel
 
@@ -26,6 +28,24 @@ static NSString * const kAOEImageName = @"cat";
     }
     
     return self;
+}
+
+#pragma mark -
+#pragma mark NSCoding Protocol
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        self.randomString = [coder decodeObjectForKey:kAOEKeyRandomString];
+        self.imageModel = [coder decodeObjectForKey:kAOEKeyImageModel];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.randomString forKey:kAOEKeyRandomString];
+    [coder encodeObject:self.imageModel forKey:kAOEKeyImageModel];
 }
 
 @end

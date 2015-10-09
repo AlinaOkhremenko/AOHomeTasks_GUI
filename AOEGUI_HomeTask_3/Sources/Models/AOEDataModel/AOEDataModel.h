@@ -10,7 +10,7 @@
 #import "AOEArrayModel.h"
 #import "AOEImageModel.h"
 
-@interface AOEDataModel : NSObject
+@interface AOEDataModel : NSObject <NSCoding>
 @property (nonatomic, strong)   NSString        *randomString;
 @property (nonatomic, strong)   AOEImageModel   *imageModel;
 
