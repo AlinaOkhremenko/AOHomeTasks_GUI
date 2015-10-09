@@ -38,6 +38,7 @@
 		C7ACA1851BC8539000E97387 /* AOEDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1631BC8539000E97387 /* AOEDataModelViewController.m */; };
 		C7ACA1861BC8539000E97387 /* AOEDataModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1641BC8539000E97387 /* AOEDataModelViewController.xib */; };
 		C7ACA1881BC854D300E97387 /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1871BC854D300E97387 /* AOEAppDelegate.m */; };
+		C7ACA1901BC8632200E97387 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA18F1BC8632200E97387 /* cat.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		C7ACA1641BC8539000E97387 /* AOEDataModelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOEDataModelViewController.xib; sourceTree = "<group>"; };
 		C7ACA1871BC854D300E97387 /* AOEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOEAppDelegate.m; path = ../../AOETableViewApp/AOETableViewApp/AOEAppDelegate.m; sourceTree = "<group>"; };
 		C7ACA1891BC854DA00E97387 /* AOEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AOEAppDelegate.h; path = ../../AOETableViewApp/AOETableViewApp/AOEAppDelegate.h; sourceTree = "<group>"; };
+		C7ACA18F1BC8632200E97387 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		C7ACA10E1BC8539000E97387 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C7ACA18E1BC8632200E97387 /* Images */,
 				C7ACA10F1BC8539000E97387 /* Images.xcassets */,
 				C7ACA1101BC8539000E97387 /* LaunchScreen.xib */,
 			);
@@ -475,6 +478,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C7ACA18E1BC8632200E97387 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C7ACA18F1BC8632200E97387 /* cat.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -557,6 +568,7 @@
 			files = (
 				C7ACA1861BC8539000E97387 /* AOEDataModelViewController.xib in Resources */,
 				C7ACA16C1BC8539000E97387 /* LaunchScreen.xib in Resources */,
+				C7ACA1901BC8632200E97387 /* cat.jpeg in Resources */,
 				C7ACA1841BC8539000E97387 /* AOEDataModelViewCell.xib in Resources */,
 				C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */,
 				C7ACA1671BC8539000E97387 /* Info.plist in Resources */,

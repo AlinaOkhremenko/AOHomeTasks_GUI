@@ -8,9 +8,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AOEImageModel : NSObject
-@property (nonatomic, strong)   UIImage     *picture;
+@interface AOEImageModel : NSObject <NSCoding>
+@property (nonatomic, strong)   NSURL       *url;
+@property (nonatomic, readonly) UIImage     *picture;
 
-- (instancetype)initWithImageName:(NSString *)imageName;
+- (id)init;
 
 @end
