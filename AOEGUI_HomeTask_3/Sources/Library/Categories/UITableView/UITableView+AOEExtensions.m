@@ -28,25 +28,22 @@
     return cell;
 }
 
-- (void)updateWithChangesModel:(AOEChangesModel *)changesModel {
-    AOEIndexChangesModel *modelOneIndex = nil;
-    AOEDoubleIndexChangesModel *modelTwoIndices = nil;
+- (void)updateWithChangesModel:(id)changesModel {
+    AOEIndexChangesModel *modelOneIndex = (AOEIndexChangesModel *)changesModel;
+    AOEDoubleIndexChangesModel *modelTwoIndices = (AOEDoubleIndexChangesModel *)changesModel;
  
-    switch (changesModel.type) {
+    switch ([modelOneIndex type]) {
         case AOEModelChangeTypeDelete:
-            modelOneIndex = (AOEIndexChangesModel *)changesModel;
             [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:modelOneIndex.index]]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case AOEModelChangeTypeInsert:
-            modelOneIndex = (AOEIndexChangesModel *)changesModel;
             [self insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:modelOneIndex.index]]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case AOEModelChangeTypeMove:
-            modelTwoIndices = (AOEDoubleIndexChangesModel *)changesModel;
             [self moveRowAtIndexPath:[NSIndexPath indexPathForRow:modelTwoIndices.fromIndex]
                               toIndexPath:[NSIndexPath indexPathForRow:modelTwoIndices.toIndex]];
             break;
