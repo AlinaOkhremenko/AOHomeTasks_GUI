@@ -11,7 +11,6 @@
 
 #import "NSString+AOEExtensions.h"
 
-static NSString * const kAOEImageName       = @"cat";
 static NSString * const kAOEKeyRandomString = @"randomString";
 static NSString * const kAOEKeyImageModel   = @"imageModel";
 
@@ -24,7 +23,7 @@ static NSString * const kAOEKeyImageModel   = @"imageModel";
     self = [super init];
     if (self) {
         self.randomString = [NSString randomString];
-        self.imageModel = [[AOEImageModel alloc] initWithImageName:kAOEImageName];
+        self.imageModel = [[AOEImageModel alloc] init];
     }
     
     return self;
