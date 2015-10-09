@@ -24,6 +24,6 @@ typedef NS_ENUM(NSUInteger, AOEModelChangeType) {
 + (AOEIndexChangesModel *)insertModelWithIndex:(NSUInteger)index;
 + (AOEIndexChangesModel *)deleteModelWithIndex:(NSUInteger)index;
 + (AOEDoubleIndexChangesModel *)moveModelFromIndex:(NSUInteger)fromIndex
-                                          toIndex:(NSUInteger)toIndex;
+                                           toIndex:(NSUInteger)toIndex;
 
 @end

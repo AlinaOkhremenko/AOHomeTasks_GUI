@@ -29,20 +29,20 @@
 
 + (AOEIndexChangesModel *)insertModelWithIndex:(NSUInteger)index {
     return [AOEIndexChangesModel modelWithIndex:index
-                                              type:AOEModelChangeTypeInsert];
+                                           type:AOEModelChangeTypeInsert];
 }
 
 + (AOEIndexChangesModel *)deleteModelWithIndex:(NSUInteger)index {
     return [AOEIndexChangesModel modelWithIndex:index
-                                              type:AOEModelChangeTypeDelete];
+                                           type:AOEModelChangeTypeDelete];
 }
 
 + (AOEDoubleIndexChangesModel *)moveModelFromIndex:(NSUInteger)fromIndex
-                                          toIndex:(NSUInteger)toIndex
+                                           toIndex:(NSUInteger)toIndex
 {
     return [AOEDoubleIndexChangesModel modelFromIndex:fromIndex
-                                             toIndex:toIndex
-                                                type:AOEModelChangeTypeMove];
+                                              toIndex:toIndex
+                                                 type:AOEModelChangeTypeMove];
 }
 
 @end

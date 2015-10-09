@@ -15,6 +15,4 @@
 - (id)init;
 - (id)initWithCount:(NSUInteger)count;
 
-- (void)fillArrayModelWithRows:(NSUInteger)rowsCount;
-
 @end

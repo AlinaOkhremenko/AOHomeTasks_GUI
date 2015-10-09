@@ -22,6 +22,8 @@
 #import "NSIndexPath+AOEExtensions.h"
 #import "AOEMacro.h"
 
+static NSString * const kAOETableTitle = @"Data Table";
+
 AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerView);
 
 @implementation AOEDataModelViewController
@@ -126,17 +128,18 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerVi
                                                                                action:@selector(addNewRow)];
     item.rightBarButtonItem = addButton;
     item.leftBarButtonItem = self.editButtonItem;
-    self.title = @"Data Table";
+    self.title = kAOETableTitle;
 }
 
 - (void)addNewRow {
-    [self.containerView.tableView beginUpdates];
+    UITableView *tableView = self.containerView.tableView;
+    [tableView beginUpdates];
     AOEArrayModel *model = self.arrayModel;
     [model addObject:[AOEDataModel new]];
     NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:model.count - 1];
-    [self.containerView.tableView insertRowsAtIndexPaths:@[currentIndexPath]
+    [tableView insertRowsAtIndexPaths:@[currentIndexPath]
                                         withRowAnimation:UITableViewRowAnimationFade];
-    [self.containerView.tableView endUpdates];
+    [tableView endUpdates];
 }
 
 #pragma mark -

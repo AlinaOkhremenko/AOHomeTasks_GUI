@@ -16,7 +16,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView  *pictureView;
 @property (nonatomic, strong) IBOutlet UILabel      *randomText;
 
-@property (nonatomic, strong) AOEDataModel     *model;
+@property (nonatomic, strong)      AOEDataModel     *model;
 
 - (void)fillWithModel:(AOEDataModel *)model;
 

@@ -10,6 +10,11 @@
 #import "AOEDataModel.h"
 
 static const NSUInteger kAOERowsCount = 12;
+@interface AOEDataArrayModel ()
+
+- (void)fillArrayModelWithRows:(NSUInteger)rowsCount;
+
+@end
 
 @implementation AOEDataArrayModel
 
@@ -30,7 +35,7 @@ static const NSUInteger kAOERowsCount = 12;
 }
 
 #pragma mark -
-#pragma mark Public Methods
+#pragma mark Private Methods
 
 - (void)fillArrayModelWithRows:(NSUInteger)rowsCount {
     for (NSUInteger index = 0; index < rowsCount; index++) {

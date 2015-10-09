@@ -18,6 +18,7 @@
     if (_model != model) {
         _model = model;
     }
+    
     [self fillWithModel:model];
 }
 
