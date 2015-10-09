@@ -18,7 +18,6 @@
 
 @implementation AOEAppDelegate
 
-
 - (BOOL)              application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

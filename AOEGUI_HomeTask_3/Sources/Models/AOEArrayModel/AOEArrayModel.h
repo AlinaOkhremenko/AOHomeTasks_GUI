@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AOObservable.h"
 
-@interface AOEArrayModel : AOEObservable
+@interface AOEArrayModel : AOEObservable <NSCoding>
 @property (nonatomic, readonly) NSUInteger  count;
 @property (nonatomic, readonly) NSArray     *array;
 

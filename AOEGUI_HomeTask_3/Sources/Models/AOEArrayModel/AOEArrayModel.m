@@ -11,6 +11,7 @@
 #import "AOEArrayModelObserver.h"
 
 #import "NSMutableArray+AOEExtensions.h"
+static  NSString * const kAOEKeyMutableObjects = @"objects";
 
 @interface AOEArrayModel ()
 @property (nonatomic, strong)   NSMutableArray  *objects;
@@ -86,6 +87,21 @@
     [self notifyObserversWithSelector:@selector(arrayModel:didChangeWithChangesModel:)
                            withObject:self
                            withObject:model];
+}
+
+#pragma mark - 
+#pragma mark NSCoding Protocol
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        self.objects = [coder decodeObjectForKey:kAOEKeyMutableObjects];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.objects forKey:kAOEKeyMutableObjects];
 }
 
 @end
