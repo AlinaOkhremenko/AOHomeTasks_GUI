@@ -12,6 +12,8 @@
 #import "AOEDoubleIndexChangesModel.h"
 
 #import "NSIndexPath+AOEExtensions.h"
+#import "AOEDoubleIndexChangesModel+AOEIndexPath.h"
+#import "AOEIndexChangesModel+AOEIndexPath.h"
 #import "UINib+AOEExtensions.h"
 
 @implementation UITableView (AOEExtensions)
@@ -34,18 +36,18 @@
  
     switch ([modelOneIndex type]) {
         case AOEModelChangeTypeDelete:
-            [self deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:modelOneIndex.index]]
+            [self deleteRowsAtIndexPaths:@[[modelOneIndex destinationIndexPath]]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case AOEModelChangeTypeInsert:
-            [self insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:modelOneIndex.index]]
+            [self insertRowsAtIndexPaths:@[[modelOneIndex destinationIndexPath]]
                              withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case AOEModelChangeTypeMove:
-            [self moveRowAtIndexPath:[NSIndexPath indexPathForRow:modelTwoIndices.fromIndex]
-                              toIndexPath:[NSIndexPath indexPathForRow:modelTwoIndices.toIndex]];
+            [self moveRowAtIndexPath:[modelTwoIndices sourceIndexPath]
+                              toIndexPath:[modelTwoIndices destinationIndexPath]];
             break;
     }
 
