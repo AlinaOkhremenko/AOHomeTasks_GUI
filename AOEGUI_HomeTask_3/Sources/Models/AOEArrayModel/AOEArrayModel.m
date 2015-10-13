@@ -89,13 +89,23 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
                            withObject:model];
 }
 
+#pragma mark -
+#pragma mark NSFastEnumeration Protocol
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
+                                  objects:(__unsafe_unretained id [])buffer
+                                    count:(NSUInteger)len
+{
+    return [self.objects countByEnumeratingWithState:state objects:buffer count:len];
+}
+
 #pragma mark - 
 #pragma mark NSCoding Protocol
 
-- (id)initWithCoder:(NSCoder *)coder {
+- (id)initWithCoder:(NSCoder *)decoder{
     self = [super init];
     if (self) {
-        self.objects = [coder decodeObjectForKey:kAOEKeyMutableObjects];
+        self.objects = [decoder decodeObjectForKey:kAOEKeyMutableObjects];
     }
     return self;
 }
