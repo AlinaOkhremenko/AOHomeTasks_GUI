@@ -5,14 +5,16 @@
 //  Created by Alina Okhremenko on 26.09.15.
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
-
 #import "AOEDataModel.h"
+
 #import "AOEImageModel.h"
 
 #import "NSString+AOEExtensions.h"
 
-static NSString * const kAOEKeyRandomString = @"randomString";
-static NSString * const kAOEKeyImageModel   = @"imageModel";
+static NSString * const kAOEKeyRandomString = @"kAOEKeyRandomString";
+static NSString * const kAOEKeyImageModel   = @"kAOEKeyImageModel";
+static NSString * const kAOEImageExtension  = @"jpeg";
+static NSString * const kAOEKeyUrl          = @"url";
 
 @implementation AOEDataModel
 
@@ -23,20 +25,20 @@ static NSString * const kAOEKeyImageModel   = @"imageModel";
     self = [super init];
     if (self) {
         self.randomString = [NSString randomString];
-        self.imageModel = [[AOEImageModel alloc] init];
+        self.imageModel = [AOEImageModel catImageModel];
     }
     
-    return self;
+       return self;
 }
 
 #pragma mark -
 #pragma mark NSCoding Protocol
 
-- (id)initWithCoder:(NSCoder *)coder {
+- (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (self) {
-        self.randomString = [coder decodeObjectForKey:kAOEKeyRandomString];
-        self.imageModel = [coder decodeObjectForKey:kAOEKeyImageModel];
+        self.randomString = [decoder decodeObjectForKey:kAOEKeyRandomString];
+        self.imageModel = [decoder decodeObjectForKey:kAOEKeyImageModel];
     }
     
     return self;

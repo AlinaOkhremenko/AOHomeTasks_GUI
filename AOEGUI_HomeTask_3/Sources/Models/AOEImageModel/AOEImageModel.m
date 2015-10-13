@@ -8,22 +8,34 @@
 
 #import "AOEImageModel.h"
 
-static NSString * const kAOEImageName       = @"cat";
+static NSString * const kAOEImageName       = @"kAOEImageName";
 static NSString * const kAOEImageExtension  = @"jpeg";
 static NSString * const kAOEKeyUrl          = @"url";
+static NSString * const kAOENamePicture     = @"cat";
 
 @implementation AOEImageModel
 
-#pragma mark - 
+#pragma mark -
+#pragma mark Class Methods
+
++ (instancetype)catImageModel {
+    static AOEImageModel *catPicture = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        catPicture = [[self alloc] initWithUrl:[[NSBundle mainBundle] URLForResource:kAOENamePicture withExtension:kAOEImageExtension]];
+    });
+    
+    return catPicture;
+}
+
+#pragma mark -
 #pragma mark Initialization Method
 
-- (id)init {
+- (id)initWithUrl:(NSURL *)url {
     self = [super init];
     if (self) {
-        self.url = [[NSBundle mainBundle] URLForResource:kAOEImageName
-                                           withExtension:kAOEImageExtension];
+        self.url = url;
     }
-    
     return self;
 }
 
@@ -31,23 +43,23 @@ static NSString * const kAOEKeyUrl          = @"url";
 #pragma mark Accessors
 
 - (UIImage *)picture {
-    static UIImage *__catPicture = nil;
+    static UIImage *__picture = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSData *fileFromUrl = [NSData dataWithContentsOfURL:self.url];
-        __catPicture = [UIImage imageWithData:fileFromUrl];
+        __picture = [UIImage imageWithData:fileFromUrl];
     });
     
-    return __catPicture;
+    return __picture;
 }
 
 #pragma mark -
 #pragma mark NSCoding Protocol
 
-- (id)initWithCoder:(NSCoder *)coder {
+- (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (self) {
-        self.url = [coder decodeObjectForKey:kAOEKeyUrl];
+        self.url = [decoder decodeObjectForKey:kAOEKeyUrl];
     }
     return self;
 }
