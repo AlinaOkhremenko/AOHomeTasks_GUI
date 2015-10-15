@@ -22,7 +22,8 @@ static NSString * const kAOENamePicture     = @"cat";
     static AOEImageModel *catPicture = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        catPicture = [[self alloc] initWithUrl:[[NSBundle mainBundle] URLForResource:kAOENamePicture withExtension:kAOEImageExtension]];
+        catPicture = [[self alloc] initWithUrl:[[NSBundle mainBundle] URLForResource:kAOENamePicture
+                                                                       withExtension:kAOEImageExtension]];
     });
     
     return catPicture;

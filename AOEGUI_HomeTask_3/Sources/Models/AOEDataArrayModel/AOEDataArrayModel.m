@@ -28,10 +28,34 @@ static const NSUInteger kAOERowsCount = 12;
 - (id)initWithCount:(NSUInteger)rowsCount {
     self = [super init];
     if (self) {
+        self.fileName = @"DataArrayModel";
         [self fillArrayModelWithRows:rowsCount];
     }
     
     return self;
+}
+
+
+- (void)saveDataArrayToFile {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:self.fileName];
+    
+    [NSKeyedArchiver archiveRootObject:self toFile:filePath];
+}
+
+- (id)loadDataArrayFromFile {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:self.fileName];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        AOEDataArrayModel *savedData = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        return savedData;
+    }
+    
+    return nil;
 }
 
 #pragma mark -

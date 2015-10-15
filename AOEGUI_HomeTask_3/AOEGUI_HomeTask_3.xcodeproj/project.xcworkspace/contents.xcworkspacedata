@@ -4,14 +4,4 @@
    <FileRef
       location = "self:AOEGUI_HomeTask_3.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:../AOEGUI_HomeTask_3Tests"
-      name = "AOEGUI_HomeTask_3Tests">
-      <FileRef
-         location = "group:../AOEGUI_HomeTask_3Tests/AOEGUI_HomeTask_3Tests.m">
-      </FileRef>
-      <FileRef
-         location = "group:../AOEGUI_HomeTask_3Tests/Info.plist">
-      </FileRef>
-   </Group>
 </Workspace>

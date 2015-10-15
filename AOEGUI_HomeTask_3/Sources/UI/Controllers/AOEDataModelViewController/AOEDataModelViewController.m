@@ -40,6 +40,7 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerVi
     if (self) {
          [self setupNavigationItem];
     }
+    
     return self;
 }
 
@@ -47,11 +48,7 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerVi
 #pragma mark Accessors
 
 - (void)setArrayModel:(AOEDataArrayModel *)arrayModel {
-    if (_arrayModel != arrayModel) {
-        [_arrayModel removeObserver:self];
-        _arrayModel = arrayModel;
-        [_arrayModel addObserver:self];
-    }
+    AOESynthesizeObserverSetter(arrayModel, _arrayModel);
 }
 
 #pragma mark - 
