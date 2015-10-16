@@ -42,8 +42,8 @@
 		C7ACA1961BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1951BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m */; };
 		C7ACA1991BCDB16A00E97387 /* AOEIndexChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1981BCDB16A00E97387 /* AOEIndexChangesModel+AOEExtensions.m */; };
 		C7ECFDE21BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDE11BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m */; };
-		C7ECFDE81BCFF98700B3F868 /* AOELoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDE71BCFF98700B3F868 /* AOELoadingView.m */; };
-		C7ECFDEA1BCFF9AA00B3F868 /* AOELoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ECFDE91BCFF9AA00B3F868 /* AOELoadingView.xib */; };
+		C7ECFDEE1BD0F14200B3F868 /* AOELoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDEC1BD0F14200B3F868 /* AOELoadingView.m */; };
+		C7ECFDEF1BD0F14200B3F868 /* AOELoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +124,9 @@
 		C7ECFDDF1BCEE68F00B3F868 /* AOEGUI_HomeTask_3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOEGUI_HomeTask_3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7ECFDE01BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AOEChangesModel+AOEExtensions.h"; sourceTree = "<group>"; };
 		C7ECFDE11BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AOEChangesModel+AOEExtensions.m"; sourceTree = "<group>"; };
-		C7ECFDE61BCFF98700B3F868 /* AOELoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOELoadingView.h; path = ../../../../../Documents/AOELoadingView.h; sourceTree = "<group>"; };
-		C7ECFDE71BCFF98700B3F868 /* AOELoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOELoadingView.m; path = ../../../../../Documents/AOELoadingView.m; sourceTree = "<group>"; };
-		C7ECFDE91BCFF9AA00B3F868 /* AOELoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AOELoadingView.xib; path = ../../../../../Documents/AOELoadingView.xib; sourceTree = "<group>"; };
+		C7ECFDEB1BD0F14200B3F868 /* AOELoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOELoadingView.h; path = ../../../../../../Documents/AOELoadingView.h; sourceTree = "<group>"; };
+		C7ECFDEC1BD0F14200B3F868 /* AOELoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOELoadingView.m; path = ../../../../../../Documents/AOELoadingView.m; sourceTree = "<group>"; };
+		C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AOELoadingView.xib; path = ../../../../../../Documents/AOELoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,11 +496,12 @@
 		C7ACA1651BC8539000E97387 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7ECFDE61BCFF98700B3F868 /* AOELoadingView.h */,
-				C7ECFDE71BCFF98700B3F868 /* AOELoadingView.m */,
-				C7ECFDE91BCFF9AA00B3F868 /* AOELoadingView.xib */,
+				C7ECFDEB1BD0F14200B3F868 /* AOELoadingView.h */,
+				C7ECFDEC1BD0F14200B3F868 /* AOELoadingView.m */,
+				C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */,
 			);
-			path = Views;
+			name = Views;
+			path = Controllers/Views;
 			sourceTree = "<group>";
 		};
 		C7ACA18E1BC8632200E97387 /* Images */ = {
@@ -592,8 +593,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7ACA1861BC8539000E97387 /* AOEDataModelViewController.xib in Resources */,
+				C7ECFDEF1BD0F14200B3F868 /* AOELoadingView.xib in Resources */,
 				C7ACA16C1BC8539000E97387 /* LaunchScreen.xib in Resources */,
-				C7ECFDEA1BCFF9AA00B3F868 /* AOELoadingView.xib in Resources */,
 				C7ACA1901BC8632200E97387 /* cat.jpeg in Resources */,
 				C7ACA1841BC8539000E97387 /* AOEDataModelViewCell.xib in Resources */,
 				C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */,
@@ -618,13 +619,13 @@
 				C7ACA16D1BC8539000E97387 /* NSIndexPath+AOEExtensions.m in Sources */,
 				C7ACA17D1BC8539000E97387 /* AOEDoubleIndexChangesModel.m in Sources */,
 				C7ACA1881BC854D300E97387 /* AOEAppDelegate.m in Sources */,
-				C7ECFDE81BCFF98700B3F868 /* AOELoadingView.m in Sources */,
 				C7ACA1781BC8539000E97387 /* AOSyllablesAlphabet.m in Sources */,
 				C7ACA1811BC8539000E97387 /* AOEImageModel.m in Sources */,
 				C7ACA17E1BC8539000E97387 /* AOEIndexChangesModel.m in Sources */,
 				C7ACA1961BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m in Sources */,
 				C7ACA1771BC8539000E97387 /* AOAlphabetWithStrings.m in Sources */,
 				C7ACA1721BC8539000E97387 /* UIViewController+AOEExtensions.m in Sources */,
+				C7ECFDEE1BD0F14200B3F868 /* AOELoadingView.m in Sources */,
 				C7ACA1821BC8539000E97387 /* AOEContainerView.m in Sources */,
 				C7ACA1991BCDB16A00E97387 /* AOEIndexChangesModel+AOEExtensions.m in Sources */,
 				C7ACA16E1BC8539000E97387 /* NSMutableArray+AOEExtensions.m in Sources */,
