@@ -33,8 +33,6 @@
     window.rootViewController = navigationController;
     [window makeKeyAndVisible];
     
-    [[AOELoadingView loadingView] setVisible:YES animated:YES withCompletion:nil];
-    
     return YES;
 }
 

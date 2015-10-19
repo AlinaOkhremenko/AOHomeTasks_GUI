@@ -13,8 +13,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="452" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="l8c-CC-mNG">
-                        <rect key="frame" x="0.0" y="0.0" width="96" height="81"/>
+                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="l8c-CC-mNG">
+                        <rect key="frame" x="0.0" y="-2" width="96" height="81"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NfI-m8-jst">
@@ -24,9 +24,14 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="nsI-4M-ZWY">
+                        <rect key="frame" x="39" y="29" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </activityIndicatorView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imageLoadingWheel" destination="nsI-4M-ZWY" id="Q7a-Wg-GOc"/>
                 <outlet property="pictureView" destination="l8c-CC-mNG" id="Yda-c4-s5K"/>
                 <outlet property="randomText" destination="NfI-m8-jst" id="xzP-ea-twa"/>
             </connections>
