@@ -7,6 +7,7 @@
 //
 
 #import "AOEImageModel.h"
+#import "AOEDataModelViewCell.h"
 
 static NSString * const kAOEImageName       = @"kAOEImageName";
 static NSString * const kAOEImageExtension  = @"jpeg";
@@ -16,20 +17,6 @@ static NSString * const kAOENamePicture     = @"cat";
 @implementation AOEImageModel
 
 #pragma mark -
-#pragma mark Class Methods
-
-+ (instancetype)catImageModel {
-    static AOEImageModel *catPicture = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        catPicture = [[self alloc] initWithUrl:[[NSBundle mainBundle] URLForResource:kAOENamePicture
-                                                                       withExtension:kAOEImageExtension]];
-    });
-    
-    return catPicture;
-}
-
-#pragma mark -
 #pragma mark Initialization Method
 
 - (id)initWithUrl:(NSURL *)url {
@@ -37,21 +24,27 @@ static NSString * const kAOENamePicture     = @"cat";
     if (self) {
         self.url = url;
     }
+    
     return self;
 }
 
-#pragma mark - 
-#pragma mark Accessors
+#pragma mark -
+#pragma mark Public Methods
 
-- (UIImage *)picture {
-    static UIImage *__picture = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSData *fileFromUrl = [NSData dataWithContentsOfURL:self.url];
-        __picture = [UIImage imageWithData:fileFromUrl];
-    });
-    
-    return __picture;
+- (void)downloadImageWithURL:(NSURL *)url
+             completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                   if (!error) {
+                                       UIImage *image = [[UIImage alloc] initWithData:data];
+                                       completionBlock(YES, image);
+                                   } else {
+                                       completionBlock(NO, nil);
+                                   }
+                               }];
 }
 
 #pragma mark -
@@ -62,6 +55,7 @@ static NSString * const kAOENamePicture     = @"cat";
     if (self) {
         self.url = [decoder decodeObjectForKey:kAOEKeyUrl];
     }
+    
     return self;
 }
 

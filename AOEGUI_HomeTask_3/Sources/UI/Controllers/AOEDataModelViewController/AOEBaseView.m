@@ -7,15 +7,34 @@
 //
 
 #import "AOEBaseView.h"
+#import "AOELoadingView.h"
 
+@interface AOEBaseView ()
+@property (nonatomic, readwrite)    AOELoadingView  *loadingView;
+
+@end
 @implementation AOEBaseView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.loadingView = [AOELoadingView loadingView];
+    [self.loadingView setVisible:NO animated:YES withCompletion:nil];
 }
-*/
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)show {
+    [self.loadingView setVisible:YES animated:YES withCompletion:nil];
+}
+
+- (void)hide {
+    [self.loadingView setVisible:NO animated:NO];
+}
+
+- (BOOL)isHidden {
+    return self.loadingView.hidden;
+}
 
 @end

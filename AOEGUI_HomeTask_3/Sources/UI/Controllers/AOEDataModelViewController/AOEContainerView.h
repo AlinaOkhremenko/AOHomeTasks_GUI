@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AOEContainerView : UIView
+#import "AOEBaseView.h"
+
+@interface AOEContainerView : AOEBaseView
 @property (nonatomic, strong)   IBOutlet    UITableView    *tableView;
 
 @end

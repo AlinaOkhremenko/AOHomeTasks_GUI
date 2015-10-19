@@ -7,14 +7,13 @@
 //
 #import "AOEDataModel.h"
 
-#import "AOEImageModel.h"
-
 #import "NSString+AOEExtensions.h"
 
 static NSString * const kAOEKeyRandomString = @"kAOEKeyRandomString";
 static NSString * const kAOEKeyImageModel   = @"kAOEKeyImageModel";
 static NSString * const kAOEImageExtension  = @"jpeg";
 static NSString * const kAOEKeyUrl          = @"url";
+static NSString * const kAOEUrl             = @"https://lh4.googleusercontent.com/-zOPqgfb8Vw4/AAAAAAAAAAI/AAAAAAAAAVQ/6DRhCvLBVdc/photo.jpg";
 
 @implementation AOEDataModel
 
@@ -25,10 +24,10 @@ static NSString * const kAOEKeyUrl          = @"url";
     self = [super init];
     if (self) {
         self.randomString = [NSString randomString];
-        self.imageModel = [AOEImageModel catImageModel];
+        self.imageModel =  [[AOEImageModel alloc] initWithUrl:[NSURL URLWithString:kAOEKeyUrl]];
     }
     
-       return self;
+    return self;
 }
 
 #pragma mark -

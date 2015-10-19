@@ -10,4 +10,8 @@
 
 @interface AOEBaseView : UIView
 
+- (void)show;
+- (void)hide;
+- (BOOL)isHidden;
+
 @end

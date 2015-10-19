@@ -11,8 +11,8 @@
 @property (nonatomic, strong)   NSURL       *url;
 @property (nonatomic, readonly) UIImage     *picture;
 
-+ (instancetype)catImageModel;
-
 - (id)initWithUrl:(NSURL *)url;
+- (void)downloadImageWithURL:(NSURL *)url
+             completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock;
 
 @end
