@@ -5,10 +5,9 @@
 //  Created by Alina Okhremenko on 03.10.15.
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
-
 #import "AOEChangesModel.h"
-#import "AOEDoubleIndexChangesModel.h"
 #import "AOEIndexChangesModel.h"
+#import "AOEDoubleIndexChangesModel.h"
 
 @interface AOEChangesModel ()
 @property(nonatomic, assign) AOEModelChangeType type;

@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AOEArrayModel.h"
 #import "AOEImageModel.h"
 
 @interface AOEDataModel : NSObject <NSCoding>

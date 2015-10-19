@@ -5,10 +5,7 @@
 //  Created by Alina Okhremenko on 14.10.15.
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
-
 #import "AOEDoubleIndexChangesModel+AOEExtensions.h"
-
-#import "AOEChangesModel+AOEExtensions.h"
 #import "NSIndexPath+AOEExtensions.h"
 
 @implementation AOEDoubleIndexChangesModel (AOEExtensions)

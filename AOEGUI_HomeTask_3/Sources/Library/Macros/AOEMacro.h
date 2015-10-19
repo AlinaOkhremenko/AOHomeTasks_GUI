@@ -29,19 +29,11 @@ __strong __typeof(VAR) VAR = __AOEWeak##VAR;
 #define AOEstrongifyAndReturnNilIfNil(VAR) \
     AOEstrongifyAndReturnEntity(VAR, nil)
 
-
-//#define AOESynthesizeObserverSetter(iVar, var) \
-//    if (iVar != var ) { \
-//        [iVar removeObserver:self]; \
-//        iVar = var; \
-//        [iVar addObserver:self]; \
-//        } 
-
 #define AOESynthesizeSetterWithExpressions(var, iVar, preExpression, postExpression) \
     if (iVar != var ) { \
-    preExpression; \
-    iVar = var; \
-    postExpression; \
+        preExpression; \
+        iVar = var; \
+        postExpression; \
     }
 
 #define AOESynthesizeObserverSetter(var, iVar) \

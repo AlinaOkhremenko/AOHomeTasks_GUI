@@ -7,7 +7,10 @@
 //
 
 #import "AOEDataArrayModel.h"
+
 #import "AOEDataModel.h"
+
+#import "NSFileManager+AOEExtensions.h"
 
 static const NSUInteger kAOERowsCount = 12;
 @interface AOEDataArrayModel ()
@@ -37,17 +40,12 @@ static const NSUInteger kAOERowsCount = 12;
 
 
 - (void)saveDataArrayToFile {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:self.fileName];
-    
-    [NSKeyedArchiver archiveRootObject:self toFile:filePath];
+        NSString *filePath = [[NSFileManager userDocumentsPath] stringByAppendingPathComponent:self.fileName];
+        [NSKeyedArchiver archiveRootObject:self.array toFile:filePath];
 }
 
 - (id)loadDataArrayFromFile {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:self.fileName];
+       NSString *filePath = [[NSFileManager userDocumentsPath] stringByAppendingPathComponent:self.fileName];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         NSData *data = [NSData dataWithContentsOfFile:filePath];

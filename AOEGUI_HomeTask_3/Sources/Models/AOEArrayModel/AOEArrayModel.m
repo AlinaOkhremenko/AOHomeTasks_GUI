@@ -7,10 +7,12 @@
 //
 
 #import "AOEArrayModel.h"
+
 #import "AOEChangesModel.h"
 #import "AOEArrayModelObserver.h"
 
 #import "NSMutableArray+AOEExtensions.h"
+
 static  NSString * const kAOEKeyMutableObjects = @"objects";
 
 @interface AOEArrayModel ()
