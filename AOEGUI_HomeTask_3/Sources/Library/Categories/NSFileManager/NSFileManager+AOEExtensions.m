@@ -10,4 +10,14 @@
 
 @implementation NSFileManager (AOEExtensions)
 
++ (NSString *)userDocumentsPath {
+    return [self pathWithSearchPathDirectory:NSDocumentDirectory domainMask:NSUserDomainMask];
+}
+
++ (NSString *)pathWithSearchPathDirectory:(NSSearchPathDirectory)pathDirectory
+                               domainMask:(NSSearchPathDomainMask)domainMask
+{
+    return [NSSearchPathForDirectoriesInDomains(pathDirectory, domainMask, YES) firstObject];
+}
+
 @end

@@ -10,4 +10,8 @@
 
 @interface NSFileManager (AOEExtensions)
 
++ (NSString *)userDocumentsPath;
++ (NSString *)pathWithSearchPathDirectory:(NSSearchPathDirectory)pathDirectory
+                               domainMask:(NSSearchPathDomainMask)domainMask;
+
 @end

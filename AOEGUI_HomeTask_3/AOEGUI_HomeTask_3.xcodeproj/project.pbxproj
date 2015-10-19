@@ -44,6 +44,8 @@
 		C7ECFDE21BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDE11BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m */; };
 		C7ECFDEE1BD0F14200B3F868 /* AOELoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDEC1BD0F14200B3F868 /* AOELoadingView.m */; };
 		C7ECFDEF1BD0F14200B3F868 /* AOELoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */; };
+		C7ECFDF21BD59D1000B3F868 /* AOEBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDF11BD59D0F00B3F868 /* AOEBaseView.m */; };
+		C7ECFDF61BD5A43600B3F868 /* NSFileManager+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDF51BD5A43600B3F868 /* NSFileManager+AOEExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,10 @@
 		C7ECFDEB1BD0F14200B3F868 /* AOELoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOELoadingView.h; path = ../../../../../../Documents/AOELoadingView.h; sourceTree = "<group>"; };
 		C7ECFDEC1BD0F14200B3F868 /* AOELoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOELoadingView.m; path = ../../../../../../Documents/AOELoadingView.m; sourceTree = "<group>"; };
 		C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AOELoadingView.xib; path = ../../../../../../Documents/AOELoadingView.xib; sourceTree = "<group>"; };
+		C7ECFDF01BD59D0F00B3F868 /* AOEBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEBaseView.h; sourceTree = "<group>"; };
+		C7ECFDF11BD59D0F00B3F868 /* AOEBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEBaseView.m; sourceTree = "<group>"; };
+		C7ECFDF41BD5A43600B3F868 /* NSFileManager+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AOEExtensions.h"; sourceTree = "<group>"; };
+		C7ECFDF51BD5A43600B3F868 /* NSFileManager+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AOEExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,7 @@
 		C7ACA1131BC8539000E97387 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C7ECFDF31BD5A41200B3F868 /* NSFileManager */,
 				C7ACA1141BC8539000E97387 /* NSIndexPath */,
 				C7ACA1171BC8539000E97387 /* NSMutableArray */,
 				C7ACA11A1BC8539000E97387 /* NSString */,
@@ -489,6 +496,8 @@
 				C7ACA1621BC8539000E97387 /* AOEDataModelViewController.h */,
 				C7ACA1631BC8539000E97387 /* AOEDataModelViewController.m */,
 				C7ACA1641BC8539000E97387 /* AOEDataModelViewController.xib */,
+				C7ECFDF01BD59D0F00B3F868 /* AOEBaseView.h */,
+				C7ECFDF11BD59D0F00B3F868 /* AOEBaseView.m */,
 			);
 			path = AOEDataModelViewController;
 			sourceTree = "<group>";
@@ -510,6 +519,15 @@
 				C7ACA18F1BC8632200E97387 /* cat.jpeg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		C7ECFDF31BD5A41200B3F868 /* NSFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				C7ECFDF41BD5A43600B3F868 /* NSFileManager+AOEExtensions.h */,
+				C7ECFDF51BD5A43600B3F868 /* NSFileManager+AOEExtensions.m */,
+			);
+			path = NSFileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +638,7 @@
 				C7ACA17D1BC8539000E97387 /* AOEDoubleIndexChangesModel.m in Sources */,
 				C7ACA1881BC854D300E97387 /* AOEAppDelegate.m in Sources */,
 				C7ACA1781BC8539000E97387 /* AOSyllablesAlphabet.m in Sources */,
+				C7ECFDF61BD5A43600B3F868 /* NSFileManager+AOEExtensions.m in Sources */,
 				C7ACA1811BC8539000E97387 /* AOEImageModel.m in Sources */,
 				C7ACA17E1BC8539000E97387 /* AOEIndexChangesModel.m in Sources */,
 				C7ACA1961BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m in Sources */,
@@ -632,6 +651,7 @@
 				C7ACA17A1BC8539000E97387 /* AOETableViewCell.m in Sources */,
 				C7ACA17F1BC8539000E97387 /* AOEDataArrayModel.m in Sources */,
 				C7ACA16F1BC8539000E97387 /* NSString+AOEExtensions.m in Sources */,
+				C7ECFDF21BD59D1000B3F868 /* AOEBaseView.m in Sources */,
 				C7ACA1741BC8539000E97387 /* AOAlphabet.m in Sources */,
 				C7ACA1701BC8539000E97387 /* UINib+AOEExtensions.m in Sources */,
 				C7ACA1761BC8539000E97387 /* AOAlphabetWithRange.m in Sources */,
@@ -752,8 +772,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AOEGUI_HomeTask_3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -762,8 +784,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AOEGUI_HomeTask_3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
