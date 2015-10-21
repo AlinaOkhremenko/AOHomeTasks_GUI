@@ -7,9 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AOEModel.h"
 #import "AOEImageModel.h"
 
-@interface AOEDataModel : NSObject <NSCoding>
+@interface AOEDataModel : AOEModel <NSCoding>
 @property (nonatomic, strong)   NSString        *randomString;
 @property (nonatomic, strong)   AOEImageModel   *imageModel;
 

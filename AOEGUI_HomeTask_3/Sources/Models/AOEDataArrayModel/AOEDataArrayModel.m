@@ -13,13 +13,23 @@
 #import "NSFileManager+AOEExtensions.h"
 
 static const NSUInteger kAOERowsCount = 12;
+static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
+
 @interface AOEDataArrayModel ()
+@property (nonatomic, readonly)                  NSString   *fileName;
+@property (nonatomic, readonly)                  NSString   *fileFolder;
+@property (nonatomic, readonly)                  NSString   *filePath;
+@property (nonatomic, assign, getter=isCached)   BOOL       cached;
 
 - (void)fillArrayModelWithRows:(NSUInteger)rowsCount;
 
 @end
-
 @implementation AOEDataArrayModel
+
+@dynamic fileName;
+@dynamic fileFolder;
+@dynamic filePath;
+@dynamic cached;
 
 #pragma mark - 
 #pragma mark Initializations
@@ -31,29 +41,53 @@ static const NSUInteger kAOERowsCount = 12;
 - (id)initWithCount:(NSUInteger)rowsCount {
     self = [super init];
     if (self) {
-        self.fileName = @"DataArrayModel";
         [self fillArrayModelWithRows:rowsCount];
     }
     
     return self;
 }
 
+#pragma mark -
+#pragma mark Accessors
 
-- (void)saveDataArrayToFile {
-        NSString *filePath = [[NSFileManager userDocumentsPath] stringByAppendingPathComponent:self.fileName];
-        [NSKeyedArchiver archiveRootObject:self.array toFile:filePath];
+- (NSString *)fileName {
+    return kAOEfileName;
 }
 
-- (id)loadDataArrayFromFile {
-       NSString *filePath = [[NSFileManager userDocumentsPath] stringByAppendingPathComponent:self.fileName];
-    
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        NSData *data = [NSData dataWithContentsOfFile:filePath];
-        AOEDataArrayModel *savedData = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        return savedData;
+- (NSString *)fileFolder {
+    return [NSFileManager userDocumentsPath];
+}
+
+- (NSString *)filePath {
+    return [self.fileFolder stringByAppendingPathComponent:self.fileName];
+}
+
+- (BOOL)isCached {
+    return [[NSFileManager defaultManager] fileExistsAtPath:self.filePath];
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)saveDataArrayToFile {
+    [NSKeyedArchiver archiveRootObject:self.array toFile:self.filePath];
+}
+
+- (void)performLoading {
+    id block = nil;
+    if (self.cached) {
+        id objects = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
+        block = ^{
+            [self addObject:objects];
+        };
+    } else {
+        block = ^{
+            [self fillArrayModelWithRows:kAOERowsCount];
+        };
     }
-    
-    return nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.state = AOEModelStateDidLoad;
+    });
 }
 
 #pragma mark -

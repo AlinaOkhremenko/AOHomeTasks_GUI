@@ -9,7 +9,7 @@
 #import "AOEArrayModel.h"
 
 #import "AOEChangesModel.h"
-#import "AOEArrayModelObserver.h"
+#import "AOEModelObserver.h"
 
 #import "NSMutableArray+AOEExtensions.h"
 
@@ -55,6 +55,12 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
     [self.objects addObject:object];
 }
 
+- (void)addObjects:(id<NSFastEnumeration>)objects {
+        for (id object in objects) {
+            [self addObject:object];
+    }
+}
+
 - (void)removeObject:(id)object {
     [self.objects removeObject:object];
 }
@@ -86,7 +92,7 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
 }
 
 - (void)notifyWithChangesModel:(id)model {
-    [self notifyObserversWithSelector:@selector(arrayModel:didChangeWithChangesModel:)
+    [self notifyObserversWithSelector:@selector(model:didChangeWithChangesModel:)
                            withObject:self
                            withObject:model];
 }

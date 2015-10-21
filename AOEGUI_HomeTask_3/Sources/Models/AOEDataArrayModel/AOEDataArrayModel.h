@@ -11,12 +11,10 @@
 #import "AOEArrayModel.h"
 
 @interface AOEDataArrayModel : AOEArrayModel
-@property (nonatomic, copy) NSString    *fileName;
 
 - (id)init;
 - (id)initWithCount:(NSUInteger)count;
 
 - (void)saveDataArrayToFile;
-- (id)loadDataArrayFromFile;
 
 @end
