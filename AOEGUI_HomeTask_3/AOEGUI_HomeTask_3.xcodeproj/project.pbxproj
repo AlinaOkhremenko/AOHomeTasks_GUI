@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C704932B1BD8310100E5AA15 /* AOEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C704932A1BD8310100E5AA15 /* AOEModel.m */; };
 		C7ACA1671BC8539000E97387 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1091BC8539000E97387 /* Info.plist */; };
 		C7ACA1681BC8539000E97387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA10A1BC8539000E97387 /* main.m */; };
 		C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA10F1BC8539000E97387 /* Images.xcassets */; };
@@ -32,7 +33,7 @@
 		C7ACA17F1BC8539000E97387 /* AOEDataArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1531BC8539000E97387 /* AOEDataArrayModel.m */; };
 		C7ACA1801BC8539000E97387 /* AOEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1561BC8539000E97387 /* AOEDataModel.m */; };
 		C7ACA1811BC8539000E97387 /* AOEImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1591BC8539000E97387 /* AOEImageModel.m */; };
-		C7ACA1821BC8539000E97387 /* AOEContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA15E1BC8539000E97387 /* AOEContainerView.m */; };
+		C7ACA1821BC8539000E97387 /* AOEDataModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA15E1BC8539000E97387 /* AOEDataModelView.m */; };
 		C7ACA1831BC8539000E97387 /* AOEDataModelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1601BC8539000E97387 /* AOEDataModelViewCell.m */; };
 		C7ACA1841BC8539000E97387 /* AOEDataModelViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1611BC8539000E97387 /* AOEDataModelViewCell.xib */; };
 		C7ACA1851BC8539000E97387 /* AOEDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1631BC8539000E97387 /* AOEDataModelViewController.m */; };
@@ -59,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C70493291BD8310100E5AA15 /* AOEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEModel.h; sourceTree = "<group>"; };
+		C704932A1BD8310100E5AA15 /* AOEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEModel.m; sourceTree = "<group>"; };
+		C704932E1BD847BF00E5AA15 /* AOEModelObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEModelObserver.h; sourceTree = "<group>"; };
 		C7ACA1091BC8539000E97387 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7ACA10A1BC8539000E97387 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7ACA10F1BC8539000E97387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -94,7 +98,6 @@
 		C7ACA1411BC8539000E97387 /* AOEMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEMacro.h; sourceTree = "<group>"; };
 		C7ACA1441BC8539000E97387 /* AOEArrayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEArrayModel.h; sourceTree = "<group>"; };
 		C7ACA1451BC8539000E97387 /* AOEArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEArrayModel.m; sourceTree = "<group>"; };
-		C7ACA1471BC8539000E97387 /* AOEArrayModelObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEArrayModelObserver.h; sourceTree = "<group>"; };
 		C7ACA1491BC8539000E97387 /* AOEChangesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEChangesModel.h; sourceTree = "<group>"; };
 		C7ACA14A1BC8539000E97387 /* AOEChangesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEChangesModel.m; sourceTree = "<group>"; };
 		C7ACA14C1BC8539000E97387 /* AOEDoubleIndexChangesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDoubleIndexChangesModel.h; sourceTree = "<group>"; };
@@ -107,8 +110,8 @@
 		C7ACA1561BC8539000E97387 /* AOEDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataModel.m; sourceTree = "<group>"; };
 		C7ACA1581BC8539000E97387 /* AOEImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEImageModel.h; sourceTree = "<group>"; };
 		C7ACA1591BC8539000E97387 /* AOEImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEImageModel.m; sourceTree = "<group>"; };
-		C7ACA15D1BC8539000E97387 /* AOEContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEContainerView.h; sourceTree = "<group>"; };
-		C7ACA15E1BC8539000E97387 /* AOEContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEContainerView.m; sourceTree = "<group>"; };
+		C7ACA15D1BC8539000E97387 /* AOEDataModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDataModelView.h; sourceTree = "<group>"; };
+		C7ACA15E1BC8539000E97387 /* AOEDataModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataModelView.m; sourceTree = "<group>"; };
 		C7ACA15F1BC8539000E97387 /* AOEDataModelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEDataModelViewCell.h; sourceTree = "<group>"; };
 		C7ACA1601BC8539000E97387 /* AOEDataModelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEDataModelViewCell.m; sourceTree = "<group>"; };
 		C7ACA1611BC8539000E97387 /* AOEDataModelViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOEDataModelViewCell.xib; sourceTree = "<group>"; };
@@ -153,6 +156,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70493281BD830D500E5AA15 /* AOEModel */ = {
+			isa = PBXGroup;
+			children = (
+				C704932D1BD847BF00E5AA15 /* AOEModelObserver */,
+				C70493291BD8310100E5AA15 /* AOEModel.h */,
+				C704932A1BD8310100E5AA15 /* AOEModel.m */,
+			);
+			path = AOEModel;
+			sourceTree = "<group>";
+		};
+		C704932D1BD847BF00E5AA15 /* AOEModelObserver */ = {
+			isa = PBXGroup;
+			children = (
+				C704932E1BD847BF00E5AA15 /* AOEModelObserver.h */,
+			);
+			path = AOEModelObserver;
+			sourceTree = "<group>";
+		};
 		C7ACA0D41BC851D300E97387 = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +400,7 @@
 		C7ACA1421BC8539000E97387 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C70493281BD830D500E5AA15 /* AOEModel */,
 				C7ACA1431BC8539000E97387 /* AOEArrayModel */,
 				C7ACA1481BC8539000E97387 /* AOEChangesModel */,
 				C7ACA1511BC8539000E97387 /* AOEDataArrayModel */,
@@ -393,17 +415,8 @@
 			children = (
 				C7ACA1441BC8539000E97387 /* AOEArrayModel.h */,
 				C7ACA1451BC8539000E97387 /* AOEArrayModel.m */,
-				C7ACA1461BC8539000E97387 /* AOEArrayModelObserver */,
 			);
 			path = AOEArrayModel;
-			sourceTree = "<group>";
-		};
-		C7ACA1461BC8539000E97387 /* AOEArrayModelObserver */ = {
-			isa = PBXGroup;
-			children = (
-				C7ACA1471BC8539000E97387 /* AOEArrayModelObserver.h */,
-			);
-			path = AOEArrayModelObserver;
 			sourceTree = "<group>";
 		};
 		C7ACA1481BC8539000E97387 /* AOEChangesModel */ = {
@@ -488,8 +501,8 @@
 		C7ACA15C1BC8539000E97387 /* AOEDataModelViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C7ACA15D1BC8539000E97387 /* AOEContainerView.h */,
-				C7ACA15E1BC8539000E97387 /* AOEContainerView.m */,
+				C7ACA15D1BC8539000E97387 /* AOEDataModelView.h */,
+				C7ACA15E1BC8539000E97387 /* AOEDataModelView.m */,
 				C7ACA15F1BC8539000E97387 /* AOEDataModelViewCell.h */,
 				C7ACA1601BC8539000E97387 /* AOEDataModelViewCell.m */,
 				C7ACA1611BC8539000E97387 /* AOEDataModelViewCell.xib */,
@@ -645,7 +658,7 @@
 				C7ACA1771BC8539000E97387 /* AOAlphabetWithStrings.m in Sources */,
 				C7ACA1721BC8539000E97387 /* UIViewController+AOEExtensions.m in Sources */,
 				C7ECFDEE1BD0F14200B3F868 /* AOELoadingView.m in Sources */,
-				C7ACA1821BC8539000E97387 /* AOEContainerView.m in Sources */,
+				C7ACA1821BC8539000E97387 /* AOEDataModelView.m in Sources */,
 				C7ACA1991BCDB16A00E97387 /* AOEIndexChangesModel+AOEExtensions.m in Sources */,
 				C7ACA16E1BC8539000E97387 /* NSMutableArray+AOEExtensions.m in Sources */,
 				C7ACA17A1BC8539000E97387 /* AOETableViewCell.m in Sources */,
@@ -653,6 +666,7 @@
 				C7ACA16F1BC8539000E97387 /* NSString+AOEExtensions.m in Sources */,
 				C7ECFDF21BD59D1000B3F868 /* AOEBaseView.m in Sources */,
 				C7ACA1741BC8539000E97387 /* AOAlphabet.m in Sources */,
+				C704932B1BD8310100E5AA15 /* AOEModel.m in Sources */,
 				C7ACA1701BC8539000E97387 /* UINib+AOEExtensions.m in Sources */,
 				C7ACA1761BC8539000E97387 /* AOAlphabetWithRange.m in Sources */,
 				C7ACA1831BC8539000E97387 /* AOEDataModelViewCell.m in Sources */,
