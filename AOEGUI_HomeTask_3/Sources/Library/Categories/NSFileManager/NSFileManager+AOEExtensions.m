@@ -14,6 +14,10 @@
     return [self pathWithSearchPathDirectory:NSDocumentDirectory domainMask:NSUserDomainMask];
 }
 
++ (NSString *)pathWithSearchPathDirectory:(NSSearchPathDirectory)pathDirectory {
+    return [self pathWithSearchPathDirectory:pathDirectory domainMask:NSUserDomainMask];
+}
+
 + (NSString *)pathWithSearchPathDirectory:(NSSearchPathDirectory)pathDirectory
                                domainMask:(NSSearchPathDomainMask)domainMask
 {

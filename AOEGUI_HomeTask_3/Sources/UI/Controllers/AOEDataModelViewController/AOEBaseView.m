@@ -19,14 +19,14 @@
     [super awakeFromNib];
     
     self.loadingView = [AOELoadingView loadingView];
-    [self.loadingView setVisible:NO animated:YES withCompletion:nil];
+    [self.loadingView setVisible:NO animated:YES];
 }
 
 #pragma mark -
 #pragma mark Public Methods
 
 - (void)show {
-    [self.loadingView setVisible:YES animated:YES withCompletion:nil];
+    [self.loadingView setVisible:YES animated:YES];
 }
 
 - (void)hide {
