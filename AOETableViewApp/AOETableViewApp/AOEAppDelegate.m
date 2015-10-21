@@ -15,7 +15,7 @@
 #import "UIWindow+AOEExtensions.h"
 
 @interface AOEAppDelegate ()
-@property (nonatomic, strong) AOEDataModelViewController *viewController;
+@property (nonatomic, strong) AOEDataArrayModel *arrayModel;
 
 @end
 
@@ -40,19 +40,17 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    [self.viewController.arrayModel saveDataArrayToFile];
+    [self.arrayModel saveDataArrayToFile];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    AOEDataArrayModel *newDataArray = [self.viewController.arrayModel loadDataArrayFromFile];
-    self.viewController.arrayModel = newDataArray;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    [self.viewController.arrayModel saveDataArrayToFile];
+    [self.arrayModel saveDataArrayToFile];
 }
 
 @end

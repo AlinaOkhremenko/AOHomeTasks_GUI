@@ -16,7 +16,7 @@
 #import "AOEIndexChangesModel.h"
 #import "AOEDoubleIndexChangesModel.h"
 
-#import "AOEArrayModelObserver.h"
+#import "AOEModelObserver.h"
 
 #import "UITableView+AOEExtensions.h"
 #import "NSIndexPath+AOEExtensions.h"
@@ -49,6 +49,7 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
 
 - (void)setArrayModel:(AOEDataArrayModel *)arrayModel {
     AOESynthesizeObserverSetter(arrayModel, _arrayModel);
+    [_arrayModel load];
 }
 
 #pragma mark - 
@@ -57,6 +58,7 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.arrayModel load];
     [self.containerView.tableView reloadData];
 }
 
@@ -142,9 +144,17 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
 #pragma mark -
 #pragma mark AOEModelObserver Protocol
 
+- (void)modelWillLoad:(id)model {
+    [self.containerView showLoadingView];
+};
 
+- (void)modelDidLoad:(id)model {
+    [self.containerView.tableView reloadData];
+    [self.containerView hideLoadingView];
+    
+};
 
-- (void)        arrayModel:(AOEArrayModel *)arrayModel
+- (void)             model:(AOEArrayModel *)arrayModel
  didChangeWithChangesModel:(AOEChangesModel *)changesModel
 {
     [self.containerView.tableView updateWithChangesModel:changesModel];
