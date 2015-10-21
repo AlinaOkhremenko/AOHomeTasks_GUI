@@ -14,6 +14,6 @@
 - (void)modelDidLoad:(id)model;
 - (void)modelDidFailLoading:(id)model;
 
-- (void)model:(id)arrayModel didChangeWithChanges:(id)changes;
+- (void)model:(id)arrayModel didChangeWithChangesModel:(id)changesModel;
 
 @end

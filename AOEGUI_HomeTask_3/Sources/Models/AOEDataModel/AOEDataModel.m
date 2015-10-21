@@ -7,6 +7,8 @@
 //
 #import "AOEDataModel.h"
 
+#import "AOEImageModel.h"
+
 #import "NSString+AOEExtensions.h"
 
 static NSString * const kAOEKeyRandomString = @"kAOEKeyRandomString";

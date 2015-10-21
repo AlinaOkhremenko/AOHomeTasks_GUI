@@ -83,7 +83,7 @@
             break;
             
         case AOEModelStateDidChange:
-            selector = @selector(model:didChangeWithChanges:);
+            selector = @selector(model:didChangeWithChangesModel:);
             break;
             
         case AOEModelStateDidUnload:
