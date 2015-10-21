@@ -10,7 +10,7 @@
 #import "AOELoadingView.h"
 
 @interface AOEBaseView ()
-@property (nonatomic, readwrite)    AOELoadingView  *loadingView;
+@property (nonatomic, readwrite)    AOELoadingView      *loadingView;
 
 @end
 @implementation AOEBaseView
@@ -18,23 +18,27 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.loadingView = [AOELoadingView loadingView];
-    [self.loadingView setVisible:NO animated:YES];
+    self.loadingView = [self currentLoadingView];
+    [self.loadingView setVisible:NO animated:NO];
 }
 
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)show {
+- (id)currentLoadingView {
+    return [AOELoadingView loadingView];
+}
+
+- (void)showLoadingView {
     [self.loadingView setVisible:YES animated:YES];
 }
 
-- (void)hide {
+- (void)hideLoadingView {
     [self.loadingView setVisible:NO animated:NO];
 }
 
-- (BOOL)isHidden {
-    return self.loadingView.hidden;
+- (BOOL)loadingViewIsHidden {
+    return self.loadingView.alpha == 0;
 }
 
 @end

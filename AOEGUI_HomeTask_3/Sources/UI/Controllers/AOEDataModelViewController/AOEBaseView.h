@@ -10,8 +10,8 @@
 
 @interface AOEBaseView : UIView
 
-- (void)show;
-- (void)hide;
-- (BOOL)isHidden;
+- (void)showLoadingView;
+- (void)hideLoadingView;
+- (BOOL)loadingViewIsHidden;
 
 @end
