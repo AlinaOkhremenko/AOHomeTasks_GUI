@@ -15,11 +15,28 @@
 @end
 @implementation AOEBaseView
 
+#pragma mark -
+#pragma mark Deallocations
+
+- (void)dealloc {
+    self.loadingView = nil;
+}
+
+#pragma mark -
+#pragma mark View Life Cycle Methods
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
     self.loadingView = [self currentLoadingView];
     [self.loadingView setVisible:NO animated:NO];
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (BOOL)isLoadingViewHidden {
+    return self.loadingView.alpha == 0;
 }
 
 #pragma mark -
@@ -30,15 +47,12 @@
 }
 
 - (void)showLoadingView {
+    [self bringSubviewToFront:self.loadingView];
     [self.loadingView setVisible:YES animated:YES];
 }
 
 - (void)hideLoadingView {
     [self.loadingView setVisible:NO animated:NO];
-}
-
-- (BOOL)loadingViewIsHidden {
-    return self.loadingView.alpha == 0;
 }
 
 @end
