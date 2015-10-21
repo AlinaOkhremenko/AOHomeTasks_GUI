@@ -24,7 +24,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="nsI-4M-ZWY">
+                    <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="nsI-4M-ZWY">
                         <rect key="frame" x="39" y="29" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </activityIndicatorView>

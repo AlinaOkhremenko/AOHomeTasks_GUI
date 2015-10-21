@@ -9,9 +9,11 @@
 
 #import "AOETableViewCell.h"
 
+#import "AOEModelObserver.h"
+
 @class AOEDataModel;
 
-@interface AOEDataModelViewCell : AOETableViewCell
+@interface AOEDataModelViewCell : AOETableViewCell <AOEModelObserver>
 @property (nonatomic, strong) IBOutlet UIImageView              *pictureView;
 @property (nonatomic, strong) IBOutlet UILabel                  *randomText;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView  *imageLoadingWheel;

@@ -8,6 +8,7 @@
 #import "AOEDataModelViewCell.h"
 
 #import "AOEDataModel.h"
+#import "AOEMacro.h"
 
 static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8Vw4/AAAAAAAAAAI/AAAAAAAAAVQ/6DRhCvLBVdc/photo.jpg";
 
@@ -17,12 +18,13 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
 #pragma mark Accessors
 
 - (void)setModel:(AOEDataModel *)model {
-    if (_model != model) {
-        _model = model;
-    }
-
+    AOESynthesizeObserverSetter(model, _model);
     [self fillWithModel:model];
+    [model load];
 }
+
+#pragma mark -
+#pragma mark Public methods
 
 - (void)fillWithModel:(AOEDataModel *)model {
     NSURL *url = [NSURL URLWithString:kAOEUrl];
@@ -31,7 +33,19 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
             self.pictureView.image = image;
         }
     }];
+    
     self.randomText.text = model.randomString;
+}
+
+#pragma mark -
+#pragma mark AOEModelObserver Protocol
+
+- (void)modelWillLoad:(id)model {
+    [self.imageLoadingWheel startAnimating];
+}
+- (void)modelDidLoad:(id)model {
+    [self fillWithModel:model];
+    [self.imageLoadingWheel stopAnimating];
 }
 
 @end
