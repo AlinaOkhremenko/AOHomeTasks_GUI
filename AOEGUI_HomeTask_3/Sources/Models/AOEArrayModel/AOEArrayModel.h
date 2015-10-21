@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AOObservable.h"
 
-@interface AOEArrayModel : AOEObservable <NSCoding, NSFastEnumeration>
+#import "AOEModel.h"
+
+@interface AOEArrayModel : AOEModel <NSCoding, NSFastEnumeration>
 @property (nonatomic, readonly) NSUInteger  count;
 @property (nonatomic, readonly) NSArray     *array;
 
 - (void)addObject:(id)object;
 - (void)removeObject:(id)object;
+- (void)addObjects:(id<NSFastEnumeration>)objects;
 
 - (id)objectAtIndex:(NSUInteger)index;
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
