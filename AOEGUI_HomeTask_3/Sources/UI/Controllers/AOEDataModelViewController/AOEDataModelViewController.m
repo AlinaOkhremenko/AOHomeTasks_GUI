@@ -8,7 +8,7 @@
 #import "AOEDataModelViewController.h"
 
 #import "AOEDataModelViewCell.h"
-#import "AOEContainerView.h"
+#import "AOEDataModelView.h"
 
 #import "AOEDataArrayModel.h"
 #import "AOEDataModel.h"
@@ -24,7 +24,7 @@
 
 static NSString * const kAOETableTitle = @"Data Table";
 
-AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerView);
+AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelView);
 
 @implementation AOEDataModelViewController
 
@@ -140,7 +140,9 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEContainerVi
 }
 
 #pragma mark -
-#pragma mark AOEObserver Protocol
+#pragma mark AOEModelObserver Protocol
+
+
 
 - (void)        arrayModel:(AOEArrayModel *)arrayModel
  didChangeWithChangesModel:(AOEChangesModel *)changesModel

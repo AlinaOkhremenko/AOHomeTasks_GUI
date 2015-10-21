@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 
-#import "AOEContainerView.h"
+#import "AOEDataModelView.h"
 
-@implementation AOEContainerView
+@implementation AOEDataModelView
 
 @end

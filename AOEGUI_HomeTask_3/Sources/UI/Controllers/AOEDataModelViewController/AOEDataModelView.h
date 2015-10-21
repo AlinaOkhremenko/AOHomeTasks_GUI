@@ -10,7 +10,7 @@
 
 #import "AOEBaseView.h"
 
-@interface AOEContainerView : AOEBaseView
+@interface AOEDataModelView : AOEBaseView
 @property (nonatomic, strong)   IBOutlet    UITableView    *tableView;
 
 @end

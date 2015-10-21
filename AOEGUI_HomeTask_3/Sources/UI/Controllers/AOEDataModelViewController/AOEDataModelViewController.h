@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AOEArrayModelObserver.h"
+#import "AOEModelObserver.h"
 
 @class AOEDataArrayModel;
 
-@interface AOEDataModelViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AOEArrayModelObserver>
+@interface AOEDataModelViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AOEModelObserver>
 @property (nonatomic, strong)   AOEDataArrayModel   *arrayModel;
 
 @end
