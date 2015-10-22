@@ -13,8 +13,6 @@
 @interface AOEDataArrayModel : AOEArrayModel
 
 - (id)init;
-- (id)initWithCount:(NSUInteger)count;
-
-- (void)saveDataArrayToFile;
+- (void)save;
 
 @end

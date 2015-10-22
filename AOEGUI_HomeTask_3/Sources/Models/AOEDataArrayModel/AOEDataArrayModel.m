@@ -20,8 +20,12 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
 @property (nonatomic, readonly)                  NSString   *fileFolder;
 @property (nonatomic, readonly)                  NSString   *filePath;
 @property (nonatomic, assign, getter=isCached)   BOOL       cached;
+@property (nonatomic, readonly)                  NSArray    *notificationsName;
 
 - (void)fillArrayModelWithRows:(NSUInteger)rowsCount;
+- (void)subscribeToApplicationNotifications:(NSArray *)notificationsName;
+- (void)unsubscribeFromApplicationNotifications:(NSArray *)notificationsName;
+- (void)saveWithNotification:(id)notification;
 
 @end
 @implementation AOEDataArrayModel
@@ -30,18 +34,19 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
 @dynamic fileFolder;
 @dynamic filePath;
 @dynamic cached;
+@dynamic notificationsName;
 
 #pragma mark - 
-#pragma mark Initializations
+#pragma mark Initializations and Deallocation
 
-- (id)init {
-    return [self initWithCount:kAOERowsCount];
+- (void)dealloc {
+    [self unsubscribeFromApplicationNotifications:self.notificationsName];
 }
 
-- (id)initWithCount:(NSUInteger)rowsCount {
+- (id)init {
     self = [super init];
     if (self) {
-        [self fillArrayModelWithRows:rowsCount];
+        [self subscribeToApplicationNotifications:self.notificationsName];
     }
     
     return self;
@@ -66,10 +71,14 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
     return [[NSFileManager defaultManager] fileExistsAtPath:self.filePath];
 }
 
+- (NSArray *)notificationsName {
+    return @[UIApplicationDidEnterBackgroundNotification, UIApplicationWillTerminateNotification];
+}
+
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)saveDataArrayToFile {
+- (void)save {
     [NSKeyedArchiver archiveRootObject:self.array toFile:self.filePath];
 }
 
@@ -77,13 +86,9 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
     id block = nil;
     if (self.cached) {
         id objects = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
-        block = ^{
-            [self addObject:objects];
-        };
+        block = ^{ [self addObject:objects];  };
     } else {
-        block = ^{
-            [self fillArrayModelWithRows:kAOERowsCount];
-        };
+        block = ^{ [self fillArrayModelWithRows:kAOERowsCount]; };
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         self.state = AOEModelStateDidLoad;
@@ -92,6 +97,27 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
 
 #pragma mark -
 #pragma mark Private Methods
+
+- (void)subscribeToApplicationNotifications:(NSArray *)notificationsName {
+    for (NSString *notification in notificationsName) {
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(saveWithNotification:)
+                                                    name:notification
+                                                  object:nil];
+    }
+}
+
+- (void)unsubscribeFromApplicationNotifications:(NSArray *)notificationsName {
+    for (NSString *notification in notificationsName) {
+        [[NSNotificationCenter defaultCenter]removeObserver:self
+                                                       name:notification
+                                                     object:nil];
+    }
+}
+
+- (void)saveWithNotification:(id)notification {
+    [self save];
+}
 
 - (void)fillArrayModelWithRows:(NSUInteger)rowsCount {
     for (NSUInteger index = 0; index < rowsCount; index++) {

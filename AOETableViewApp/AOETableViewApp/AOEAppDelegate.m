@@ -40,7 +40,6 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    [self.arrayModel saveDataArrayToFile];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -50,7 +49,6 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    [self.arrayModel saveDataArrayToFile];
 }
 
 @end
