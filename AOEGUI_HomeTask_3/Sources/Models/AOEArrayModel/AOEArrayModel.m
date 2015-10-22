@@ -56,8 +56,8 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
 }
 
 - (void)addObjects:(id<NSFastEnumeration>)objects {
-        for (id object in objects) {
-            [self addObject:object];
+    for (id object in objects) {
+        [self addObject:object];
     }
 }
 
@@ -65,8 +65,19 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
     [self.objects removeObject:object];
 }
 
+- (void)removeObjects:(id<NSFastEnumeration>)objects {
+    for (id object in objects) {
+        NSUInteger index = [self indexOfObject:object];
+        [self removeObjectAtIndex:index];
+    }
+}
+
 - (id)objectAtIndex:(NSUInteger)index {
     return [self.objects objectAtIndex:index];
+}
+
+- (NSUInteger)indexOfObject:(id)object {
+    return [self.objects indexOfObject:object];
 }
 
 - (id)objectAtIndexedSubscript:(NSUInteger)index {

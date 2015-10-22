@@ -27,10 +27,12 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
 #pragma mark Public methods
 
 - (void)fillWithModel:(AOEDataModel *)model {
+     [self.imageLoadingWheel startAnimating];
     NSURL *url = [NSURL URLWithString:kAOEUrl];
     [model.imageModel downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image){
         if (succeeded) {
             self.pictureView.image = image;
+            [self.imageLoadingWheel stopAnimating];
         }
     }];
     
@@ -41,12 +43,10 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
 #pragma mark AOEModelObserver Protocol
 
 - (void)modelWillLoad:(id)model {
-    [self.imageLoadingWheel startAnimating];
 }
 
 - (void)modelDidLoad:(id)model {
     [self fillWithModel:model];
-    [self.imageLoadingWheel stopAnimating];
 }
 
 - (void)modelDidFailLoading:(id)model {

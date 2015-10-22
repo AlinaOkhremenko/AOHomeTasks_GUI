@@ -19,11 +19,7 @@
 }
 
 - (void)applyToTableView:(UITableView *)tableView withRowAnimation:(UITableViewRowAnimation)animation {
-    switch (self.type) {
-        case AOEModelChangeTypeMove:
-            [tableView moveRowAtIndexPath:[self sourceIndexPath] toIndexPath:[self destinationIndexPath]];
-            break;
-    }
+    [tableView moveRowAtIndexPath:[self sourceIndexPath] toIndexPath:[self destinationIndexPath]];
 }
 
 @end

@@ -59,7 +59,6 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
     [super viewDidLoad];
     
     [self.arrayModel load];
-    [self.containerView.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -146,13 +145,13 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
 
 - (void)modelWillLoad:(id)model {
     [self.containerView showLoadingView];
-};
+}
 
 - (void)modelDidLoad:(id)model {
     [self.containerView.tableView reloadData];
     [self.containerView hideLoadingView];
     
-};
+}
 
 - (void)             model:(AOEArrayModel *)arrayModel
  didChangeWithChangesModel:(AOEChangesModel *)changesModel
@@ -161,6 +160,6 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
 }
 
 - (void)modelDidFailLoading:(id)model {
-};
+}
 
 @end

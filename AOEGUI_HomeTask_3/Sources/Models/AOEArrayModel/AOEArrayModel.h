@@ -17,8 +17,10 @@
 - (void)addObject:(id)object;
 - (void)removeObject:(id)object;
 - (void)addObjects:(id<NSFastEnumeration>)objects;
+- (void)removeObjects:(id<NSFastEnumeration>)objects;
 
 - (id)objectAtIndex:(NSUInteger)index;
+- (NSUInteger)indexOfObject:(id)object; 
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
 
 - (void)insertObject:(id)object atIndex:(NSUInteger)index;

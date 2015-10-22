@@ -28,15 +28,16 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.loadingView = [self currentLoadingView];
-    [self.loadingView setVisible:NO animated:NO];
+    AOELoadingView *loadingView = [self currentLoadingView];
+    self.loadingView = loadingView;
+    loadingView.visible = NO;
 }
 
 #pragma mark -
 #pragma mark Accessors
 
 - (BOOL)isLoadingViewHidden {
-    return self.loadingView.alpha == 0;
+    return self.loadingView.visible;
 }
 
 #pragma mark -
@@ -47,8 +48,9 @@
 }
 
 - (void)showLoadingView {
-    [self bringSubviewToFront:self.loadingView];
-    [self.loadingView setVisible:YES animated:YES];
+    AOELoadingView *loadingView = self.loadingView;
+    [self bringSubviewToFront:loadingView];
+    [loadingView setVisible:YES animated:YES];
 }
 
 - (void)hideLoadingView {

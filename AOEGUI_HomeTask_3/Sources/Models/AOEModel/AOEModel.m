@@ -38,7 +38,7 @@
         _state = state;
     }
     if (self.shouldNotify) {
-    [self notifyObserversWithSelector:[self selectorForState:state] withObject:object];
+        [self notifyObserversWithSelector:[self selectorForState:state] withObject:object];
     }
 }
 
@@ -46,26 +46,29 @@
 #pragma mark Public Methods
 
 - (void)load {
-    AOEModelState state = self.state;
-    if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
-        [self notifyObserversWithSelector:[self selectorForState:state]];
-        
-        return;
+    @synchronized(self) {
+        AOEModelState state = self.state;
+        if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
+            [self notifyObserversWithSelector:[self selectorForState:state]];
+            
+            return;
+        }
     }
+    
     self.state = AOEModelStateWillLoad;
     
-    [self preLoading];
+    [self setupLoading];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
         [self performLoading];
     });
-};
+}
 
-- (void)preLoading {
-};
+- (void)setupLoading {
+}
 
 - (void)performLoading {
-};
+}
 
 - (SEL)selectorForState:(AOEModelState)state {
     SEL selector = NULL;
@@ -86,8 +89,7 @@
             selector = @selector(model:didChangeWithChangesModel:);
             break;
             
-        case AOEModelStateDidUnload:
-         default:
+        default:
             break;
     }
     
@@ -95,12 +97,13 @@
 }
 
 - (void)performBlock:(void(^)(void))block shouldNotify:(BOOL)shouldNotify {
-        BOOL currentNotifyingState = self.shouldNotify;
-        self.shouldNotify = shouldNotify;
-        if (block) {
-            block();
-        self.shouldNotify = currentNotifyingState;
+    BOOL currentNotifyingState = self.shouldNotify;
+    self.shouldNotify = shouldNotify;
+    if (block) {
+        block();
     }
+    
+    self.shouldNotify = currentNotifyingState;
 }
 
 @end

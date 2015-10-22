@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AOEBaseView : UIView
-@property (nonatomic, readonly, getter=isLoadingViewHidden) BOOL LoadingViewHidden;
+@property (nonatomic, readonly, getter=isLoadingViewHidden) BOOL loadingViewHidden;
 
 - (void)showLoadingView;
 - (void)hideLoadingView;
-
-- (BOOL)isLoadingViewHidden;
 
 @end

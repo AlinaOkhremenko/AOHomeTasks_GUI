@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C704932B1BD8310100E5AA15 /* AOEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C704932A1BD8310100E5AA15 /* AOEModel.m */; };
-		C7ACA1671BC8539000E97387 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1091BC8539000E97387 /* Info.plist */; };
 		C7ACA1681BC8539000E97387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA10A1BC8539000E97387 /* main.m */; };
 		C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA10F1BC8539000E97387 /* Images.xcassets */; };
 		C7ACA16C1BC8539000E97387 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1101BC8539000E97387 /* LaunchScreen.xib */; };
@@ -629,7 +628,6 @@
 				C7ACA1901BC8632200E97387 /* cat.jpeg in Resources */,
 				C7ACA1841BC8539000E97387 /* AOEDataModelViewCell.xib in Resources */,
 				C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */,
-				C7ACA1671BC8539000E97387 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

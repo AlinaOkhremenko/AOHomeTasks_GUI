@@ -55,7 +55,7 @@
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object {
-    [self notifyObserversWithSelector:selector withObject:object withObject:nil];
+    [self notifyObserversWithSelector:selector withObject:self withObject:object];
 }
 
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object withObject:(id)object2 {

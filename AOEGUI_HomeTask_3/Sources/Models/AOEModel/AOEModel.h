@@ -20,14 +20,15 @@ typedef NS_ENUM(NSUInteger, AOEModelState) {
 @interface AOEModel : AOEObservable
 @property (nonatomic, assign)   AOEModelState   state;
 
-- (void)setState:(AOEModelState)state;
 - (void)setState:(AOEModelState)state withObject:(id)object;
 
 - (void)load;
+
 /**
  * method to be overriden in subclasses
  */
-- (void)preLoading;
+- (void)setupLoading;
+
 /**
  * method to be overriden in subclasses
  */
