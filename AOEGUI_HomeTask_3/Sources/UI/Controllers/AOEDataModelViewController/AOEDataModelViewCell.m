@@ -43,9 +43,16 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
 - (void)modelWillLoad:(id)model {
     [self.imageLoadingWheel startAnimating];
 }
+
 - (void)modelDidLoad:(id)model {
     [self fillWithModel:model];
     [self.imageLoadingWheel stopAnimating];
+}
+
+- (void)modelDidFailLoading:(id)model {
+}
+
+- (void)model:(id)arrayModel didChangeWithChangesModel:(id)changesModel {
 }
 
 @end

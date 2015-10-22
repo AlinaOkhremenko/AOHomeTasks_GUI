@@ -160,4 +160,7 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
     [self.containerView.tableView updateWithChangesModel:changesModel];
 }
 
+- (void)modelDidFailLoading:(id)model {
+};
+
 @end
