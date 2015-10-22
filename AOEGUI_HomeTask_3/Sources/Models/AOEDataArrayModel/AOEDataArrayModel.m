@@ -90,6 +90,9 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
     } else {
         block = ^{ [self fillArrayModelWithRows:kAOERowsCount]; };
     }
+    
+    [self performBlock:block shouldNotify:NO];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         self.state = AOEModelStateDidLoad;
     });

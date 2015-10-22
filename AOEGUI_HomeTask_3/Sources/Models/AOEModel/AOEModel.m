@@ -46,13 +46,9 @@
 #pragma mark Public Methods
 
 - (void)load {
-    @synchronized(self) {
-        AOEModelState state = self.state;
-        if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
-            [self notifyObserversWithSelector:[self selectorForState:state]];
-            
-            return;
-        }
+    AOEModelState state = self.state;
+    if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
+        [self notifyObserversWithSelector:[self selectorForState:state]];
     }
     
     self.state = AOEModelStateWillLoad;
