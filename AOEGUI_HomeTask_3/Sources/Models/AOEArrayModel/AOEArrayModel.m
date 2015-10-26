@@ -87,25 +87,19 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
 - (void)insertObject:(id)object atIndex:(NSUInteger)index {
     [self.objects insertObject:object atIndex:index];
     
-    [self notifyWithChangesModel:[AOEChangesModel insertModelWithIndex:index]];
+    [self setState:AOEModelStateDidChange withObject:[AOEChangesModel insertModelWithIndex:index]];
 }
 
 - (void)removeObjectAtIndex:(NSUInteger)index {
     [self.objects removeObjectAtIndex:index];
     
-    [self notifyWithChangesModel:[AOEChangesModel deleteModelWithIndex:index]];
+    [self setState:AOEModelStateDidChange withObject:[AOEChangesModel deleteModelWithIndex:index]];
 }
 
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     [self.objects moveObjectAtIndex:fromIndex toIndex:toIndex];
     
-    [self notifyWithChangesModel:[AOEChangesModel moveModelFromIndex:fromIndex toIndex:toIndex]];
-}
-
-- (void)notifyWithChangesModel:(id)model {
-    [self notifyObserversWithSelector:@selector(model:didChangeWithChangesModel:)
-                           withObject:self
-                           withObject:model];
+    [self setState:AOEModelStateDidChange withObject:[AOEChangesModel moveModelFromIndex:fromIndex toIndex:toIndex]];
 }
 
 #pragma mark -

@@ -18,9 +18,6 @@ typedef NS_ENUM(NSUInteger, AOEModelState) {
 };
 
 @interface AOEModel : AOEObservable
-@property (nonatomic, assign)   AOEModelState   state;
-
-- (void)setState:(AOEModelState)state withObject:(id)object;
 
 - (void)load;
 
@@ -34,7 +31,5 @@ typedef NS_ENUM(NSUInteger, AOEModelState) {
  */
 - (void)performLoading;
 
-- (SEL)selectorForState:(AOEModelState)state;
-- (void)performBlock:(void(^)(void))block shouldNotify:(BOOL)shouldNotify;
 
 @end

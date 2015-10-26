@@ -10,7 +10,7 @@
 
 @interface AOEObservable ()
 @property (nonatomic, strong)    NSHashTable        *mutableObservers;
-
+@property (nonatomic, assign)    BOOL               shouldNotify;
 @end
 
 @implementation AOEObservable
@@ -22,6 +22,7 @@
     self = [super init];
     if (self) {
         self.mutableObservers = [NSHashTable weakObjectsHashTable];
+        self.shouldNotify = YES;
     }
     
     return self;
@@ -29,6 +30,22 @@
 
 #pragma mark -
 #pragma mark Accessors
+
+- (void)setState:(NSUInteger)state {
+    [self setState:state withObject:nil];
+    
+}
+
+- (void)setState:(NSUInteger)state withObject:(id)object {
+    @synchronized(self) {
+        if (_state != state) {
+            _state = state;
+        }
+        if (self.shouldNotify) {
+            [self notifyObserversWithSelector:[self selectorForState:state] withObject:object];
+        }
+    }
+}
 
 - (NSArray *)observers {
     return [self.mutableObservers allObjects];
@@ -48,25 +65,45 @@
     return [self.mutableObservers containsObject:observer];
 }
 
-- (void)notifyObserversWithSelector:(SEL)selector {
-    [self notifyObserversWithSelector:selector withObject:nil];
+- (SEL)selectorForState:(NSUInteger)state {
+    return nil;
 }
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 
-- (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object {
-    [self notifyObserversWithSelector:selector withObject:self withObject:object];
+- (void)notifyObserversWithSelector:(SEL)selector {
+    [self notifyObserversWithSelector:selector withObject:nil];
 }
 
-- (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object withObject:(id)object2 {
-    NSArray *observers = [self.mutableObservers allObjects];
-    for (id observer in observers) {
+- (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object {
+    for (id observer in self.mutableObservers) {
         if ([observer respondsToSelector:selector]) {
-            [observer performSelector:selector withObject:object withObject:object2];
+            [observer performSelector:selector withObject:self withObject:object];
         }
     }
 }
 
 #pragma clang diagnostic pop
+
+- (void)performBlockWithoutNotification:(void(^)(void))block {
+    [self performBlock:block shouldNotify:NO];
+}
+
+- (void)performBlockWithNotification:(void(^)(void))block {
+    [self performBlock:block shouldNotify:YES];
+}
+
+- (void)performBlock:(void(^)(void))block shouldNotify:(BOOL)shouldNotify {
+    @synchronized(self) {
+        BOOL currentNotifyingState = self.shouldNotify;
+        self.shouldNotify = shouldNotify;
+        if (block) {
+            block();
+        }
+        
+        self.shouldNotify = currentNotifyingState;
+    }
+}
 
 @end

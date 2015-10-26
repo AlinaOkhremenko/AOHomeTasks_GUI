@@ -10,13 +10,21 @@
 
 @interface AOEObservable : NSObject
 @property (nonatomic, readonly)  NSArray     *observers;
+@property (nonatomic)            NSUInteger  state;
+
+- (void)setState:(NSUInteger)state;
+- (void)setState:(NSUInteger)state withObject:(id)object;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;
 - (BOOL)containsObserver:(id)observer;
 
+- (SEL)selectorForState:(NSUInteger)state;
+
 - (void)notifyObserversWithSelector:(SEL)selector;
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object;
-- (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object withObject:(id)object2;
+
+- (void)performBlockWithNotification:(void(^)(void))block;
+- (void)performBlockWithoutNotification:(void(^)(void))block;
 
 @end

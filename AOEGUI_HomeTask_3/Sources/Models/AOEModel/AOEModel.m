@@ -7,11 +7,8 @@
 //
 #import "AOEModel.h"
 #import "AOEModelObserver.h"
+#import "AOObservable.h"
 
-@interface AOEModel ()
-@property (nonatomic, assign)   BOOL    shouldNotify;
-
-@end
 @implementation AOEModel
 
 #pragma mark -
@@ -20,7 +17,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.shouldNotify = YES;
+    
     }
     
     return self;
@@ -28,19 +25,6 @@
 
 #pragma mark -
 #pragma mark Accessors
-
-- (void)setState:(AOEModelState)state {
-    [self setState:state withObject:nil];
-}
-
-- (void)setState:(AOEModelState)state withObject:(id)object {
-    if (state != _state) {
-        _state = state;
-    }
-    if (self.shouldNotify) {
-        [self notifyObserversWithSelector:[self selectorForState:state] withObject:object];
-    }
-}
 
 #pragma mark -
 #pragma mark Public Methods
@@ -67,7 +51,7 @@
 - (void)performLoading {
 }
 
-- (SEL)selectorForState:(AOEModelState)state {
+- (SEL)selectorForState:(NSUInteger)state {
     SEL selector = NULL;
     switch (state) {
         case AOEModelStateWillLoad:
@@ -87,20 +71,11 @@
             break;
             
         default:
+            [super selectorForState:state];
             break;
     }
     
     return selector;
-}
-
-- (void)performBlock:(void(^)(void))block shouldNotify:(BOOL)shouldNotify {
-    BOOL currentNotifyingState = self.shouldNotify;
-    self.shouldNotify = shouldNotify;
-    if (block) {
-        block();
-    }
-    
-    self.shouldNotify = currentNotifyingState;
 }
 
 @end

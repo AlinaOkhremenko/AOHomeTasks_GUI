@@ -86,12 +86,12 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
     id block = nil;
     if (self.cached) {
         id objects = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
-        block = ^{ [self addObjects:objects];  };
+        block = ^{ [self addObjects:objects]; };
     } else {
         block = ^{ [self fillArrayModelWithRows:kAOERowsCount]; };
     }
     
-    [self performBlock:block shouldNotify:NO];
+    [self performBlockWithoutNotification:block];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         self.state = AOEModelStateDidLoad;
