@@ -10,6 +10,9 @@
 		C704932B1BD8310100E5AA15 /* AOEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C704932A1BD8310100E5AA15 /* AOEModel.m */; };
 		C70493391BDEE03500E5AA15 /* AOEGCDQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = C70493381BDEE03500E5AA15 /* AOEGCDQueues.m */; };
 		C704933D1BDEE18000E5AA15 /* AOECache.m in Sources */ = {isa = PBXBuildFile; fileRef = C704933C1BDEE18000E5AA15 /* AOECache.m */; };
+		C70493451BDEEA3800E5AA15 /* AOEURLImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70493441BDEEA3800E5AA15 /* AOEURLImageModel.m */; };
+		C70493481BDEEA6900E5AA15 /* AOEFileImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70493471BDEEA6900E5AA15 /* AOEFileImageModel.m */; };
+		C704934A1BDEEAD100E5AA15 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70493491BDEEAD100E5AA15 /* Security.framework */; };
 		C7ACA1681BC8539000E97387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA10A1BC8539000E97387 /* main.m */; };
 		C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA10F1BC8539000E97387 /* Images.xcassets */; };
 		C7ACA16C1BC8539000E97387 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1101BC8539000E97387 /* LaunchScreen.xib */; };
@@ -68,6 +71,11 @@
 		C70493381BDEE03500E5AA15 /* AOEGCDQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEGCDQueues.m; sourceTree = "<group>"; };
 		C704933B1BDEE18000E5AA15 /* AOECache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOECache.h; sourceTree = "<group>"; };
 		C704933C1BDEE18000E5AA15 /* AOECache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOECache.m; sourceTree = "<group>"; };
+		C70493431BDEEA3800E5AA15 /* AOEURLImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEURLImageModel.h; sourceTree = "<group>"; };
+		C70493441BDEEA3800E5AA15 /* AOEURLImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEURLImageModel.m; sourceTree = "<group>"; };
+		C70493461BDEEA6900E5AA15 /* AOEFileImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEFileImageModel.h; sourceTree = "<group>"; };
+		C70493471BDEEA6900E5AA15 /* AOEFileImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEFileImageModel.m; sourceTree = "<group>"; };
+		C70493491BDEEAD100E5AA15 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C7ACA1091BC8539000E97387 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7ACA10A1BC8539000E97387 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7ACA10F1BC8539000E97387 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C704934A1BDEEAD100E5AA15 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +209,7 @@
 		C7ACA0D41BC851D300E97387 = {
 			isa = PBXGroup;
 			children = (
+				C70493491BDEEAD100E5AA15 /* Security.framework */,
 				C7ACA1061BC8539000E97387 /* AOEGUI_HomeTask_3 */,
 				C7ACA10E1BC8539000E97387 /* Resources */,
 				C7ACA1111BC8539000E97387 /* Sources */,
@@ -502,6 +512,10 @@
 			children = (
 				C7ACA1581BC8539000E97387 /* AOEImageModel.h */,
 				C7ACA1591BC8539000E97387 /* AOEImageModel.m */,
+				C70493431BDEEA3800E5AA15 /* AOEURLImageModel.h */,
+				C70493441BDEEA3800E5AA15 /* AOEURLImageModel.m */,
+				C70493461BDEEA6900E5AA15 /* AOEFileImageModel.h */,
+				C70493471BDEEA6900E5AA15 /* AOEFileImageModel.m */,
 			);
 			path = AOEImageModel;
 			sourceTree = "<group>";
@@ -697,6 +711,7 @@
 				C7ACA1681BC8539000E97387 /* main.m in Sources */,
 				C7ECFDE21BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m in Sources */,
 				C7ACA1851BC8539000E97387 /* AOEDataModelViewController.m in Sources */,
+				C70493481BDEEA6900E5AA15 /* AOEFileImageModel.m in Sources */,
 				C7ACA17C1BC8539000E97387 /* AOEChangesModel.m in Sources */,
 				C7ACA1801BC8539000E97387 /* AOEDataModel.m in Sources */,
 				C7ACA1751BC8539000E97387 /* AOAlphabetWithAlphabets.m in Sources */,
@@ -706,6 +721,7 @@
 				C7ACA1791BC8539000E97387 /* AOObservable.m in Sources */,
 				C70493391BDEE03500E5AA15 /* AOEGCDQueues.m in Sources */,
 				C7ACA1731BC8539000E97387 /* UIWindow+AOEExtensions.m in Sources */,
+				C70493451BDEEA3800E5AA15 /* AOEURLImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +830,10 @@
 				INFOPLIST_FILE = AOEGUI_HomeTask_3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -826,6 +846,10 @@
 				INFOPLIST_FILE = AOEGUI_HomeTask_3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

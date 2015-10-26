@@ -10,6 +10,7 @@
 
 void AOEDispatchQueueSyncOnMainThread(void(^block)(void)) {
     if (block == nil) {
+        
         return;
     }
     if ([NSThread isMainThread]) {
@@ -21,6 +22,7 @@ void AOEDispatchQueueSyncOnMainThread(void(^block)(void)) {
 
 void AOEDispatchQueueAsyncOnMainThread(void(^block)(void)) {
     if (block == nil) {
+        
         return;
     } else {
         dispatch_async(dispatch_get_main_queue(), block);
@@ -29,6 +31,7 @@ void AOEDispatchQueueAsyncOnMainThread(void(^block)(void)) {
 
 void AOEDispatchQueueAsyncInBackground(void(^block)(void)) {
     if (block == nil) {
+        
         return;
     } else {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), block);
