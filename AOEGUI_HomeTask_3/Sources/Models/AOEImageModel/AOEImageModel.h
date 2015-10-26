@@ -12,7 +12,6 @@
 @property (nonatomic, readonly) UIImage     *picture;
 
 - (id)initWithUrl:(NSURL *)url;
-- (void)downloadImageWithURL:(NSURL *)url
-             completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock;
+- (void)downloadImageWithCompletionBlock:(void (^)(UIImage *image, id *error))completionBlock;
 
 @end
