@@ -11,6 +11,7 @@
 #import "AOEDataModel.h"
 
 #import "NSFileManager+AOEExtensions.h"
+#import "AOEGCDQueues.h"
 
 static const NSUInteger kAOERowsCount = 12;
 static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
@@ -93,7 +94,7 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
     
     [self performBlockWithoutNotification:block];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    AOEDispatchQueueAsyncInBackground(^{
         self.state = AOEModelStateDidLoad;
     });
 }

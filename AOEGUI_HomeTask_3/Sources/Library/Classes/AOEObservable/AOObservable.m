@@ -11,6 +11,9 @@
 @interface AOEObservable ()
 @property (nonatomic, strong)    NSHashTable        *mutableObservers;
 @property (nonatomic, assign)    BOOL               shouldNotify;
+
+- (void)performBlock:(void(^)(void))block shouldNotify:(BOOL)shouldNotify;
+
 @end
 
 @implementation AOEObservable
@@ -33,7 +36,6 @@
 
 - (void)setState:(NSUInteger)state {
     [self setState:state withObject:nil];
-    
 }
 
 - (void)setState:(NSUInteger)state withObject:(id)object {

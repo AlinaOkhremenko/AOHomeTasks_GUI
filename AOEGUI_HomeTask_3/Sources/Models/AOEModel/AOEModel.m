@@ -9,22 +9,10 @@
 #import "AOEModelObserver.h"
 #import "AOObservable.h"
 
+#import "AOEGCDQueues.h"
+#import "AOEMacro.h"
+
 @implementation AOEModel
-
-#pragma mark -
-#pragma mark Initializations
-
-- (id)init {
-    self = [super init];
-    if (self) {
-    
-    }
-    
-    return self;
-}
-
-#pragma mark -
-#pragma mark Accessors
 
 #pragma mark -
 #pragma mark Public Methods
@@ -39,7 +27,9 @@
     
     [self setupLoading];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+    AOEweakify(self);
+    AOEDispatchQueueAsyncInBackground(^{
+        AOEstrongify(self);
         [self performLoading];
     });
 }

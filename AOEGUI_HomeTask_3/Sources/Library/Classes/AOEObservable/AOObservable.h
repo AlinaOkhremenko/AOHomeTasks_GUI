@@ -12,7 +12,6 @@
 @property (nonatomic, readonly)  NSArray     *observers;
 @property (nonatomic)            NSUInteger  state;
 
-- (void)setState:(NSUInteger)state;
 - (void)setState:(NSUInteger)state withObject:(id)object;
 
 - (void)addObserver:(id)observer;
