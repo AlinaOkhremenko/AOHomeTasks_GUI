@@ -27,7 +27,7 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
 #pragma mark Public methods
 
 - (void)fillWithModel:(AOEDataModel *)model {
-     [self.imageLoadingWheel startAnimating];
+    [self.imageLoadingWheel startAnimating];
     NSURL *url = [NSURL URLWithString:kAOEUrl];
     [model.imageModel downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image){
         if (succeeded) {

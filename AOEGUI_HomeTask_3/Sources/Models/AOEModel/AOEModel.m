@@ -49,9 +49,9 @@
     AOEModelState state = self.state;
     if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
         [self notifyObserversWithSelector:[self selectorForState:state]];
+        
+        return;
     }
-    
-    self.state = AOEModelStateWillLoad;
     
     [self setupLoading];
     
@@ -61,6 +61,7 @@
 }
 
 - (void)setupLoading {
+    self.state = AOEModelStateWillLoad;
 }
 
 - (void)performLoading {

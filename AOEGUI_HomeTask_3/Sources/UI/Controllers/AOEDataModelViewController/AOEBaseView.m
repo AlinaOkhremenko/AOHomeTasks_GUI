@@ -10,7 +10,7 @@
 #import "AOELoadingView.h"
 
 @interface AOEBaseView ()
-@property (nonatomic, readwrite)    AOELoadingView      *loadingView;
+@property (nonatomic, strong)    AOELoadingView      *loadingView;
 
 @end
 @implementation AOEBaseView

@@ -86,7 +86,7 @@ static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
     id block = nil;
     if (self.cached) {
         id objects = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
-        block = ^{ [self addObject:objects];  };
+        block = ^{ [self addObjects:objects];  };
     } else {
         block = ^{ [self fillArrayModelWithRows:kAOERowsCount]; };
     }

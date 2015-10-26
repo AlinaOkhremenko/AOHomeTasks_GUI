@@ -52,12 +52,12 @@ static  NSString * const kAOEKeyMutableObjects = @"objects";
 #pragma mark Public Methods
 
 - (void)addObject:(id)object {
-    [self.objects addObject:object];
+    [self.objects insertObject:object atIndex:self.count];
 }
 
 - (void)addObjects:(id<NSFastEnumeration>)objects {
     for (id object in objects) {
-        [self addObject:object];
+        [self.objects addObject:object];
     }
 }
 
