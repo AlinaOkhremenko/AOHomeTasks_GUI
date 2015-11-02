@@ -21,7 +21,7 @@
         [hashString appendFormat:@"%02x", hashBytes[i]];
     }
     
-    return hashString;
+    return [hashString copy];
 }
 
 @end

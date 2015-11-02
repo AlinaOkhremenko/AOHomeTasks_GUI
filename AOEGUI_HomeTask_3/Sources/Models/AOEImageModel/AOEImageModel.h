@@ -7,11 +7,19 @@
 //
 #import <UIKit/UIKit.h>
 
-@interface AOEImageModel : NSObject <NSCoding>
+#import "AOEModel.h"
+
+@interface AOEImageModel : AOEModel <NSCoding>
 @property (nonatomic, strong)   NSURL       *url;
-@property (nonatomic, readonly) UIImage     *picture;
+@property (nonatomic, strong)   UIImage     *picture;
+
++ (instancetype)imageWithURL:(NSURL *)url;
 
 - (id)initWithUrl:(NSURL *)url;
-- (void)downloadImageWithCompletionBlock:(void (^)(UIImage *image, id *error))completionBlock;
+
+- (void)loadImageWithCompletionBlock:(void (^)(UIImage *image, id error))completionBlock;
+- (void)cancel;
+- (void)notifyOfLoadingImageState:(UIImage *)image error:(id)error;
+- (void)finishLoadingImage:(UIImage *)image error:(id)error;
 
 @end

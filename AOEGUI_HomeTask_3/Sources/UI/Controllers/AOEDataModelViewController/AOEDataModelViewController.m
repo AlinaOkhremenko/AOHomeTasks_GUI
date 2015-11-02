@@ -143,6 +143,9 @@ AOEViewControllerClass(AOEDataModelViewController, containerView, AOEDataModelVi
 #pragma mark -
 #pragma mark AOEModelObserver Protocol
 
+- (void)modelDidUnload:(id)model {
+}
+
 - (void)modelWillLoad:(id)model {
     [self.containerView showLoadingView];
 }

@@ -13,7 +13,7 @@
 #import "NSFileManager+AOEExtensions.h"
 #import "AOEGCDQueues.h"
 
-static const NSUInteger kAOERowsCount = 12;
+static const NSUInteger kAOERowsCount = 1;
 static  NSString * const kAOEfileName  = @"AOEDataModel.plist";
 
 @interface AOEDataArrayModel ()

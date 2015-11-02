@@ -44,7 +44,6 @@
 		C7ACA1851BC8539000E97387 /* AOEDataModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1631BC8539000E97387 /* AOEDataModelViewController.m */; };
 		C7ACA1861BC8539000E97387 /* AOEDataModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA1641BC8539000E97387 /* AOEDataModelViewController.xib */; };
 		C7ACA1881BC854D300E97387 /* AOEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1871BC854D300E97387 /* AOEAppDelegate.m */; };
-		C7ACA1901BC8632200E97387 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C7ACA18F1BC8632200E97387 /* cat.jpeg */; };
 		C7ACA1961BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1951BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m */; };
 		C7ACA1991BCDB16A00E97387 /* AOEIndexChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACA1981BCDB16A00E97387 /* AOEIndexChangesModel+AOEExtensions.m */; };
 		C7ECFDE21BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDE11BCFE26800B3F868 /* AOEChangesModel+AOEExtensions.m */; };
@@ -52,6 +51,9 @@
 		C7ECFDEF1BD0F14200B3F868 /* AOELoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */; };
 		C7ECFDF21BD59D1000B3F868 /* AOEBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDF11BD59D0F00B3F868 /* AOEBaseView.m */; };
 		C7ECFDF61BD5A43600B3F868 /* NSFileManager+AOEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECFDF51BD5A43600B3F868 /* NSFileManager+AOEExtensions.m */; };
+		C7F7CAD61BE2F93F007C1028 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C7F7CAD41BE2F93F007C1028 /* cat.jpeg */; };
+		C7F7CAD71BE2F93F007C1028 /* explorer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C7F7CAD51BE2F93F007C1028 /* explorer.jpeg */; };
+		C7F7CADA1BE6C627007C1028 /* AOEImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7CAD91BE6C627007C1028 /* AOEImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,7 +138,6 @@
 		C7ACA1641BC8539000E97387 /* AOEDataModelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOEDataModelViewController.xib; sourceTree = "<group>"; };
 		C7ACA1871BC854D300E97387 /* AOEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOEAppDelegate.m; path = ../../AOETableViewApp/AOETableViewApp/AOEAppDelegate.m; sourceTree = "<group>"; };
 		C7ACA1891BC854DA00E97387 /* AOEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AOEAppDelegate.h; path = ../../AOETableViewApp/AOETableViewApp/AOEAppDelegate.h; sourceTree = "<group>"; };
-		C7ACA18F1BC8632200E97387 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
 		C7ACA1941BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AOEDoubleIndexChangesModel+AOEExtensions.h"; sourceTree = "<group>"; };
 		C7ACA1951BCDAF0400E97387 /* AOEDoubleIndexChangesModel+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AOEDoubleIndexChangesModel+AOEExtensions.m"; sourceTree = "<group>"; };
 		C7ACA1971BCDB16A00E97387 /* AOEIndexChangesModel+AOExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AOEIndexChangesModel+AOExtensions.h"; sourceTree = "<group>"; };
@@ -152,6 +153,10 @@
 		C7ECFDF11BD59D0F00B3F868 /* AOEBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEBaseView.m; sourceTree = "<group>"; };
 		C7ECFDF41BD5A43600B3F868 /* NSFileManager+AOEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AOEExtensions.h"; sourceTree = "<group>"; };
 		C7ECFDF51BD5A43600B3F868 /* NSFileManager+AOEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AOEExtensions.m"; sourceTree = "<group>"; };
+		C7F7CAD41BE2F93F007C1028 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
+		C7F7CAD51BE2F93F007C1028 /* explorer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = explorer.jpeg; sourceTree = "<group>"; };
+		C7F7CAD81BE6C627007C1028 /* AOEImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOEImageView.h; sourceTree = "<group>"; };
+		C7F7CAD91BE6C627007C1028 /* AOEImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOEImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,7 +249,7 @@
 		C7ACA10E1BC8539000E97387 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C7ACA18E1BC8632200E97387 /* Images */,
+				C7F7CAD31BE2F93F007C1028 /* Images */,
 				C7ACA10F1BC8539000E97387 /* Images.xcassets */,
 				C7ACA1101BC8539000E97387 /* LaunchScreen.xib */,
 			);
@@ -573,17 +578,11 @@
 				C7ECFDEB1BD0F14200B3F868 /* AOELoadingView.h */,
 				C7ECFDEC1BD0F14200B3F868 /* AOELoadingView.m */,
 				C7ECFDED1BD0F14200B3F868 /* AOELoadingView.xib */,
+				C7F7CAD81BE6C627007C1028 /* AOEImageView.h */,
+				C7F7CAD91BE6C627007C1028 /* AOEImageView.m */,
 			);
 			name = Views;
 			path = Controllers/Views;
-			sourceTree = "<group>";
-		};
-		C7ACA18E1BC8632200E97387 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				C7ACA18F1BC8632200E97387 /* cat.jpeg */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		C7ECFDF31BD5A41200B3F868 /* NSFileManager */ = {
@@ -593,6 +592,15 @@
 				C7ECFDF51BD5A43600B3F868 /* NSFileManager+AOEExtensions.m */,
 			);
 			path = NSFileManager;
+			sourceTree = "<group>";
+		};
+		C7F7CAD31BE2F93F007C1028 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C7F7CAD41BE2F93F007C1028 /* cat.jpeg */,
+				C7F7CAD51BE2F93F007C1028 /* explorer.jpeg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,7 +647,7 @@
 		C7ACA0D51BC851D300E97387 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Alina Okhremenko";
 				TargetAttributes = {
 					C7ACA0DC1BC851D300E97387 = {
@@ -676,9 +684,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7ACA1861BC8539000E97387 /* AOEDataModelViewController.xib in Resources */,
+				C7F7CAD71BE2F93F007C1028 /* explorer.jpeg in Resources */,
 				C7ECFDEF1BD0F14200B3F868 /* AOELoadingView.xib in Resources */,
+				C7F7CAD61BE2F93F007C1028 /* cat.jpeg in Resources */,
 				C7ACA16C1BC8539000E97387 /* LaunchScreen.xib in Resources */,
-				C7ACA1901BC8632200E97387 /* cat.jpeg in Resources */,
 				C7ACA1841BC8539000E97387 /* AOEDataModelViewCell.xib in Resources */,
 				C7ACA16B1BC8539000E97387 /* Images.xcassets in Resources */,
 			);
@@ -735,6 +744,7 @@
 				C7ACA1791BC8539000E97387 /* AOObservable.m in Sources */,
 				C70493391BDEE03500E5AA15 /* AOEGCDQueues.m in Sources */,
 				C7ACA1731BC8539000E97387 /* UIWindow+AOEExtensions.m in Sources */,
+				C7F7CADA1BE6C627007C1028 /* AOEImageView.m in Sources */,
 				C70493451BDEEA3800E5AA15 /* AOEURLImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,6 +788,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -848,6 +859,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AOE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -864,6 +876,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AOE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -883,6 +896,7 @@
 				);
 				INFOPLIST_FILE = AOEGUI_HomeTask_3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AOE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOEGUI_HomeTask_3.app/AOEGUI_HomeTask_3";
 			};
@@ -898,6 +912,7 @@
 				);
 				INFOPLIST_FILE = AOEGUI_HomeTask_3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AOE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOEGUI_HomeTask_3.app/AOEGUI_HomeTask_3";
 			};

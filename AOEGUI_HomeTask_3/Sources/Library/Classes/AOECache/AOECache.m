@@ -48,19 +48,27 @@
 #pragma mark Public Methods
 
 - (id)objectForKey:(id)key {
-    return [self.objects objectForKey:key];
+    @synchronized(self) {
+        return [self.objects objectForKey:key];
+    }
 }
 
 - (void)addObject:(id)object forKey:(id)key {
-    [self.objects setObject:object forKey:key];
+    @synchronized(self) {
+        [self.objects setObject:object forKey:key];
+    }
 }
 
 - (void)removeObjectForKey:(id)key {
-    [self.objects removeObjectForKey:key];
+    @synchronized(self) {
+        [self.objects removeObjectForKey:key];
+    }
 }
 
 - (void)removeAllObjects {
-    [self.objects removeAllObjects];
+    @synchronized(self) {
+         [self.objects removeAllObjects];
+    }
 }
 
 @end

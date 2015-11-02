@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Alina Okhremenko. All rights reserved.
 //
 
-#import "AOEImageModel.h"
+#import "AOEFileImageModel.h"
 
-@interface AOEURLImageModel : AOEImageModel
+@interface AOEURLImageModel : AOEFileImageModel
 
 @end

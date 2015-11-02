@@ -10,9 +10,9 @@
 #import "AOObservable.h"
 
 typedef NS_ENUM(NSUInteger, AOEModelState) {
+    AOEModelStateDidUnload,
     AOEModelStateWillLoad,
     AOEModelStateDidLoad,
-    AOEModelStateDidUnload,
     AOEModelStateDidFailLoading,
     AOEModelStateDidChange
 };

@@ -13,38 +13,13 @@
 
 @implementation AOEFileImageModel
 
-@dynamic fileName;
-@dynamic fileFolder;
-@dynamic filePath;
-@dynamic cached;
-
-#pragma mark -
-#pragma mark Accessors
-
-- (NSString *)fileName {
-    return [self.url decimalMD5Value];
-}
-
-- (NSString *)fileFolder {
-    return [NSFileManager userDocumentsPath];
-}
-
-- (NSString *)filePath {
-    return [self.fileFolder stringByAppendingPathComponent:self.fileName];
-}
-
-- (BOOL)isCached {
-    return [[NSFileManager defaultManager] fileExistsAtPath:self.filePath];
-}
-
 #pragma mark -
 #pragma mark Public
 
-- (void)downloadImageWithCompletionBlock:(void (^)(UIImage *, __autoreleasing id *))completionBlock {
-    UIImage *image = [UIImage imageWithContentsOfFile:self.filePath];
+- (void)loadImageWithCompletionBlock:(void (^)(UIImage *image, id error))completionBlock {
+    UIImage *image = [UIImage imageWithContentsOfFile:[self.url path]];
     
     completionBlock(image, nil);
 }
-
 
 @end

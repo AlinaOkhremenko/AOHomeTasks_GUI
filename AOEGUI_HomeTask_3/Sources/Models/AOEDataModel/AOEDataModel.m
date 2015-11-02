@@ -26,7 +26,7 @@ static NSString * const kAOEUrl             = @"https://lh4.googleusercontent.co
     self = [super init];
     if (self) {
         self.randomString = [NSString randomString];
-        self.imageModel =  [[AOEImageModel alloc] initWithUrl:[NSURL URLWithString:kAOEKeyUrl]];
+        self.imageModel =  [AOEImageModel imageWithURL:[NSURL URLWithString:kAOEUrl]];
     }
     
     return self;

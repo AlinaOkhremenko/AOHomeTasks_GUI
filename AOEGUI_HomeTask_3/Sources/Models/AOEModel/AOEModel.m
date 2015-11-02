@@ -18,15 +18,16 @@
 #pragma mark Public Methods
 
 - (void)load {
-    AOEModelState state = self.state;
-    if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
-        [self notifyObserversWithSelector:[self selectorForState:state]];
+    @synchronized(self) {
+        AOEModelState state = self.state;
+        if (state == AOEModelStateDidLoad || state == AOEModelStateWillLoad) {
+            [self notifyObserversWithSelector:[self selectorForState:state]];
+            
+            return;
+        }
         
-        return;
+        [self setupLoading];
     }
-    
-    [self setupLoading];
-    
     AOEweakify(self);
     AOEDispatchQueueAsyncInBackground(^{
         AOEstrongify(self);
@@ -44,6 +45,10 @@
 - (SEL)selectorForState:(NSUInteger)state {
     SEL selector = NULL;
     switch (state) {
+        case AOEModelStateDidUnload:
+            selector = @selector(modelDidUnload:);
+            break;
+            
         case AOEModelStateWillLoad:
             selector = @selector(modelWillLoad:);
             break;
@@ -61,7 +66,7 @@
             break;
             
         default:
-            [super selectorForState:state];
+            selector = [super selectorForState:state];
             break;
     }
     

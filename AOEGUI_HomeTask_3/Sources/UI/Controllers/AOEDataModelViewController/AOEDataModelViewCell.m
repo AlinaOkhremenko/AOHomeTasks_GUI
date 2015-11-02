@@ -9,8 +9,8 @@
 
 #import "AOEDataModel.h"
 #import "AOEMacro.h"
-
-static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8Vw4/AAAAAAAAAAI/AAAAAAAAAVQ/6DRhCvLBVdc/photo.jpg";
+#import "AOEImageModel.h"
+#import "AOEImageView.h"
 
 @implementation AOEDataModelViewCell
 
@@ -18,41 +18,18 @@ static NSString * const kAOEUrl = @"https://lh4.googleusercontent.com/-zOPqgfb8V
 #pragma mark Accessors
 
 - (void)setModel:(AOEDataModel *)model {
-    AOESynthesizeObserverSetter(model, _model);
-    [self fillWithModel:model];
-    [model load];
+    if (_model != model) {
+        _model = model;
+        [self fillWithModel:model];
+    }
 }
 
 #pragma mark -
 #pragma mark Public methods
 
 - (void)fillWithModel:(AOEDataModel *)model {
-    [self.imageLoadingWheel startAnimating];
-    NSURL *url = [NSURL URLWithString:kAOEUrl];
-    [model.imageModel downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image){
-        if (succeeded) {
-            self.pictureView.image = image;
-            [self.imageLoadingWheel stopAnimating];
-        }
-    }];
-    
+    self.imageViewContainer.imageModel = model.imageModel;
     self.randomText.text = model.randomString;
-}
-
-#pragma mark -
-#pragma mark AOEModelObserver Protocol
-
-- (void)modelWillLoad:(id)model {
-}
-
-- (void)modelDidLoad:(id)model {
-    [self fillWithModel:model];
-}
-
-- (void)modelDidFailLoading:(id)model {
-}
-
-- (void)model:(id)arrayModel didChangeWithChangesModel:(id)changesModel {
 }
 
 @end
