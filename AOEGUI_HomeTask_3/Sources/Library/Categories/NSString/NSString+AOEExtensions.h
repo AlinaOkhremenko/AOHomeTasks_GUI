@@ -21,4 +21,6 @@
  */
 + (id)randomString;
 
+- (NSString *)decimalMD5Value;
+
 @end

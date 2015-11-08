@@ -30,7 +30,6 @@
     
     AOELoadingView *loadingView = [self currentLoadingView];
     self.loadingView = loadingView;
-    loadingView.visible = NO;
 }
 
 #pragma mark -
@@ -49,12 +48,13 @@
 
 - (void)showLoadingView {
     AOELoadingView *loadingView = self.loadingView;
-    [self bringSubviewToFront:loadingView];
+    loadingView.containerView = self;
     [loadingView setVisible:YES animated:YES];
+    [self bringSubviewToFront:loadingView];
 }
 
 - (void)hideLoadingView {
-    [self.loadingView setVisible:NO animated:NO];
+    [self.loadingView setVisible:NO animated:YES];
 }
 
 @end

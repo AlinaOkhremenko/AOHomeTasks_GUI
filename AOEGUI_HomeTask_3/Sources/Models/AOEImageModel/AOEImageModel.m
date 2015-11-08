@@ -52,7 +52,7 @@ static NSString * const kAOEKeyUrl          = @"url";
     self.url = nil;
 }
 
-- (id)initWithUrl:(NSURL *)url {
+- (id)initWithURL:(NSURL *)url {
     AOECache *imageCache = [[self class] currentCache];
     id existedImageModel = [imageCache objectForKey:url];
     
@@ -91,6 +91,7 @@ static NSString * const kAOEKeyUrl          = @"url";
 
 - (void)performLoading {
     AOEweakify(self);
+    NSLog(@"performLoading");
     [self loadImageWithCompletionBlock:^(UIImage *image, id error) {
         AOEstrongify(self);
         [self finishLoadingImage:image error:error];

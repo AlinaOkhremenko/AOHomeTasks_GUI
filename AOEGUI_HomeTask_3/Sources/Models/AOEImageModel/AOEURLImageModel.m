@@ -10,7 +10,7 @@
 
 #import "AOEFileImageModel.h"
 
-#import "NSURL+MD5.h"
+#import "NSString+AOEExtensions.h"
 #import "NSFileManager+AOEExtensions.h"
 #import "AOEMacro.h"
 
@@ -22,7 +22,7 @@ static NSString * const kAOEDefaultImage = @"explorer.jpeg";
 @property (nonatomic, readonly)     NSString    *fileFolder;
 @property (nonatomic, readonly, getter=isCached)    BOOL    cached;
 
-@property (nonatomic, strong)   NSURLSession              *session;
+@property (nonatomic, readonly)   NSURLSession              *session;
 @property (nonatomic, strong)   NSURLSessionDownloadTask  *downloadTask;
 
 - (void)downloadImage:(void (^)(UIImage *image, id error))completion;
@@ -36,6 +36,7 @@ static NSString * const kAOEDefaultImage = @"explorer.jpeg";
 @dynamic fileFolder;
 @dynamic filePath;
 @dynamic cached;
+@dynamic session;
 
 #pragma mark -
 #pragma mark Accessors
@@ -62,7 +63,7 @@ static NSString * const kAOEDefaultImage = @"explorer.jpeg";
 }
 
 - (NSString *)fileName {
-    return [self.url decimalMD5Value];
+    return [[self.url absoluteString] decimalMD5Value];
 }
 
 - (NSString *)fileFolder {
@@ -82,7 +83,9 @@ static NSString * const kAOEDefaultImage = @"explorer.jpeg";
 
 - (void)loadImageWithCompletionBlock:(void (^)(UIImage *image, id error))completionBlock {
     if (self.cached) {
-        [super loadImageWithCompletionBlock:completionBlock];
+        UIImage *image = [UIImage imageWithContentsOfFile:self.filePath];
+        completionBlock(image, nil);
+        
         if (!self.picture) {
             [self deleteFromCache];
         }
@@ -104,12 +107,13 @@ static NSString * const kAOEDefaultImage = @"explorer.jpeg";
     self.downloadTask = [self.session downloadTaskWithURL:self.url
                                         completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
                                             AOEstrongify(self);
+                                            [NSThread sleepForTimeInterval:5];
                                             if (nil == error) {
                                                 [[NSFileManager defaultManager] copyItemAtURL:location
                                                                                         toURL:[NSURL fileURLWithPath:self.filePath]
                                                                                         error:&error];
                                                 if (nil == error) {
-                                                    [super loadImageWithCompletionBlock:completion];
+                                                    [self loadImageWithCompletionBlock:completion];
                                                     
                                                     return ;
                                                 }

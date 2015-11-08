@@ -7,6 +7,7 @@
 //
 
 #import "NSString+AOEExtensions.h"
+#import <CommonCrypto/CommonDigest.h>
 
 static const NSUInteger kAOELowerBoundLength = 1;
 static const NSUInteger kAOEUpperBoundLength = 15;
@@ -37,6 +38,19 @@ static const NSUInteger kAOEUpperBoundLength = 15;
                                                  andAlphabet:alphabetWithUpperCase];
     
     return [self stringWithFormat:@"%@%@",randomUpperCaseString, randomLowerCaseString];
+}
+
+- (NSString *)decimalMD5Value {
+    const char *urlString = [self UTF8String];
+    unsigned char hashBytes[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(urlString,(CC_LONG)strlen(urlString), hashBytes);
+    
+    NSMutableString *hashString = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for ( NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++ ) {
+        [hashString appendFormat:@"%02x", hashBytes[i]];
+    }
+    
+    return [hashString copy];
 }
 
 @end

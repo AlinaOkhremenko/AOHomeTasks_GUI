@@ -15,7 +15,7 @@
 
 + (instancetype)imageWithURL:(NSURL *)url;
 
-- (id)initWithUrl:(NSURL *)url;
+- (id)initWithURL:(NSURL *)url;
 
 - (void)loadImageWithCompletionBlock:(void (^)(UIImage *image, id error))completionBlock;
 - (void)cancel;

@@ -9,7 +9,7 @@
 #import "AOEFileImageModel.h"
 
 #import "NSFileManager+AOEExtensions.h"
-#import "NSURL+MD5.h"
+#import "NSString+AOEExtensions.h"
 
 @implementation AOEFileImageModel
 
